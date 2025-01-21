@@ -19,7 +19,8 @@ import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
 import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
 import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
-import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
+import { type CaseStudy, type MDXEntry } from '@/lib/mdx'
+import { loadCaseStudies } from '#src/lib/mdx'
 
 const clients = [
   ['Phobia', logoPhobiaLight],
