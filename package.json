@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
@@ -38,10 +40,20 @@
     "unified-conditional": "0.0.2"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.4",
+    "@storybook/addon-essentials": "8.6.0-alpha.0",
+    "@storybook/addon-interactions": "8.6.0-alpha.0",
+    "@storybook/addon-onboarding": "8.6.0-alpha.0",
+    "@storybook/blocks": "8.6.0-alpha.0",
+    "@storybook/nextjs": "8.6.0-alpha.0",
+    "@storybook/react": "8.6.0-alpha.0",
+    "@storybook/test": "8.6.0-alpha.0",
     "eslint": "^8.56.0",
     "eslint-config-next": "^14.0.4",
+    "eslint-plugin-storybook": "^0.11.2",
     "prettier": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.5",
-    "sharp": "0.33.1"
+    "sharp": "0.33.1",
+    "storybook": "8.6.0-alpha.0"
   }
 }
