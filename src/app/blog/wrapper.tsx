@@ -4,7 +4,8 @@ import { FadeIn } from '@/components/FadeIn'
 import { MDXComponents } from '@/components/MDXComponents'
 import { PageLinks } from '@/components/PageLinks'
 import { formatDate } from '@/lib/formatDate'
-import { type Article, type MDXEntry, loadArticles } from '@/lib/mdx'
+import { type Article, type MDXEntry } from '@/lib/mdx'
+import { loadArticles } from '#src/lib/mdx'
 
 export default async function BlogArticleWrapper({
   article,

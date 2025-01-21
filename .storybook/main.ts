@@ -14,5 +14,11 @@ const config: StorybookConfig = {
   features: {
     experimentalRSC: true,
   },
+  staticDirs: [
+    {
+      from: '../src/app/blog/3-lessons-we-learned-going-back-to-the-office',
+      to: '/src/app/blog/3-lessons-we-learned-going-back-to-the-office',
+    },
+  ],
 }
 export default config
