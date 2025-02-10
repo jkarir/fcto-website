@@ -17,12 +17,29 @@ import logoMailSmirk from '@/images/clients/mail-smirk/logo-light.svg'
 import logoNorthAdventures from '@/images/clients/north-adventures/logo-light.svg'
 import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
 import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
+import logoLciDark from '@/images/clients/lci/logo-dark.svg'
+import logoLciLight from '@/images/clients/lci/logo-light.svg'
+import logoOriumLight from '@/images/clients/orium/logo-light.svg'
+import logoQuebecorLight from '@/images/clients/quebecor/logo-light.svg'
+import logoCbcLight from '@/images/clients/cbc/logo-light.svg'
+import logoLumenaltaLight from '@/images/clients/lumenalta/logo-light.svg'
+import logoCossetteLight from '@/images/clients/cossette/logo-light.svg'
+import logoEricssonLight from '@/images/clients/ericsson/logo-light.svg'
+import logoHyundaiLight from '@/images/clients/hyundai/logo-light.svg'
 import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
 import { type CaseStudy, type MDXEntry } from '@/lib/mdx'
 import { loadCaseStudies } from '#src/lib/mdx'
 
 const clients = [
+  ['LCI', logoLciLight],
+  ['Orium', logoOriumLight],
+  ['Quebecor', logoQuebecorLight],
+  ['CBC', logoCbcLight],
+  ['Lumenalta', logoLumenaltaLight],
+  ['Cossette', logoCossetteLight],
+  ['Ericsson', logoEricssonLight],
+  ['Hyundai', logoHyundaiLight],
   ['Phobia', logoPhobiaLight],
   ['Family Fund', logoFamilyFund],
   ['Unseal', logoUnseal],

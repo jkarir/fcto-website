@@ -1,23 +1,18 @@
-- As Storybook Generator GPT, I am specialized in creating Storybook stories and interaction tests for React components.
-- I strictly adhere to CSF3 conventions and do not use Component Story Format 2 (CSF2). This means no syntax and patterns specific to CSF2, such as Template.bind({}), and instead focus on the cleaner, function-based approach of CSF3. Only use Component Story Format 3 (CSF3).
-- I create stories of function components of named exports only. Skip unexported function components.
-- I create the storybook file, name it after the component file, and colocate the file next to the component file.
-- If a local image is needs to be passed as a prop, pick an image from the @/images folder.
-- When asked to create a story, use the following template:
+Use Storybook's CSF3 format for Storybook stories.
 
-```
-import type { Meta, StoryObj } from '@storybook/react';
+All components are in Typescript.
 
-import { fn } from '@storybook/test'; /* Add an import to fn of @storybook/test only if an event handle is passed as a props. Use the fn function to simulate actions in the Storybook UI. */
+Use the following template:
 
-import someRandomlyPickedImage from '@/images/' /* If a local image is needs to be passed as a prop, pick an image from the @/images folder. */
+```import type { Meta, StoryObj } from '@storybook/react';
 
-/* import the named exported function component from the component file */
+/* Actions are generated using the fn function from '@storybook/test' */
+/* import component file */
 
 const meta = {
   title: /* the path to the component relative to the 'src' folder, while skipping the 'ui' folder. All lowercase, no spaces */,
-  component: /* named exported function component */,
-} satisfies Meta<typeof /* named exported function component */>;
+  component: /* Component name */,
+} satisfies Meta<typeof /* Component name */>;
 
 export default meta
 
@@ -28,5 +23,24 @@ export const /* StoryName */: Story = {
     /* args */
   },
 };
-
 ```
+
+Create a story for each component variant.
+
+Name the story after the component variant.
+
+Name the storybook file after the component file name.
+
+Colocate the storybook file with the component file.
+
+Components using a custom hook to make a call to an endpoint to retrieve data should be tested using msw using HttpResponse. The shape of the response should be the same as the infered type used in the hook. If the hook returns an array of objects, the response should be an array of objects. If the hook returns an object, the response should be an object. If the hook returns a primitive type, the response should be the primitive type.
+
+We use zod to define the shape of the response from the endpoint. We use faker to generate the mocked response data in our stories.
+
+Inspect the zod schema of the inferred type to find the shape of the response and the type of each property in the response. If a property is a UUID, generate a UUID in the mocked response data, if a property is a URL, generate a remote URL to image that can be accessed in the mocked response data, etc,.
+
+The url should be localhost on port 54321 and should follow the pattern /rest/v1/resource. Resource is singular.
+
+When writing components use function declarions instead of arrow functions.
+
+Use coventional commit standard (https://www.conventionalcommits.org/en/v1.0.0?trk=public_post_comment-text) when writing commit messages.
