@@ -1,5 +1,5 @@
 import { type Metadata } from 'next'
-import Image from 'next/image'
+import Image, { ImageProps } from 'next/image'
 import Link from 'next/link'
 
 import { ContactSection } from '@/components/ContactSection'
@@ -30,8 +30,9 @@ import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
 import { type CaseStudy, type MDXEntry } from '@/lib/mdx'
 import { loadCaseStudies } from '#src/lib/mdx'
+import { Clients } from '@/_pages/home/clients'
 
-const clients = [
+const clients: Array<[string, ImageProps['src']]> = [
   ['LCI', logoLciLight],
   ['Orium', logoOriumLight],
   ['Quebecor', logoQuebecorLight],
@@ -49,35 +50,6 @@ const clients = [
   ['Bright Path', logoBrightPath],
   ['North Adventures', logoNorthAdventures],
 ]
-
-function Clients() {
-  return (
-    <div className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
-      <Container>
-        <FadeIn className="flex items-center gap-x-8">
-          <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            We’ve worked with hundreds of amazing people
-          </h2>
-          <div className="h-px flex-auto bg-neutral-800" />
-        </FadeIn>
-        <FadeInStagger faster>
-          <ul
-            role="list"
-            className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
-          >
-            {clients.map(([client, logo]) => (
-              <li key={client}>
-                <FadeIn>
-                  <Image src={logo} alt={client} unoptimized />
-                </FadeIn>
-              </li>
-            ))}
-          </ul>
-        </FadeInStagger>
-      </Container>
-    </div>
-  )
-}
 
 function CaseStudies({
   caseStudies,
@@ -213,7 +185,7 @@ export default async function Home() {
         </FadeIn>
       </Container>
 
-      <Clients />
+      <Clients clients={clients} />
 
       <CaseStudies caseStudies={caseStudies} />
 
