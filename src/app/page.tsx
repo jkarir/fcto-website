@@ -1,36 +1,35 @@
 import { type Metadata } from 'next'
-import Image, { ImageProps } from 'next/image'
-import Link from 'next/link'
+import { ImageProps } from 'next/image'
 
+import { loadCaseStudies } from '#src/lib/mdx'
+import { Clients } from '@/_pages/home/clients'
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
-import { FadeIn, FadeInStagger } from '@/components/FadeIn'
+import { FadeIn } from '@/components/FadeIn'
 import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
 import logoBrightPath from '@/images/clients/bright-path/logo-light.svg'
+import logoCbcLight from '@/images/clients/cbc/logo-light.svg'
+import logoCossetteLight from '@/images/clients/cossette/logo-light.svg'
+import logoEricssonLight from '@/images/clients/ericsson/logo-light.svg'
 import logoFamilyFund from '@/images/clients/family-fund/logo-light.svg'
 import logoGreenLife from '@/images/clients/green-life/logo-light.svg'
 import logoHomeWork from '@/images/clients/home-work/logo-light.svg'
+import logoHyundaiLight from '@/images/clients/hyundai/logo-light.svg'
+import logoLciLight from '@/images/clients/lci/logo-light.svg'
+import logoLumenaltaLight from '@/images/clients/lumenalta/logo-light.svg'
 import logoMailSmirk from '@/images/clients/mail-smirk/logo-light.svg'
 import logoNorthAdventures from '@/images/clients/north-adventures/logo-light.svg'
+import logoOriumLight from '@/images/clients/orium/logo-light.svg'
 import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
 import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
-import logoLciDark from '@/images/clients/lci/logo-dark.svg'
-import logoLciLight from '@/images/clients/lci/logo-light.svg'
-import logoOriumLight from '@/images/clients/orium/logo-light.svg'
 import logoQuebecorLight from '@/images/clients/quebecor/logo-light.svg'
-import logoCbcLight from '@/images/clients/cbc/logo-light.svg'
-import logoLumenaltaLight from '@/images/clients/lumenalta/logo-light.svg'
-import logoCossetteLight from '@/images/clients/cossette/logo-light.svg'
-import logoEricssonLight from '@/images/clients/ericsson/logo-light.svg'
-import logoHyundaiLight from '@/images/clients/hyundai/logo-light.svg'
 import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
-import { type CaseStudy, type MDXEntry } from '@/lib/mdx'
-import { loadCaseStudies } from '#src/lib/mdx'
-import { Clients } from '@/_pages/home/clients'
+
+import { CaseStudies } from '@/_pages/home/case-studies'
 
 const clients: Array<[string, ImageProps['src']]> = [
   ['LCI', logoLciLight],
@@ -50,66 +49,6 @@ const clients: Array<[string, ImageProps['src']]> = [
   ['Bright Path', logoBrightPath],
   ['North Adventures', logoNorthAdventures],
 ]
-
-function CaseStudies({
-  caseStudies,
-}: {
-  caseStudies: Array<MDXEntry<CaseStudy>>
-}) {
-  return (
-    <>
-      <SectionIntro
-        title="Harnessing technology for a brighter future"
-        className="mt-24 sm:mt-32 lg:mt-40"
-      >
-        <p>
-          We believe technology is the answer to the world’s greatest
-          challenges. It’s also the cause, so we find ourselves in bit of a
-          catch 22 situation.
-        </p>
-      </SectionIntro>
-      <Container className="mt-16">
-        <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-          {caseStudies.map((caseStudy) => (
-            <FadeIn key={caseStudy.href} className="flex">
-              <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
-                <h3>
-                  <Link href={caseStudy.href}>
-                    <span className="absolute inset-0 rounded-3xl" />
-                    <Image
-                      src={caseStudy.logo}
-                      alt={caseStudy.client}
-                      className="h-16 w-16"
-                      unoptimized
-                    />
-                  </Link>
-                </h3>
-                <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
-                  <time
-                    dateTime={caseStudy.date.split('-')[0]}
-                    className="font-semibold"
-                  >
-                    {caseStudy.date.split('-')[0]}
-                  </time>
-                  <span className="text-neutral-300" aria-hidden="true">
-                    /
-                  </span>
-                  <span>Case study</span>
-                </p>
-                <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
-                  {caseStudy.title}
-                </p>
-                <p className="mt-4 text-base text-neutral-600">
-                  {caseStudy.description}
-                </p>
-              </article>
-            </FadeIn>
-          ))}
-        </FadeInStagger>
-      </Container>
-    </>
-  )
-}
 
 function Services() {
   return (
