@@ -1,9 +1,10 @@
+import { ClientRecord } from '@/lib/clients'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import Image, { type ImageProps } from 'next/image'
 
 interface ClientsProps {
-  clients: Array<[string, ImageProps['src']]>
+  clients: ClientRecord
   className?: string
   children?: React.ReactNode
 }
@@ -25,12 +26,12 @@ export function Clients({ clients, className, children }: ClientsProps) {
             role="list"
             className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
           >
-            {clients.map(([client, logo]) => (
-              <li key={client}>
+            {Object.entries(clients).map(([identifier, client]) => (
+              <li key={identifier}>
                 <FadeIn>
                   <Image
-                    src={logo}
-                    alt={`${client} logo`}
+                    src={client.image.light}
+                    alt={`${client.name} logo`}
                     width={158}
                     height={48}
                     className="object-contain"

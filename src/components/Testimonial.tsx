@@ -1,19 +1,26 @@
 import Image, { type ImageProps } from 'next/image'
 import clsx from 'clsx'
-
+import { type ReactNode } from 'react'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { GridPattern } from '@/components/GridPattern'
+import { clients, ClientIdentifier } from '@/lib/clients'
+
+interface TestimonialProps {
+  children: ReactNode
+  clientIdentifier: ClientIdentifier
+  mode?: 'light' | 'dark'
+  className?: string
+}
 
 export function Testimonial({
   children,
-  client,
+  clientIdentifier,
+  mode = 'dark',
   className,
-}: {
-  children: React.ReactNode
-  client: { logo: ImageProps['src']; name: string }
-  className?: string
-}) {
+}: TestimonialProps) {
+  const client = clients[clientIdentifier]
+  console.log({ client })
   return (
     <div
       className={clsx(
@@ -29,12 +36,19 @@ export function Testimonial({
         <FadeIn>
           <figure className="mx-auto max-w-4xl">
             <blockquote className="relative font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
-              <p className="before:content-['“'] after:content-['”'] sm:before:absolute sm:before:right-full">
+              <p className="before:content-['“'] after:content-['“'] sm:before:absolute sm:before:right-full">
                 {children}
               </p>
             </blockquote>
             <figcaption className="mt-10">
-              <Image src={client.logo} alt={client.name} unoptimized />
+              <Image
+                src={clients[clientIdentifier].image[mode]}
+                alt={clientIdentifier}
+                unoptimized
+                width={158}
+                height={48}
+                className="object-contain"
+              />
             </figcaption>
           </figure>
         </FadeIn>

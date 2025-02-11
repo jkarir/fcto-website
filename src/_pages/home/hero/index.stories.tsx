@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Hero } from './index'
+import React from 'react'
 
 const meta = {
   title: 'pages/home/hero',

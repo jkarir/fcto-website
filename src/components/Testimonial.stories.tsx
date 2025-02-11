@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Testimonial } from './Testimonial'
-import logoImage from '@/images/clients/family-fund/logomark-dark.svg'
 
 const meta = {
   title: 'components/testimonial',
@@ -15,10 +14,7 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
-    client: {
-      name: 'Family Fund',
-      logo: logoImage,
-    },
+    clientIdentifier: 'family-fund',
     children:
       'We approached Studio looking for a unique brand that would stand out in a crowded market. What they delivered surpassed our expectations.',
   },

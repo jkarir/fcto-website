@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { MDXComponents } from './MDXComponents'
 import imageFile from '@/images/team/leslie-alexander.jpg'
+import React from 'react'
 
 const meta = {
   title: 'components/mdx-components',
@@ -17,7 +18,9 @@ export const Default: Story = {
         <h1>MDX Components Demo</h1>
 
         <MDXComponents.img src={imageFile} alt="Sample image" />
-        <MDXComponents.TopTip>Here's an important tip!</MDXComponents.TopTip>
+        <MDXComponents.TopTip>
+          Here&apos;s an important tip!
+        </MDXComponents.TopTip>
       </MDXComponents.Typography>,
     ],
   },
