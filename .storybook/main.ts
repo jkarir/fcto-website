@@ -19,6 +19,10 @@ const config: StorybookConfig = {
       from: '../src/app/blog/3-lessons-we-learned-going-back-to-the-office',
       to: '/src/app/blog/3-lessons-we-learned-going-back-to-the-office',
     },
+    {
+      from: '../src/images/jurgen-karir-cropped.jpg',
+      to: '/images/jurgen-karir-cropped.jpg',
+    },
   ],
 }
 export default config
