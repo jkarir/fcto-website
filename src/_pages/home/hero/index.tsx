@@ -7,7 +7,7 @@ interface HeroProps {
   title?: React.ReactNode
   description?: React.ReactNode
   person?: {
-    name: string
+    name: React.ReactNode
     title: string
     image: StaticImageData
   }
@@ -28,7 +28,7 @@ export function Hero({
     </>
   ),
   person = {
-    name: 'J&#252;rgen Karir',
+    name: <>J&#252;rgen Karir</>,
     title: 'Fractional CTO',
     image: jurgen_karir,
   },

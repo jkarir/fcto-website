@@ -27,7 +27,10 @@ export default async function Home() {
 
       <CaseStudies caseStudies={caseStudies} />
 
-      <Testimonial className="mt-24 sm:mt-32 lg:mt-40" clientIdentifier={'LCI'}>
+      <Testimonial
+        className="mt-24 sm:mt-32 lg:mt-40"
+        clientIdentifier={'LCI Education'}
+      >
         ... His deep expertise in composable architecture, strategic thinking,
         and hands-on approach were instrumental in delivering a scalable,
         high-performing digital experience...

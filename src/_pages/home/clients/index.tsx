@@ -17,7 +17,7 @@ export function Clients({ clients, className, children }: ClientsProps) {
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            {children ?? "We've worked with hundreds of amazing people"}
+            {children ?? "I've worked with hundreds of amazing people"}
           </h2>
           <div className="h-px flex-auto bg-neutral-800" />
         </FadeIn>
@@ -28,14 +28,19 @@ export function Clients({ clients, className, children }: ClientsProps) {
           >
             {Object.entries(clients).map(([identifier, client]) => (
               <li key={identifier}>
-                <FadeIn>
+                <FadeIn className="flex items-center gap-4">
                   <Image
                     src={client.image.light}
                     alt={`${client.name} logo`}
-                    width={158}
-                    height={48}
-                    className="object-contain"
+                    width={client.image.imageisName ? 100 : 36}
+                    height={36}
+                    className="h-9 w-auto object-contain"
                   />
+                  {!client.image.imageisName && (
+                    <p className="text-base leading-9 text-white">
+                      <strong>{client.name}</strong>
+                    </p>
+                  )}
                 </FadeIn>
               </li>
             ))}
