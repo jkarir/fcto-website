@@ -37,7 +37,7 @@ export function Clients({ clients, className, children }: ClientsProps) {
                     className="h-9 w-auto object-contain"
                   />
                   {!client.image.imageisName && (
-                    <p className="text-base leading-9 text-white">
+                    <p className="text-lg leading-9 text-white">
                       <strong>{client.name}</strong>
                     </p>
                   )}

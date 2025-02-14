@@ -40,15 +40,23 @@ export function Testimonial({
                 {children}
               </p>
             </blockquote>
-            <figcaption className="mt-10">
+            <figcaption className="mt-10 flex items-center gap-x-6">
               <Image
                 src={clients[clientIdentifier].image[mode]}
                 alt={clientIdentifier}
                 unoptimized
-                width={158}
-                height={48}
+                width={50}
+                height={50}
                 className="object-contain"
               />
+              <div>
+                <div className="font-display text-base font-medium text-neutral-950">
+                  Brian McIntyre
+                </div>
+                <div className="mt-0.5 text-sm text-neutral-600">
+                  Director of IT Delivery
+                </div>
+              </div>
             </figcaption>
           </figure>
         </FadeIn>
