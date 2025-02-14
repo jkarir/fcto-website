@@ -9,6 +9,7 @@ export function SectionIntro({
   children,
   smaller = false,
   invert = false,
+  fullWidth = false,
   ...props
 }: Omit<
   React.ComponentPropsWithoutRef<typeof Container>,
@@ -19,10 +20,11 @@ export function SectionIntro({
   children?: React.ReactNode
   smaller?: boolean
   invert?: boolean
+  fullWidth?: boolean
 }) {
   return (
     <Container {...props}>
-      <FadeIn className="max-w-2xl">
+      <FadeIn className={fullWidth ? 'max-w-none' : 'max-w-2xl'}>
         <h2>
           {eyebrow && (
             <>

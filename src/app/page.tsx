@@ -4,8 +4,8 @@ import { loadCaseStudies } from '#src/lib/mdx'
 import { Clients } from '@/_pages/home/clients'
 import { ContactSection } from '@/components/ContactSection'
 import { Testimonial } from '@/components/Testimonial'
-import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
 
+import { AboutMe } from '@/_pages/home/about-me'
 import { CaseStudies } from '@/_pages/home/case-studies'
 import { Hero } from '@/_pages/home/hero'
 import { Services } from '@/_pages/home/services'
@@ -25,7 +25,7 @@ export default async function Home() {
 
       <Clients clients={clients} />
 
-      <CaseStudies caseStudies={caseStudies} />
+      <AboutMe />
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"

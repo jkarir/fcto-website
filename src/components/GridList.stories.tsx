@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { GridList, GridListItem } from './GridList'
+import React from 'react'
 
 const meta = {
   title: 'components/grid-list',
@@ -20,6 +21,10 @@ export const Default: Story = {
       </GridListItem>,
       <GridListItem key="3" title="Item 3">
         Content for item 3
+      </GridListItem>,
+      <GridListItem key="4" title="Item 4">
+        Content for item 4Content for item 4Content for item 4Content for item
+        4Content for item 4Content for item 4
       </GridListItem>,
     ],
   },
