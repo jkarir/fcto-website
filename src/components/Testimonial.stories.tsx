@@ -14,7 +14,7 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
-    clientIdentifier: 'family-fund',
+    clientIdentifier: 'LCI Education',
     children:
       'We approached Studio looking for a unique brand that would stand out in a crowded market. What they delivered surpassed our expectations.',
   },

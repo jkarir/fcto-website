@@ -70,7 +70,8 @@ export function AboutMe({
                 development efficiency.
               </GridListItem>
               <GridListItem title="Scaling & System Architecture">
-                Making sure your platform is built for sustainable growth.
+                Ensuring your platform can handle more users, more data, and
+                more complexity.
               </GridListItem>
             </GridList>
           </SectionIntro>
