@@ -19,7 +19,7 @@ interface AboutMeProps {
 
 export function AboutMe({
   className = 'mt-24 sm:mt-32 lg:mt-40',
-  title = 'Your Technical Vision, Executed.',
+  title = 'Helping Startups & Scale-Ups Build the Right Tech for Growth',
   description = 'Some description about me',
 }: AboutMeProps) {
   return (
@@ -31,23 +31,27 @@ export function AboutMe({
       >
         <div className="mt-10 max-w-2xl space-y-6">
           <p>
-            The right <strong>technology strategy</strong> transforms ideas into{' '}
-            <strong>scalable products</strong>, streamlines operations, and
-            fuels business growth. Whether you&apos;re launching your first
-            product or scaling an existing one, I bring the{' '}
-            <strong>leadership and hands-on expertise</strong> needed to turn
-            your vision into reality.
+            I’m a{' '}
+            <strong>Fractional CTO and Software Engineering Consultant</strong>,
+            specializing in <strong>technology strategy</strong>,{' '}
+            <strong>full-stack and mobile development</strong>,{' '}
+            <strong>system architecture</strong>, and{' '}
+            <strong>engineering leadership</strong>. With{' '}
+            <strong>20+ years of experience</strong>, I help startups and
+            scale-ups build <strong>scalable</strong>, <strong>reliable</strong>
+            , and <strong>high-performing technology</strong>—always with a
+            focus on <strong>business impact</strong>, and{' '}
+            <strong>product value</strong>.
             <br />
             <br />
-            With <strong>20+ years</strong> of experience as a{' '}
-            <strong>software engineering consultant</strong>,
-            <strong>tech lead</strong>, and <strong>staff engineer</strong>,
-            I&apos;ve helped companies of all sizes, including startups and
-            scale-ups, turn ideas into reality by building scalable software,
-            optimizing engineering teams, and driving innovation. My focus is on{' '}
-            <strong>building impactful solutions</strong>, improving user
-            experience, and <strong>measurable value</strong>—all without the
-            overhead of a full-time CTO.
+            My mission is simple:{' '}
+            <strong>
+              Align technology with business goals to drive growth. Whether you
+              need technical leadership, scalable product development, or a
+              hands-on expert to guide and grow your team, I provide CTO-level
+              expertise—without the full-time cost
+            </strong>
+            .
           </p>
           <div className="mt-10">
             <Button href="/about" aria-label="About Me">

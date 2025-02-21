@@ -1,28 +1,12 @@
 import { type Metadata } from 'next'
-import Image from 'next/image'
 
-import { Border } from '@/components/Border'
+import { loadArticles } from '#src/lib/mdx'
+import { Button } from '@/components/Button'
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
-import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { GridList, GridListItem } from '@/components/GridList'
 import { PageIntro } from '@/components/PageIntro'
-import { PageLinks } from '@/components/PageLinks'
 import { SectionIntro } from '@/components/SectionIntro'
-import { StatList, StatListItem } from '@/components/StatList'
-import imageAngelaFisher from '@/images/team/angela-fisher.jpg'
-import imageBenjaminRussel from '@/images/team/benjamin-russel.jpg'
-import imageBlakeReid from '@/images/team/blake-reid.jpg'
-import imageChelseaHagon from '@/images/team/chelsea-hagon.jpg'
-import imageDriesVincent from '@/images/team/dries-vincent.jpg'
-import imageEmmaDorsey from '@/images/team/emma-dorsey.jpg'
-import imageJeffreyWebb from '@/images/team/jeffrey-webb.jpg'
-import imageKathrynMurphy from '@/images/team/kathryn-murphy.jpg'
-import imageLeonardKrasner from '@/images/team/leonard-krasner.jpg'
-import imageLeslieAlexander from '@/images/team/leslie-alexander.jpg'
-import imageMichaelFoster from '@/images/team/michael-foster.jpg'
-import imageWhitneyFrancis from '@/images/team/whitney-francis.jpg'
-import { loadArticles } from '#src/lib/mdx'
 
 function Culture() {
   return (
@@ -56,130 +40,8 @@ function Culture() {
   )
 }
 
-const team = [
-  {
-    title: 'Leadership',
-    people: [
-      {
-        name: 'Leslie Alexander',
-        role: 'Co-Founder / CEO',
-        image: { src: imageLeslieAlexander },
-      },
-      {
-        name: 'Michael Foster',
-        role: 'Co-Founder / CTO',
-        image: { src: imageMichaelFoster },
-      },
-      {
-        name: 'Dries Vincent',
-        role: 'Partner & Business Relations',
-        image: { src: imageDriesVincent },
-      },
-    ],
-  },
-  {
-    title: 'Team',
-    people: [
-      {
-        name: 'Chelsea Hagon',
-        role: 'Senior Developer',
-        image: { src: imageChelseaHagon },
-      },
-      {
-        name: 'Emma Dorsey',
-        role: 'Senior Designer',
-        image: { src: imageEmmaDorsey },
-      },
-      {
-        name: 'Leonard Krasner',
-        role: 'VP, User Experience',
-        image: { src: imageLeonardKrasner },
-      },
-      {
-        name: 'Blake Reid',
-        role: 'Junior Copywriter',
-        image: { src: imageBlakeReid },
-      },
-      {
-        name: 'Kathryn Murphy',
-        role: 'VP, Human Resources',
-        image: { src: imageKathrynMurphy },
-      },
-      {
-        name: 'Whitney Francis',
-        role: 'Content Specialist',
-        image: { src: imageWhitneyFrancis },
-      },
-      {
-        name: 'Jeffrey Webb',
-        role: 'Account Coordinator',
-        image: { src: imageJeffreyWebb },
-      },
-      {
-        name: 'Benjamin Russel',
-        role: 'Senior Developer',
-        image: { src: imageBenjaminRussel },
-      },
-      {
-        name: 'Angela Fisher',
-        role: 'Front-end Developer',
-        image: { src: imageAngelaFisher },
-      },
-    ],
-  },
-]
-
-function Team() {
-  return (
-    <Container className="mt-24 sm:mt-32 lg:mt-40">
-      <div className="space-y-24">
-        {team.map((group) => (
-          <FadeInStagger key={group.title}>
-            <Border as={FadeIn} />
-            <div className="grid grid-cols-1 gap-6 pt-12 sm:pt-16 lg:grid-cols-4 xl:gap-8">
-              <FadeIn>
-                <h2 className="font-display text-2xl font-semibold text-neutral-950">
-                  {group.title}
-                </h2>
-              </FadeIn>
-              <div className="lg:col-span-3">
-                <ul
-                  role="list"
-                  className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8"
-                >
-                  {group.people.map((person) => (
-                    <li key={person.name}>
-                      <FadeIn>
-                        <div className="group relative overflow-hidden rounded-3xl bg-neutral-100">
-                          <Image
-                            alt=""
-                            {...person.image}
-                            className="h-96 w-full object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105"
-                          />
-                          <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black to-black/0 to-40% p-6">
-                            <p className="font-display text-base/6 font-semibold tracking-wide text-white">
-                              {person.name}
-                            </p>
-                            <p className="mt-2 text-sm text-white">
-                              {person.role}
-                            </p>
-                          </div>
-                        </div>
-                      </FadeIn>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </FadeInStagger>
-        ))}
-      </div>
-    </Container>
-  )
-}
-
 export const metadata: Metadata = {
-  title: 'About Us',
+  title: 'About Me',
   description:
     'We believe that our strength lies in our collaborative approach, which puts our clients at the center of everything we do.',
 }
@@ -189,44 +51,110 @@ export default async function About() {
 
   return (
     <>
-      <PageIntro eyebrow="About us" title="Our strength is collaboration">
+      <PageIntro
+        eyebrow="About Me"
+        title="Building Scalable, High-Performing Tech for Startups & Scale-Ups"
+      >
         <p>
-          We believe that our strength lies in our collaborative approach, which
-          puts our clients at the center of everything we do.
+          I&apos;ve spent over <strong>20 years in software engineering</strong>
+          , working across different industries, teams, and technologies. My
+          experience spans <strong>full-stack and mobile development</strong>,{' '}
+          <strong>MACH and composable commmerce</strong>, and{' '}
+          <strong>technical leadership</strong>, but at my core, I love solving
+          complex problems and helping companies build software that{' '}
+          <strong>delivers real value</strong>.
         </p>
-        <div className="mt-10 max-w-2xl space-y-6 text-base">
+      </PageIntro>
+      <br />
+      <SectionIntro title="My Approach" smaller>
+        <div className="space-y-6">
           <p>
-            Studio was started by three friends who noticed that developer
-            studios were charging clients double what an in-house team would
-            cost. Since the beginning, we have been committed to doing things
-            differently by charging triple instead.
+            I believe technology should be <strong>a business enabler</strong>,{' '}
+            <strong>not a roadblock</strong>. Over the years, I’ve worked with
+            startups and scale-ups, helping them:
           </p>
+          <ul className="ms-4 list-outside list-disc">
+            <li>
+              <p>
+                Define and execute <strong>technical strategy</strong> that
+                aligns with their goals
+              </p>
+            </li>
+            <li>
+              Build <strong>scalable and maintainable systems</strong> that
+              support growth
+            </li>
+            <li>
+              Improve <strong>engineering teams’ performance</strong> through
+              better processes and mentorship
+            </li>
+            <li>
+              Navigate <strong>startup advisory and tech due diligence</strong>{' '}
+              to mitigate risks
+            </li>
+            <li>
+              Explore <strong>AI and ML opportunities</strong> where they make
+              sense
+            </li>
+          </ul>
           <p>
-            At Studio, we’re more than just colleagues — we’re a family. This
-            means we pay very little and expect people to work late. We want our
-            employees to bring their whole selves to work. In return, we just
-            ask that they keep themselves there until at least 6:30pm.
+            I approach every project with a <strong>pragmatic mindset</strong>,
+            focusing on what actually moves the needle rather than getting lost
+            in trends or over-engineering.
           </p>
         </div>
-      </PageIntro>
-      <Container className="mt-16">
-        <StatList>
-          <StatListItem value="35" label="Underpaid employees" />
-          <StatListItem value="52" label="Placated clients" />
-          <StatListItem value="$25M" label="Invoices billed" />
-        </StatList>
-      </Container>
-
-      <Culture />
-
-      <Team />
-
-      <PageLinks
-        className="mt-24 sm:mt-32 lg:mt-40"
-        title="From the blog"
-        intro="Our team of experienced designers and developers has just one thing on their mind; working on your ideas to draw a smile on the face of your users worldwide. From conducting Brand Sprints to UX Design."
-        pages={blogArticles}
-      />
+      </SectionIntro>
+      <br />
+      <SectionIntro title="My Background" smaller>
+        <div className="space-y-6">
+          <p>
+            I’m the{' '}
+            <strong>
+              Founder and Software Consultant at Blue Pixel Software
+            </strong>
+            , where I’ve taken on <strong>technical leadership roles</strong> as{' '}
+            <strong>Tech Lead and Staff Engineer</strong>, helping my clients
+            scale their engineering teams, improve development workflows, and
+            build products that are both scalable and maintainable. My work
+            spans both <strong>full-stack engineering</strong>, where I’ve built
+            scalable applications with <strong>React</strong>,{' '}
+            <strong>Node.js</strong>, <strong>and cloud platforms</strong>, and{' '}
+            <strong>mobile engineering</strong>, where I’ve led development
+            efforts in <strong>React Native and iOS</strong>.
+          </p>
+          <p>
+            Beyond hands-on development, I’ve helped my clients{' '}
+            <strong>
+              navigate architectural decisions, optimize team performance, and
+              implement best practices that support long-term growth
+            </strong>
+            . Whether working with early-stage startups or established
+            businesses, my focus has always been on delivering practical,
+            high-impact solutions that drive success.
+          </p>
+          <p>
+            Before starting my own consultancy, I spent years in{' '}
+            <strong>technical leadership and engineering roles</strong> across
+            different industries, working with teams of all sizes. Along the
+            way, I’ve led development efforts, shaped technical strategy, and
+            helped build software that real people rely on every day. From
+            scaling architectures to mentoring engineers, each experience has
+            reinforced my belief that great software isn’t just about clean
+            code—it’s about solving real problems in a way that’s sustainable
+            and adaptable as businesses grow.
+          </p>
+          <p>
+            If you&apos;re working through technical challenges, trying to
+            scale, or just need a fresh perspective on your architecture and
+            engineering processes, I&apos;d love to chat.
+          </p>
+        </div>
+        <div className="mt-10">
+          <Button href="/about" aria-label="About Me">
+            Let&apos;s Connect
+          </Button>
+        </div>
+      </SectionIntro>
 
       <ContactSection />
     </>
