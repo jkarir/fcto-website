@@ -8,6 +8,7 @@ import { List } from '#src/components/List.jsx'
 import { StylizedImage } from '#src/components/StylizedImage.jsx'
 import { title } from 'process'
 import { ReactNode } from 'react'
+import { Button } from '@/components/Button'
 
 interface AboutMeProps {
   className?: string
@@ -18,64 +19,74 @@ interface AboutMeProps {
 
 export function AboutMe({
   className = 'mt-24 sm:mt-32 lg:mt-40',
-  eyebrow = 'About Me',
-  title = 'Helping Startups & Scale-Ups Build the Right Tech for Growth',
+  title = 'Your Technical Vision, Executed.',
   description = 'Some description about me',
 }: AboutMeProps) {
   return (
     <>
       <SectionIntro
-        eyebrow={eyebrow}
         title={title}
         className={className}
         description={description}
       >
         <div className="mt-10 max-w-2xl space-y-6">
           <p>
-            I&apos;m a{' '}
-            <strong>software engineering consultant and fractional CTO</strong>,
-            specializing in <strong>full-stack and mobile development</strong>,
-            system architecture, and engineering leadership. With over{' '}
-            <strong>20 years of experience</strong>, I help startups and growing
-            companies build{' '}
-            <strong>scalable, reliable, and high-performing technology</strong>
-            —always with a focus on{' '}
-            <strong>delivering real business value</strong>.
+            The right <strong>technology strategy</strong> transforms ideas into{' '}
+            <strong>scalable products</strong>, streamlines operations, and
+            fuels business growth. Whether you&apos;re launching your first
+            product or scaling an existing one, I bring the{' '}
+            <strong>leadership and hands-on expertise</strong> needed to turn
+            your vision into reality.
+            <br />
+            <br />
+            With <strong>20+ years</strong> of experience as a{' '}
+            <strong>software engineering consultant</strong>,
+            <strong>tech lead</strong>, and <strong>staff engineer</strong>,
+            I&apos;ve helped companies of all sizes, including startups and
+            scale-ups, turn ideas into reality by building scalable software,
+            optimizing engineering teams, and driving innovation. My focus is on{' '}
+            <strong>building impactful solutions</strong>, improving user
+            experience, and <strong>measurable value</strong>—all without the
+            overhead of a full-time CTO.
           </p>
-          <p>
-            I take a <strong>value-driven approach</strong>, ensuring that every
-            technical decision supports your product, your customers, and your
-            business goals. Whether you need to{' '}
-            <strong>align your tech strategy</strong>,{' '}
-            <strong>improve your development processes</strong>, or{' '}
-            <strong>scale your systems</strong>, I provide{' '}
-            <strong>CTO-level expertise without the full-time cost</strong>.
-          </p>
+          <div className="mt-10">
+            <Button href="/about" aria-label="About Me">
+              About Me
+            </Button>
+          </div>
         </div>
       </SectionIntro>
       <Container className="mt-16">
-        <div className="space-y-14">
-          <SectionIntro title="How I can help" smaller fullWidth>
+        <div className="space-y-16">
+          <SectionIntro title="How I help" smaller fullWidth>
             <GridList className="lg:grid-cols-4">
-              <GridListItem title="Fractional CTO & Tech Strategy">
-                Ensuring your tech decisions drive business value and long-term
-                success.
+              <GridListItem title="Fractional CTO Services">
+                Strategic technology leadership to align engineering with
+                business goals, improve development processes, and foster a
+                high-performing engineering culture.
               </GridListItem>
               <GridListItem title="Full-Stack & Mobile Development">
                 Building modern, high-performance apps that scale with your
                 users.
               </GridListItem>
-              <GridListItem title="Engineering Leadership">
-                Structuring teams, optimizing workflows, and improving
-                development efficiency.
+              <GridListItem title="Technical Due Diligence">
+                Assess technology, architecture, and team capabilities to ensure
+                long-term scalability and product-market fit.
               </GridListItem>
-              <GridListItem title="Scaling & System Architecture">
-                Ensuring your platform can handle more users, more data, and
-                more complexity.
+              <GridListItem title="Startup Advisory">
+                Guidance on product development, technical hiring, team
+                mentorship, and roadmap execution to build sustainable and
+                high-value solutions.
               </GridListItem>
             </GridList>
+            <div className="mt-10">
+              <Button href="/contact" aria-label="Explore my services">
+                Explore My Services
+              </Button>
+            </div>
           </SectionIntro>
-          <SectionIntro title={'Why work with me'} smaller fullWidth>
+
+          <SectionIntro title={'Why work with me?'} smaller fullWidth>
             <GridList className="lg:grid-cols-4">
               <GridListItem title="I take a value-first approach">
                 Every decision is focused on impact, not just technology for
@@ -93,6 +104,11 @@ export function AboutMe({
                 and stage of growth.
               </GridListItem>
             </GridList>
+            <div className="mt-10">
+              <Button href="/contact" aria-label="Explore My Services">
+                Let&apos;s Connect
+              </Button>
+            </div>
           </SectionIntro>
         </div>
       </Container>
@@ -100,9 +116,9 @@ export function AboutMe({
       <Container className="mt-16">
         <Container className="mt-16">
           <StatList>
-            <StatListItem value="35" label="Underpaid employees" />
-            <StatListItem value="52" label="Placated clients" />
-            <StatListItem value="$25M" label="Invoices billed" />
+            <StatListItem value="17" label="Mobile apps shipped" />
+            <StatListItem value="15" label="Websites launched" />
+            <StatListItem value="19" label="Teams led" />
           </StatList>
         </Container>
       </Container>

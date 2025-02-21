@@ -1,7 +1,7 @@
-import Image, { StaticImageData } from 'next/image'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import jurgen_karir from '@/images/jurgen-karir-cropped.jpg'
+import Image, { StaticImageData } from 'next/image'
 
 interface HeroProps {
   title?: React.ReactNode
@@ -35,7 +35,7 @@ export function Hero({
 }: HeroProps) {
   return (
     <Container className="mt-24 sm:mt-32 md:mt-56">
-      <FadeIn className="flex flex-col-reverse items-center gap-12 md:flex-row md:items-start md:justify-between">
+      <FadeIn className="flex flex-col-reverse items-center gap-12 md:flex-row md:items-center md:justify-between">
         {/* Left Side - Text Content */}
         <div className="max-w-4xl flex-1 text-center md:text-left">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
@@ -47,11 +47,11 @@ export function Hero({
         </div>
 
         {/* Right Side - Image (Max Width: 280px, Max Height: 390px) */}
-        <div className="group relative max-h-[390px] w-full max-w-[280px] overflow-hidden rounded-3xl bg-neutral-100">
+        <div className="group relative max-h-[418px] w-full max-w-[300px] overflow-hidden rounded-3xl bg-neutral-100 md:max-w-[360px]">
           <Image
             alt="Jürgen Karir"
             {...person.image}
-            className="h-96 w-full object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105"
+            className="h-[418px] w-full object-cover transition duration-500 motion-safe:group-hover:scale-105"
           />
           <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black to-black/0 to-40% p-6">
             <p className="font-display text-base/6 font-semibold tracking-wide text-white">

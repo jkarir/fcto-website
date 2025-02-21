@@ -36,8 +36,6 @@ export default async function Home() {
         high-performing digital experience...
       </Testimonial>
 
-      <Services />
-
       <ContactSection />
     </>
   )
