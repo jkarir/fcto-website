@@ -6,9 +6,7 @@ import { ContactSection } from '@/components/ContactSection'
 import { Testimonial } from '@/components/Testimonial'
 
 import { AboutMe } from '@/_pages/home/about-me'
-import { CaseStudies } from '@/_pages/home/case-studies'
 import { Hero } from '@/_pages/home/hero'
-import { Services } from '@/_pages/home/services'
 import { clients } from '@/lib/clients'
 
 export const metadata: Metadata = {

@@ -6,14 +6,7 @@ import { ContactSection } from '@/components/ContactSection'
 import { List, ListItem } from '@/components/List'
 import { PageIntro } from '@/components/PageIntro'
 import { SectionIntro } from '@/components/SectionIntro'
-
-function SectionTitle({ children }: { children: React.ReactNode }) {
-  return (
-    <span className="block font-display text-2xl font-semibold text-neutral-950">
-      {children}
-    </span>
-  )
-}
+import { SectionTitle } from '@/components/SectionTitle'
 
 export const metadata: Metadata = {
   title: 'Engagement Models',

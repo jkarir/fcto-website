@@ -1,14 +1,9 @@
-import { SectionIntro } from '@/components/SectionIntro'
-import { Container } from '@/components/Container'
-import { PageIntro } from '@/components/PageIntro'
-import { StatList, StatListItem } from '@/components/StatList'
-import { GridList, GridListItem } from '@/components/GridList'
-import { FadeIn } from '#src/components/FadeIn.jsx'
-import { List } from '#src/components/List.jsx'
-import { StylizedImage } from '#src/components/StylizedImage.jsx'
-import { title } from 'process'
-import { ReactNode } from 'react'
 import { Button } from '@/components/Button'
+import { Container } from '@/components/Container'
+import { SectionIntro } from '@/components/SectionIntro'
+import { StatList, StatListItem } from '@/components/StatList'
+import { Services } from '../services'
+import { Advantages } from '../advantages'
 
 interface AboutMeProps {
   className?: string
@@ -62,58 +57,9 @@ export function AboutMe({
       </SectionIntro>
       <Container className="mt-16">
         <div className="space-y-16">
-          <SectionIntro title="How I help" smaller fullWidth>
-            <GridList className="lg:grid-cols-4">
-              <GridListItem title="Fractional CTO Services">
-                Strategic technology leadership to align engineering with
-                business goals, improve development processes, and foster a
-                high-performing engineering culture.
-              </GridListItem>
-              <GridListItem title="Full-Stack & Mobile Development">
-                Building modern, high-performance apps that scale with your
-                users.
-              </GridListItem>
-              <GridListItem title="Technical Due Diligence">
-                Assess technology, architecture, and team capabilities to ensure
-                long-term scalability and product-market fit.
-              </GridListItem>
-              <GridListItem title="Startup Advisory">
-                Guidance on product development, technical hiring, team
-                mentorship, and roadmap execution to build sustainable and
-                high-value solutions.
-              </GridListItem>
-            </GridList>
-            <div className="mt-10">
-              <Button href="/contact" aria-label="Explore my services">
-                Explore My Services
-              </Button>
-            </div>
-          </SectionIntro>
+          <Services />
 
-          <SectionIntro title={'Why work with me?'} smaller fullWidth>
-            <GridList className="lg:grid-cols-4">
-              <GridListItem title="I take a value-first approach">
-                Every decision is focused on impact, not just technology for
-                technology&apos;s sake.
-              </GridListItem>
-              <GridListItem title="I've been there">
-                Leading teams, building products, and solving complex
-                engineering challenges.
-              </GridListItem>
-              <GridListItem title="I'm both strategic & hands-on">
-                I don&apos;t just advise; I help implement real solutions.
-              </GridListItem>
-              <GridListItem title="I tailor my approach">
-                Every company is different, and I adapt to your specific needs
-                and stage of growth.
-              </GridListItem>
-            </GridList>
-            <div className="mt-10">
-              <Button href="/contact" aria-label="Explore My Services">
-                Let&apos;s Connect
-              </Button>
-            </div>
-          </SectionIntro>
+          <Advantages />
         </div>
       </Container>
 
