@@ -112,36 +112,43 @@ export default async function About() {
             <strong>
               Founder and Software Consultant at Blue Pixel Software
             </strong>
-            , where I’ve taken on <strong>technical leadership roles</strong> as{' '}
-            <strong>Tech Lead and Staff Engineer</strong>, helping my clients
-            scale their engineering teams, improve development workflows, and
-            build products that are both scalable and maintainable. My work
-            spans both <strong>full-stack engineering</strong>, where I’ve built
-            scalable applications with <strong>React</strong>,{' '}
-            <strong>Node.js</strong>, <strong>and cloud platforms</strong>, and{' '}
-            <strong>mobile engineering</strong>, where I’ve led development
-            efforts in <strong>React Native and iOS</strong>.
+            , where I’ve taken on <strong>technical leadership roles</strong> as
+            a <strong>Tech Lead and Staff Engineer</strong>, driving strategy,
+            mentoring teams, and helping companies scale their engineering
+            efforts. I specialize in both{' '}
+            <strong>full-stack development</strong> (React, Node.js, cloud
+            platforms) and <strong>mobile engineering</strong> (React Native,
+            iOS), ensuring that teams build scalable, maintainable, and
+            high-performing systems.
           </p>
           <p>
-            Beyond hands-on development, I’ve helped my clients{' '}
+            I’ve always had an <strong>entrepreneurial drive</strong>, which has
+            shaped how I approach technology and leadership. Whether working
+            with startups or established companies, I bring a{' '}
+            <strong>founder’s mindset</strong>—focused on efficiency,
+            scalability, and long-term impact. Over the years, I’ve led teams
+            and guided technical decisions across{' '}
             <strong>
-              navigate architectural decisions, optimize team performance, and
-              implement best practices that support long-term growth
+              video games, news media, streaming services, e-commerce, health,
+              lotteries, banking, and education
             </strong>
-            . Whether working with early-stage startups or established
-            businesses, my focus has always been on delivering practical,
-            high-impact solutions that drive success.
+            , helping organizations navigate complex challenges with{' '}
+            <strong>
+              strong leadership, strategic thinking, and hands-on expertise
+            </strong>
+            .
           </p>
           <p>
-            Before starting my own consultancy, I spent years in{' '}
-            <strong>technical leadership and engineering roles</strong> across
-            different industries, working with teams of all sizes. Along the
-            way, I’ve led development efforts, shaped technical strategy, and
-            helped build software that real people rely on every day. From
-            scaling architectures to mentoring engineers, each experience has
-            reinforced my belief that great software isn’t just about clean
-            code—it’s about solving real problems in a way that’s sustainable
-            and adaptable as businesses grow.
+            Beyond writing code, my focus has always been on{' '}
+            <strong>building and empowering high-performing teams</strong>. I
+            help organizations establish{' '}
+            <strong>
+              technical vision, improve engineering culture, and implement
+              processes that enable teams to scale efficiently
+            </strong>
+            . Whether defining architecture, optimizing workflows, or mentoring
+            engineers, I aim to create an environment where teams can thrive and
+            deliver meaningful impact.
           </p>
           <p>
             If you&apos;re working through technical challenges, trying to
