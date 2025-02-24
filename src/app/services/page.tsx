@@ -65,7 +65,7 @@ function FractionalCTO() {
           For startups that need senior technical leadership without hiring a
           full-time CTO, I offer:
         </h3>
-        <List className="mt-8">
+        <List className="mt-8 text-lg">
           <ListItem title="Tech Strategy & Roadmap">
             Ensuring your technology stack is scalable, secure, and aligned with
             your long-term business strategy.
@@ -104,7 +104,7 @@ function SoftwareEngineeringConsulting() {
         <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
           I roll up my sleeves and help with:
         </h3>
-        <List className="mt-8">
+        <List className="mt-8 text-lg">
           <ListItem title="Full-Stack & Mobile Development">
             Building reliable, high-performance applications that scale with
             your business, ensuring seamless user experiences and
@@ -143,7 +143,7 @@ function StartupAdvisory() {
           business goals, and setting up the right foundations for growth. My
           services include:
         </h3>
-        <List className="mt-8">
+        <List className="mt-8 text-lg">
           <ListItem title="Technical Feasibility Assessments">
             Evaluating the viability of your product idea, identifying potential
             risks, and ensuring your tech choices align with your long-term

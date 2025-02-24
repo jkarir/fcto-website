@@ -3,42 +3,8 @@ import { type Metadata } from 'next'
 import { loadArticles } from '#src/lib/mdx'
 import { Button } from '@/components/Button'
 import { ContactSection } from '@/components/ContactSection'
-import { Container } from '@/components/Container'
-import { GridList, GridListItem } from '@/components/GridList'
 import { PageIntro } from '@/components/PageIntro'
 import { SectionIntro } from '@/components/SectionIntro'
-
-function Culture() {
-  return (
-    <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
-      <SectionIntro
-        eyebrow="Our culture"
-        title="Balance your passion with your passion for life."
-        invert
-      >
-        <p>
-          We are a group of like-minded people who share the same core values.
-        </p>
-      </SectionIntro>
-      <Container className="mt-16">
-        <GridList>
-          <GridListItem title="Loyalty" invert>
-            Our team has been with us since the beginning because none of them
-            are allowed to have LinkedIn profiles.
-          </GridListItem>
-          <GridListItem title="Trust" invert>
-            We don’t care when our team works just as long as they are working
-            every waking second.
-          </GridListItem>
-          <GridListItem title="Compassion" invert>
-            You never know what someone is going through at home and we make
-            sure to never find out.
-          </GridListItem>
-        </GridList>
-      </Container>
-    </div>
-  )
-}
 
 export const metadata: Metadata = {
   title: 'About Me',
@@ -66,7 +32,7 @@ export default async function About() {
         </p>
       </PageIntro>
       <br />
-      <SectionIntro title="My Approach" smaller>
+      <SectionIntro title="My Approach" smaller fullWidth>
         <div className="space-y-6">
           <p>
             I believe technology should be <strong>a business enabler</strong>,{' '}
@@ -105,7 +71,7 @@ export default async function About() {
         </div>
       </SectionIntro>
       <br />
-      <SectionIntro title="My Background" smaller>
+      <SectionIntro title="My Background" smaller fullWidth>
         <div className="space-y-6">
           <p>
             I’m the{' '}
