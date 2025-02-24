@@ -27,8 +27,6 @@ export const CustomContent: Story = {
   args: {
     eyebrow: 'Our Expertise',
     title: 'Modern solutions for modern problems',
-    description:
-      'We leverage cutting-edge technologies to deliver exceptional results.',
   },
 }
 
