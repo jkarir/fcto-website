@@ -28,9 +28,8 @@ function EngagementModel({ model }: { model: EngagementModel }) {
         </BulletedList>
         <p>
           <strong>{model.pricing.headline}</strong>: {model.pricing.detail}
-          <br />
-          {model.idealFor}
         </p>
+        <p>{model.idealFor}</p>
       </div>
     </ListItem>
   )
