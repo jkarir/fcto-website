@@ -51,8 +51,6 @@ export default async function Home() {
         high-performing digital experience...
       </Testimonial>
 
-      <CallToAction className="mt-10" />
-
       <ContactSection />
     </>
   )
