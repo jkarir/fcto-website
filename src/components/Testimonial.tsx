@@ -1,10 +1,10 @@
-import Image, { type ImageProps } from 'next/image'
-import clsx from 'clsx'
-import { type ReactNode } from 'react'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { GridPattern } from '@/components/GridPattern'
-import { clients, ClientIdentifier } from '@/lib/clients'
+import { ClientIdentifier, clients } from '@/lib/clients'
+import clsx from 'clsx'
+import Image from 'next/image'
+import { type ReactNode } from 'react'
 
 interface TestimonialProps {
   children: ReactNode
@@ -19,8 +19,6 @@ export function Testimonial({
   mode = 'dark',
   className,
 }: TestimonialProps) {
-  const client = clients[clientIdentifier]
-  console.log({ client })
   return (
     <div
       className={clsx(
