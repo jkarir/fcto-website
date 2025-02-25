@@ -1,15 +1,14 @@
-import { type Metadata } from 'next'
 import { BulletedList, BulletedListItem } from '@/components/BulletedList'
 import { ContactSection } from '@/components/ContactSection'
 import { List, ListItem } from '@/components/List'
 import { PageIntro } from '@/components/PageIntro'
 import { SectionIntro } from '@/components/SectionIntro'
 import { SectionTitle } from '@/components/SectionTitle'
+import { type Metadata } from 'next'
 import {
   engagementModels,
   type EngagementModel,
 } from './engagement-model-schema'
-import { CallToAction } from '@/components/Cta'
 
 export const metadata: Metadata = {
   title: 'Engagement Models',

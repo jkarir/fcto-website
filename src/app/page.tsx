@@ -7,7 +7,6 @@ import { Testimonial } from '@/components/Testimonial'
 import { AboutMe } from '@/_pages/home/about-me'
 import { Hero } from '@/_pages/home/hero'
 import { clients } from '@/lib/clients'
-import { CallToAction } from '@/components/Cta'
 
 export const metadata: Metadata = {
   title: 'Fractional CTO & Software Engineering Consultant | Jürgen Karir',
