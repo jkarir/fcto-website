@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import ProcessPage from './page'
+import ProcessPage from './_page'
 
 import imageWhiteboard from '@/images/whiteboard.jpg'
 import imageDebraFiscal from '@/images/team/debra-fiscal.jpg'
