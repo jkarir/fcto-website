@@ -1,6 +1,5 @@
 import { type Metadata } from 'next'
 
-import { loadCaseStudies } from '#src/lib/mdx'
 import { Clients } from '@/_pages/home/clients'
 import { ContactSection } from '@/components/ContactSection'
 import { Testimonial } from '@/components/Testimonial'
@@ -10,13 +9,30 @@ import { Hero } from '@/_pages/home/hero'
 import { clients } from '@/lib/clients'
 
 export const metadata: Metadata = {
+  title: 'Fractional CTO & Software Engineering Consultant | Jürgen Karir',
   description:
-    'We are a development studio working at the intersection of design and technology.',
+    'Helping startups & scale-ups build scalable software, optimize engineering teams, and accelerate product development. Expert in full-stack, mobile, and AI-driven solutions.',
+  keywords: [
+    'Fractional CTO',
+    'Software Consultant',
+    'Tech Advisor',
+    'Full-Stack Development',
+    'Mobile Development',
+    'iOS Development',
+    'React Native',
+    'AI & ML Solutions',
+    'Startup Tech Strategy',
+    'Engineering Leadership',
+  ],
+  openGraph: {
+    title: 'Fractional CTO & Software Engineering Consultant | Jürgen Karir',
+    description:
+      'Helping startups & scale-ups build scalable software, optimize engineering teams, and accelerate product development.',
+    url: 'https://www.jurgenkarir.com',
+  },
 }
 
 export default async function Home() {
-  let caseStudies = (await loadCaseStudies()).slice(0, 3)
-
   return (
     <>
       <Hero />
