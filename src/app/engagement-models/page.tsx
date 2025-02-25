@@ -5,10 +5,8 @@ import { PageIntro } from '@/components/PageIntro'
 import { SectionIntro } from '@/components/SectionIntro'
 import { SectionTitle } from '@/components/SectionTitle'
 import { type Metadata } from 'next'
-import {
-  engagementModels,
-  type EngagementModel,
-} from './engagement-model-schema'
+import { type EngagementModel } from '@/lib/types/engagement-model-schema'
+import { engagementModels } from '@/lib/data/engagement-models'
 
 export const metadata: Metadata = {
   title: 'Engagement Models',
