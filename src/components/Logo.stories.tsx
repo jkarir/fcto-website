@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Logo, Logomark } from './Logo'
+import React from 'react'
 
 const meta = {
   title: 'components/logo',
