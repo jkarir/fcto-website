@@ -26,7 +26,7 @@ export function AboutMe({
       >
         <div className="mt-10 max-w-2xl space-y-6">
           <p>
-            I’m a{' '}
+            I'm a{' '}
             <strong>Fractional CTO and Software Engineering Consultant</strong>,
             specializing in <strong>technology strategy</strong>,{' '}
             <strong>full-stack and mobile development</strong>,{' '}
