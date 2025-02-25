@@ -22,7 +22,7 @@ export function Hero({
       </strong>
       <br />
       <br />
-      I’m <strong>J&#252;rgen Karir</strong>, and I help startups build{' '}
+      I'm <strong>J&#252;rgen Karir</strong>, and I help startups build{' '}
       <strong>scalable, efficient, and high-performing</strong> software—without
       the overhead of a full-time CTO.
     </>
