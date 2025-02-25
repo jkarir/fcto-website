@@ -6,7 +6,7 @@ interface ServicesProps {}
 
 export function Services({}: React.PropsWithChildren<ServicesProps>) {
   return (
-    <>
+    <div className="space-y-10">
       <SectionTitle>How I Help</SectionTitle>
       <GridList className="lg:grid-cols-4">
         <GridListItem title="Fractional CTO Services">
@@ -22,15 +22,14 @@ export function Services({}: React.PropsWithChildren<ServicesProps>) {
           long-term scalability and product-market fit.
         </GridListItem>
         <GridListItem title="Startup Advisory">
-          Guidance on product development, technical hiring, team mentorship,
-          and roadmap execution to build sustainable and high-value solutions.
+          Guidance on MVP development, product strategy, technical hiring, team
+          mentorship, and roadmap execution to build sustainable and high-value
+          solutions.
         </GridListItem>
       </GridList>
-      <div className="mt-10">
-        <Button href="/contact" aria-label="Explore my services">
-          Explore My Services
-        </Button>
-      </div>
-    </>
+      <Button href="/services" aria-label="Explore my services">
+        Explore My Services
+      </Button>
+    </div>
   )
 }

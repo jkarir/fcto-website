@@ -49,7 +49,7 @@ export function AboutMe({
             .
           </p>
           <div className="mt-10">
-            <Button href="/about" aria-label="About Me">
+            <Button href="/about-me" aria-label="About Me">
               About Me
             </Button>
           </div>
@@ -60,17 +60,13 @@ export function AboutMe({
           <Services />
 
           <Advantages />
-        </div>
-      </Container>
-
-      <Container className="mt-16">
-        <Container className="mt-16">
           <StatList>
+            <StatListItem value="19" label="Teams led" />
             <StatListItem value="17" label="Mobile apps shipped" />
             <StatListItem value="15" label="Websites launched" />
-            <StatListItem value="19" label="Teams led" />
+            <StatListItem value="14" label="Successful clients" />
           </StatList>
-        </Container>
+        </div>
       </Container>
     </>
   )

@@ -11,7 +11,7 @@ interface AdvantagesProps {
 
 export function Advantages({}: React.PropsWithChildren<AdvantagesProps>) {
   return (
-    <>
+    <div className="space-y-10">
       <SectionTitle>Why Work With Me?</SectionTitle>
       <GridList className="lg:grid-cols-4">
         <GridListItem title="I take a value-first approach">
@@ -30,11 +30,9 @@ export function Advantages({}: React.PropsWithChildren<AdvantagesProps>) {
           stage of growth.
         </GridListItem>
       </GridList>
-      <div className="mt-10">
-        <Button href="/contact" aria-label="Explore My Services">
-          Let&apos;s Connect
-        </Button>
-      </div>
-    </>
+      <Button href="/engagement-models" aria-label="Engagement Models">
+        Let's Work Together
+      </Button>
+    </div>
   )
 }

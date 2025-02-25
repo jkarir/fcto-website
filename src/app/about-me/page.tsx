@@ -124,7 +124,7 @@ export default async function About() {
         </div>
         <div className="mt-10">
           <Button href="/about" aria-label="About Me">
-            Let&apos;s Connect
+            Let&apos;s Talk
           </Button>
         </div>
       </SectionIntro>
