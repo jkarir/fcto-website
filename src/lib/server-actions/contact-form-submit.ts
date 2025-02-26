@@ -2,14 +2,38 @@
 
 import { redirect } from 'next/navigation'
 import { ContactFormValues } from '../types/contact-form-model-schema'
+import { EmailTemplate } from '@/components/EmailTemplate'
+import { Resend } from 'resend'
 
-export async function submitContactForm(formData: ContactFormValues) {
-  // const name = formData.get('name')
-  // const email = formData.get('email')
-  // const company = formData.get('company')
-  // const message = formData.get('message')
-  // console.log({ name, email, company, message })
+const resend = new Resend(process.env.RESEND_API_KEY)
 
-  // return { success: true }
-  redirect('/')
+export async function submitContactForm({
+  email,
+  message,
+  name,
+  company,
+}: ContactFormValues) {
+  console.log({ email, message, name, company })
+  try {
+    const { data, error } = await resend.emails.send({
+      from: 'Jürgen <jurgen@jurgenkarir.com>',
+      to: [email],
+      subject: 'Thanks For Reaching Out!',
+      react: EmailTemplate({
+        firstName: name,
+        inquiryCompany: company,
+        inquiryProjectDetails: message,
+      }),
+    })
+
+    if (error) {
+      console.error({ error1: error })
+      return { success: false }
+    }
+
+    redirect('/')
+  } catch (error) {
+    console.error({ error2: error })
+    return { success: false }
+  }
 }
