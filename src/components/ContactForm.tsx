@@ -65,6 +65,7 @@ export function ContactForm({}: ContactFormProps) {
               name: 'message',
               control: form.control,
             }}
+            multiLine
           />
         </div>
         <Button type="submit" className="mt-10">
