@@ -1,10 +1,21 @@
 import { useId } from 'react'
+import { FieldValues, useController, UseControllerProps } from 'react-hook-form'
 
-interface TextInputProps extends React.ComponentPropsWithoutRef<'input'> {
+interface TextInputProps<T extends FieldValues>
+  extends React.ComponentPropsWithoutRef<'input'> {
   label: string
+  controllerProps: UseControllerProps<T>
 }
 
-export function TextInput({ label, ...props }: TextInputProps) {
+export function TextInput<T extends FieldValues>({
+  label,
+  controllerProps,
+  ...props
+}: TextInputProps<T>) {
+  const {
+    field,
+    fieldState: { error },
+  } = useController(controllerProps)
   let id = useId()
 
   return (
@@ -12,8 +23,7 @@ export function TextInput({ label, ...props }: TextInputProps) {
       <input
         type="text"
         id={id}
-        {...props}
-        placeholder=" "
+        {...field}
         className="peer block w-full border border-neutral-300 bg-transparent px-6 pb-4 pt-12 text-base/6 text-neutral-950 ring-4 ring-transparent transition focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5 group-first:rounded-t-2xl group-last:rounded-b-2xl"
       />
       <label
@@ -22,6 +32,11 @@ export function TextInput({ label, ...props }: TextInputProps) {
       >
         {label}
       </label>
+      {error?.message && (
+        <p className="absolute right-6 top-3/4 -mt-3 text-sm text-red-600">
+          {error.message}
+        </p>
+      )}
     </div>
   )
 }
