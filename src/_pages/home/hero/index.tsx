@@ -18,11 +18,12 @@ export function Hero({
   description = (
     <>
       <strong>
-        You don't need a full-time CTO—just the right one at the right time.
+        You don&apos;t need a full-time CTO—just the right one at the right
+        time.
       </strong>
       <br />
       <br />
-      I'm <strong>J&#252;rgen Karir</strong>, and I help startups build{' '}
+      I&apos;m <strong>J&#252;rgen Karir</strong>, and I help startups build{' '}
       <strong>scalable, efficient, and high-performing</strong> software—without
       the overhead of a full-time CTO.
     </>

@@ -17,13 +17,13 @@ export default function Contact() {
       <PageIntro eyebrow="Contact Me" title="Let's Connect">
         <div className="space-y-6">
           <p>
-            Building something new? Scaling up? Facing technical roadblocks? I'd
-            love to help.
+            Building something new? Scaling up? Facing technical roadblocks?
+            I&apos;d love to help.
           </p>
           <p>
             Whether you need a{' '}
             <strong>fractional CTO, technical leadership</strong>, or just a
-            fresh perspective on your product's architecture, I bring
+            fresh perspective on your product&apos;s architecture, I bring
             experience, clarity, and a no-nonsense approach to solving complex
             challenges.
           </p>

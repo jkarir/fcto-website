@@ -11,7 +11,13 @@ export function ServiceSection({ service }: ServiceSectionProps) {
     <ImageSection
       title={service.title}
       subTitle={service.subTitle}
-      image={service.image}
+      image={{
+        ...service.image,
+        shape:
+          typeof service.image.shape === 'number'
+            ? (service.image.shape as 0 | 1 | 2)
+            : 0,
+      }}
     >
       <div className="space-y-6 text-base text-neutral-600">
         <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">

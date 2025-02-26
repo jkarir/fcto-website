@@ -14,13 +14,13 @@ export function CallToAction({ className }: CtaProps) {
         smaller
       >
         <p>
-          Whether you're launching an MVP, scaling your platform, or building a
-          high-performing team, I'd love to chat.
+          Whether you&apos;re launching an MVP, scaling your platform, or
+          building a high-performing team, I&apos;d love to chat.
         </p>
 
         <div className="mt-10">
           <Button href="/contact" aria-label="Contact Me">
-            Let's Talk
+            Let&apos;s Talk
           </Button>
         </div>
       </SectionIntro>

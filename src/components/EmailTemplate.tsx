@@ -16,7 +16,7 @@ export function EmailTemplate({
       <div className="font-sans">
         <div className="bg-neutral-950 px-6 py-12 text-white">
           <h1 className="font-display text-2xl font-medium tracking-tight">
-            Let's talk about your project
+            Let&apos;s talk about your project
           </h1>
         </div>
 
@@ -25,12 +25,13 @@ export function EmailTemplate({
 
           <div className="mb-6 space-y-6">
             <p>
-              Really appreciate you getting in touch. I'd love to hear more
-              about what you're working on and what prompted you to reach out.
+              Really appreciate you getting in touch. I&apos;d love to hear more
+              about what you&apos;re working on and what prompted you to reach
+              out.
             </p>
             <p>
-              Let's set up a quick call to chat—just let me know what time works
-              for you, or you can grab a spot on my calendar here:
+              Let&apos;s set up a quick call to chat—just let me know what time
+              works for you, or you can grab a spot on my calendar here:
             </p>
             <Button
               href="https://calendly.com/jurgen-karir/quick-intro-chat"

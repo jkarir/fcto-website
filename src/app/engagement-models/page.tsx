@@ -41,7 +41,7 @@ export default function EngagementModels() {
         title="The Right Technical Leadership, Tailored to Your Needs"
       >
         <p>
-          Every startup and scale-up has unique challenges—whether you're
+          Every startup and scale-up has unique challenges—whether you&apos;re
           launching an MVP, scaling your platform, or optimizing your
           engineering team. I offer flexible engagement models designed to meet
           you where you are and drive meaningful results.
@@ -61,10 +61,10 @@ export default function EngagementModels() {
               leadership it needs
             </strong>
             . Below are some common ways I help{' '}
-            <strong>founders and teams</strong>—whether it's getting an{' '}
+            <strong>founders and teams</strong>—whether it&apos;s getting an{' '}
             <strong>
               MVP off the ground, scaling an engineering org, or making sure
-              your tech won't hold you back
+              your tech won&apos;t hold you back
             </strong>
             .
           </p>

@@ -18,10 +18,10 @@ export default async function About() {
         title="Building Scalable, High-Performing Tech for Startups & Scale-Ups"
       >
         <p>
-          For over 20 years, I've been building software, leading teams, and
-          solving tough technical challenges across a variety of industries. My
-          experience spans <strong>full-stack and mobile development</strong>,{' '}
-          <strong>MACH and composable commmerce</strong>, and{' '}
+          For over 20 years, I&apos;ve been building software, leading teams,
+          and solving tough technical challenges across a variety of industries.
+          My experience spans <strong>full-stack and mobile development</strong>
+          , <strong>MACH and composable commmerce</strong>, and{' '}
           <strong>technical leadership</strong>, but at my core, I love solving
           complex problems and helping companies build software that{' '}
           <strong>delivers real value</strong>.
@@ -32,8 +32,8 @@ export default async function About() {
         <div className="space-y-6">
           <p>
             I believe technology should be <strong>a business enabler</strong>,{' '}
-            <strong>not a roadblock</strong>. Over the years, I've worked with
-            startups and scale-ups, helping them:
+            <strong>not a roadblock</strong>. Over the years, I&apos;ve worked
+            with startups and scale-ups, helping them:
           </p>
           <ul className="ms-4 list-outside list-disc">
             <li>
@@ -47,8 +47,8 @@ export default async function About() {
               support growth
             </li>
             <li>
-              Improve <strong>engineering teams' performance</strong> through
-              better processes and mentorship
+              Improve <strong>engineering teams&apos; performance</strong>{' '}
+              through better processes and mentorship
             </li>
             <li>
               Navigate <strong>startup advisory and tech due diligence</strong>{' '}
@@ -70,12 +70,13 @@ export default async function About() {
       <SectionIntro title="My Background" smaller fullWidth>
         <div className="space-y-6">
           <p>
-            I'm the{' '}
+            I&apos;m the{' '}
             <strong>
               Founder and Software Consultant at Blue Pixel Software
             </strong>
-            , where I've taken on <strong>technical leadership roles</strong> as
-            a <strong>Tech Lead and Staff Engineer</strong>, driving strategy,
+            , where I&apos;ve taken on{' '}
+            <strong>technical leadership roles</strong> as a{' '}
+            <strong>Tech Lead and Staff Engineer</strong>, driving strategy,
             mentoring teams, and helping companies scale their engineering
             efforts. I specialize in both{' '}
             <strong>full-stack development</strong> (React, Node.js, cloud
@@ -84,12 +85,12 @@ export default async function About() {
             high-performing systems.
           </p>
           <p>
-            I've always had an <strong>entrepreneurial drive</strong>, which has
-            shaped how I approach technology and leadership. Whether working
-            with startups or established companies, I bring a{' '}
-            <strong>founder's mindset</strong>—focused on efficiency,
-            scalability, and long-term impact. Over the years, I've led teams
-            and guided technical decisions across{' '}
+            I&apos;ve always had an <strong>entrepreneurial drive</strong>,
+            which has shaped how I approach technology and leadership. Whether
+            working with startups or established companies, I bring a{' '}
+            <strong>founder&apos;s mindset</strong>—focused on efficiency,
+            scalability, and long-term impact. Over the years, I&apos;ve led
+            teams and guided technical decisions across{' '}
             <strong>
               video games, news media, streaming services, e-commerce, health,
               lotteries, banking, and education

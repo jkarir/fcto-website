@@ -31,7 +31,7 @@ export function Advantages({}: React.PropsWithChildren<AdvantagesProps>) {
         </GridListItem>
       </GridList>
       <Button href="/engagement-models" aria-label="Engagement Models">
-        Let's Work Together
+        Let&apos;s Work Together
       </Button>
     </div>
   )
