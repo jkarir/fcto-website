@@ -28,7 +28,7 @@ export function Clients({ clients, className, children }: ClientsProps) {
           >
             {Object.entries(clients).map(([identifier, client]) => (
               <li key={identifier}>
-                <FadeIn className="flex items-center gap-4">
+                <FadeIn className="flex h-full items-center gap-2 sm:gap-4">
                   <Image
                     src={client.image.light}
                     alt={`${client.name} logo`}
@@ -37,7 +37,7 @@ export function Clients({ clients, className, children }: ClientsProps) {
                     className="h-9 w-auto object-contain"
                   />
                   {!client.image.imageisName && (
-                    <p className="text-lg leading-9 text-white">
+                    <p className="hyphens-auto break-words text-sm leading-tight text-white [text-wrap:balance] sm:text-base lg:text-lg">
                       <strong>{client.name}</strong>
                     </p>
                   )}
