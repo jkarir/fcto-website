@@ -32,12 +32,16 @@ export default function Contact() {
       <div className="mt-10 space-y-16">
         <SectionIntro title="What To Expect" smaller>
           <BulletedList>
-            <BulletedListItem>A response within 24 hours.</BulletedListItem>
             <BulletedListItem>
-              A free initial consultation to understand your needs.
+              A response within <strong>24 hours.</strong>
             </BulletedListItem>
             <BulletedListItem>
-              A clear path forward to solving your technical challenges.
+              An <strong>initial conversation</strong> to understand your
+              challenges and goals.
+            </BulletedListItem>
+            <BulletedListItem>
+              A <strong>clear path forward</strong> to solving your technical
+              challenges.
             </BulletedListItem>
           </BulletedList>
         </SectionIntro>

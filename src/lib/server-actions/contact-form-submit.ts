@@ -13,7 +13,6 @@ export async function submitContactForm({
   name,
   company,
 }: ContactFormValues) {
-  console.log({ email, message, name, company })
   try {
     const { data, error } = await resend.emails.send({
       from: 'Jürgen <jurgen@jurgenkarir.com>',
@@ -30,10 +29,9 @@ export async function submitContactForm({
       console.error({ error1: error })
       return { success: false }
     }
-
-    redirect('/')
   } catch (error) {
     console.error({ error2: error })
     return { success: false }
   }
+  redirect('/')
 }

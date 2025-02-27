@@ -1,6 +1,6 @@
-import imageWhiteboard from '@/images/whiteboard.jpg'
-import imageLaptop from '@/images/laptop.jpg'
-import imageMeeting from '@/images/meeting.jpg'
+import imageTechnologyStrategy from '@/images/technology-strategy.webp'
+import imageLaptop from '@/images/software-engineering-consulting.webp'
+import imageStartupAdvisory from '@/images/startup-advisory.webp'
 import { Service } from '@/lib/types/services-model-schema'
 
 export const services: Service[] = [
@@ -9,7 +9,7 @@ export const services: Service[] = [
     subTitle: 'Senior Tech Leadership, Tailored to Your Needs',
     intro:
       'For startups that need senior technical leadership without hiring a full-time CTO, I offer:',
-    image: { src: imageWhiteboard },
+    image: { src: imageTechnologyStrategy, shape: 0 },
     items: [
       {
         title: 'Tech Strategy & Roadmap',
@@ -37,7 +37,7 @@ export const services: Service[] = [
     title: 'Software Engineering Consulting',
     subTitle: 'Hands-On Expertise to Build, Scale & Improve Your Software',
     intro: 'I roll up my sleeves and help with:',
-    image: { src: imageLaptop },
+    image: { src: imageLaptop, shape: 1 },
     items: [
       {
         title: 'Full-Stack & Mobile Development',
@@ -66,7 +66,7 @@ export const services: Service[] = [
     subTitle: 'From Idea to Execution: Laying a Strong Foundation',
     intro:
       'I work with early-stage startups to turn ideas into tangible, scalable products by validating technical feasibility, aligning technology with business goals, and setting up the right foundations for growth. My services include:',
-    image: { src: imageWhiteboard },
+    image: { src: imageStartupAdvisory, shape: 2 },
     items: [
       {
         title: 'Technical Feasibility Assessments',
