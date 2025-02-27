@@ -53,7 +53,7 @@ export function ContactForm({}: ContactFormProps) {
             label="Email"
           />
           <TextInput<ContactFormValues>
-            label="Company"
+            label="Company (optional)"
             controllerProps={{
               name: 'company',
               control: form.control,
