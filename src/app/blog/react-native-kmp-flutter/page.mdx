@@ -1,0 +1,440 @@
+import imageLeslieAlexander from '@/images/jurgen-karir-cropped.jpg'
+import { MDXComponents } from '@/components/MDXComponents'
+import { List, ListItem } from '@/components/List'
+import { BulletedList, BulletedListItem } from '@/components/BulletedList'
+
+export const article = {
+  date: '2023-02-18',
+  title: 'React Native vs Kotlin Multiplatform vs Flutter: A Strategic Guide',
+  description:
+    'You want to build a mobile app, most likely targeting iOS and Android, but which framework should you use?',
+  author: {
+    name: 'Jürgen Karir',
+    role: 'Fractional CTO',
+    image: { src: imageLeslieAlexander },
+  },
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+## Introduction: The Cross-Platform Dilemma
+
+A mobile app is a **must-have** for almost every company today. For some, it's their **primary business driver**. Every organization aims to offer a seamless experience on both iOS and Android, and relying solely on a web app often _isn’t enough_.
+
+However, developing two separate apps with shared functionality is both **costly** and **time-consuming**. This is especially challenging for startups and small to medium-sized businesses that need **speed and efficiency** to hit their goals—whether launching an **MVP**, iterating to find _product-market fit_, or scaling up.
+
+Cross-platform solutions like **React Native, Kotlin Multiplatform (KMP), and Flutter** solve this problem. Their _"code once, run everywhere"_ approach speeds up development, reduces costs, and makes scaling easier. Even **major tech companies** have embraced this strategy because of its business advantages.
+
+The question then is: **which framework should you use?** The answer, as is often the case, _isn't just a technical one_—**it’s a strategic decision**. This article will help you understand which solution best fits your needs and supports your **business goals**.
+
+## A Brief History and Where We Are Today
+
+React Native was the first of the three to emerge in **2015**. Introduced by **Facebook (Meta)**, it quickly gained steam, mainly because it's based on **React's web development model**, which was and still is a development framework of choice for many front-end web developers. Given that and the impressive ecosystem surrounding React, React Native enjoys a considerable 38% market share.
+
+**Google**'s answer to React Native was the introduction of Flutter in **2017**. Its powerful tooling and commitment to achieving near-native performance have pushed it past React Native, and it currently leads the cross-platform market with a 42% adoption rate.
+
+In that same year, **2017** saw **JetBrains**, the authors of the Kotlin programming language, announcing their cross-platform framework, Kotlin Multiplatform. However, since it only became production-ready in late 2023, it has a corresponding small market share of around 2%.
+
+## The Technology Behind Each Framework: How Do They Work?
+
+Before diving into how these frameworks work, it helps to first clarify **what they are not**. They are **not** designed for building web or hybrid mobile apps like **Cordova** or **Ionic**.
+
+The latter rely heavily on front-end web technologies such as HTML, Javascript, and CSS and render their content in a **web browser**, which can limit performance and the overall user experience.
+
+In contrast, the cross-platform frameworks being discussed here-**React Native, Kotlin Multiplatform (KMP), and Flutter**-help developers build **fully native apps**.
+
+### How Are These Different?
+
+In a fully native approach, the **UI components are rendered directly by the operating system**. There is no browser, just a fully native experience. There’s _no embedded web browser_, just a seamless, platform-native experience.
+
+Each framework takes a **unique approach** to achieving this, but they all rely on:
+
+- A **dedicated programming language**
+- A **specific development workflow**
+- A **set of tools** that enable deployment across multiple platforms
+
+### What This Means For Startups & Teams
+
+Not surprisingly, all three frameworks vary in **architecture, strengths, and trade-offs**. The right choice depends on factors like development speed, scalability, and team expertise. **Startups and engineering teams** looking to adopt cross-platform development need to evaluate **which framework best aligns with their goals**.
+
+### React Native: Javascript and Native Bridge
+
+**React Native** is built on **React**, allowing developers to use **JavaScript and JSX** (or **TypeScript and TSX**) to create native mobile apps. The development process feels **very similar** to building a web application.
+
+A core feature of React Native is its **declarative UI approach**. Developers assemble **reusable UI components**, making it easier to build **dynamic, responsive interfaces** that run on both **iOS and Android** using **native UI components and APIs**.
+
+For example, a **\<View\>** in **React Native** maps to a **ViewGroup** on Android to a **UIView** on iOS.
+
+One of React Native’s **biggest advantages** is its ability to share a **significant amount of functionality** across platforms. This includes:
+
+- **UI components** that work on both iOS and Android.
+- **Business logic** written in JavaScript, reducing the need for platform-specific code.
+
+However, React Native **relies on a JavaScript bridge** to communicate with **native modules** for rendering and executing logic. This extra step **introduces overhead**, which can lead to latency issues. Because of this, React Native apps **cannot match the performance** of fully native applications.
+
+![React Native Architecture](/src/app/blog/react-native-kmp-flutter/rn.png 'React Native Architecture')
+
+### Flutter: A Custom Rendering Engine
+
+**Flutter** takes a similar approach to **React Native's** strategy of implementing **UI and business logic once** and applying it across all targeted platforms.
+
+However, unlike React Native, which uses the **OS’s native UI elements**, Flutter **renders everything from scratch** using a **dedicated rendering engine**. This gives Flutter **full control** over how the UI looks and behaves, ensuring a **consistent user experience** across platforms. In a way, Flutter works more like a **game engine**, drawing everything itself rather than relying on platform-specific components.
+
+Flutter uses the **Dart programming language** to implement both **UI and business logic**. Since it owns the **entire rendering stack**, Flutter apps run **incredibly close** to **fully native performance**. This level of control allows for smooth animations, fast load times, and a highly responsive user interface.
+
+![Flutter architecture](/src/app/blog/react-native-kmp-flutter/flutter.png 'Flutter Architecture')
+
+### KMP: Native Business Logic, Separate UI
+
+Compared to **React Native** and **Flutter, Kotlin Multiplatform (KMP)** takes a **different approach**. Instead of sharing both **UI and business logic**, KMP focuses primarily on **business logic**, while leaving the **UI to be handled natively** on each platform. _This makes it fundamentally different from React Native and Flutter, which aim to unify UI development as well_.
+
+As the name suggests, **Kotlin** is the programming language used to develop the **shared functionality**. This shared code can then be added to a native app as a **dependency**, allowing teams to reuse business logic without modifying the UI layer. **With this approach, developers maintain full control over the user experience on iOS and Android** while benefiting from code reusability on the backend.
+
+KMP compiles to **native Kotlin** for Android and **Kotlin Native** for iOS. Since there’s no extra runtime or intermediary bridge, the code runs **directly on the native platform**, ensuring better performance compared to frameworks that rely on JavaScript bridges.
+
+Because of its **modular nature, KMP can be integrated into existing apps** without requiring a complete rewrite. This makes it an excellent option for companies that want to **introduce cross-platform functionality gradually**, rather than committing to a full migration upfront.
+
+_Note: Compose Multiplatform has not been included in this article since iOS support is still only in beta at the time of writing._
+
+![KMP Architecture](/src/app/blog/react-native-kmp-flutter/kmp.png 'KMP Architecture')
+
+## Business Use Cases: Which Framework Fits Best?
+
+The choice of framework depends on **industry needs and the company's stage**; startups and enterprises have different priorities.
+
+### 1\. Fintech & Banking Apps:
+
+**Key factors:**
+
+- **Security is the #1 priority** (handling sensitive user data, transactions, and identity verification).
+- **High compliance requirements** (GDPR, PCI-DSS, PSD2, SOC 2).
+- Robust API communication (transaction volume, data encryption, data processing)
+- Real-time data processing (stock markets, crypto trading)
+
+**Why KMP Is The Best Match:**
+
+- **Fully native UI ensures fast, smooth financial dashboards.**
+- **Direct OS security access** (biometrics, secure storage, encryption).
+- **Best for compliance** (GDPR, PCI-DSS, PSD2) with **more straightforward audit readiness**.
+- Because of its **multithreaded capabilities** and access to the **platform-native networking clients**, it can handle many requests and responses in parallel.
+
+**Best for**: Banking apps, trading platforms, payment processors, crypto wallets
+
+**Why Not RN or Flutter**?
+
+- **React Native**: JavaScript-based = **security vulnerabilities and potential performance issues**.
+- **Flutter:** Custom rendering = **not ideal for platform-native security features**.
+
+### 2\. Consumer Social Apps (Instagram, Messaging) – Why React Native is Ideal:
+
+**Key Factors:**
+
+- **Speed-to-market is crucial** (rapid iteration & deployment).
+- **Heavy use of real-time interactions** (chat, comments, video).
+- **Integration with web applications** (cross-platform reach).
+- **Frequent UI updates** (social apps require fast feature rollouts).
+
+#### **Why React Native Works Best for Social Apps:**
+
+- **Fast development cycle** using JavaScript & React.
+- **Seamless integration with web platforms** (leverages React ecosystem).
+- **Supports real-time messaging, notifications, and social interactions**.
+- **Large developer talent pool, making it easier to hire engineers.**
+
+**Best for:** Social networks, messaging apps, live-streaming platforms.
+
+**Why Not KMP or Flutter?**
+
+- **KMP:** Requires separate UI implementation, slowing down social app iterations.
+- **Flutter:** Heavier app size & performance overhead for animations.
+
+### 3\. E-Commerce & Retail – Why Flutter or React Native Works Best
+
+**Key Factors:**
+
+- **UI-heavy experiences** (product catalogs, animations, filtering).
+- **Cross-platform demand** (mobile & web must be in sync).
+- **Scalability for promotions & seasonal spikes**.
+
+#### **Why Flutter or React Native Works Best for Retail**
+
+- **Flutter:** Provides **pixel-perfect UI** for branding & consistent product displays.
+- **React Native:** Faster iterations, good for marketplaces and dynamic content.
+- **Both frameworks support shared UI across mobile & web.**
+
+**Best for:** Shopping apps, online marketplaces, and food delivery.
+
+**Why Not KMP?**
+
+- KMP requires separate UI work per platform, slowing down e-commerce feature updates.
+
+### **4\. SaaS & Enterprise Apps – Why KMP is the Best Choice**
+
+**Key Factors:**
+
+- **Seamless backend integration** (SaaS platforms run on Java/Kotlin-based stacks).
+- **Security & data integrity** (corporate tools require encrypted data storage).
+- **Long-term maintainability** (enterprise apps last for years, needing stable tech).
+
+#### **Why KMP Works Best for Enterprise SaaS**
+
+- **Best backend compatibility** (works with JVM-based services).
+- **Direct integration with enterprise security protocols**.
+- **Long-term maintainability**—no reliance on third-party libraries that could break.
+
+**Best for:** Business dashboards, productivity tools, HR & finance software.
+
+**Why Not RN or Flutter?**
+
+- **RN:** JavaScript-based → **not great for handling complex enterprise logic**.
+- **Flutter:** Larger app sizes may not be ideal for **corporate environments with security restrictions**.
+
+### **5\. Highly Customized UI (Animation-Heavy Apps) – Why Flutter is Best**
+
+**Key Factors:**
+
+- **High-quality animations are essential** (media & entertainment apps).
+- **Smooth performance across devices**.
+- **Full control over UI design**.
+
+#### **Why Flutter Works Best for Custom UI & Animation-Heavy Apps**
+
+- **Uses Skia rendering engine for pixel-perfect UI**.
+- **Consistent design across all platforms**.
+- **Best for creating complex UI transitions & animations**.
+
+**Best for:** Design-heavy apps, interactive entertainment, creative tools.
+
+**Why Not KMP or RN?**
+
+- **KMP:** Relies on **native UI frameworks**, making custom animations harder.
+- **RN:** JavaScript bridge adds **latency for animations & frame rendering.**
+
+### Summary: Industry-Specific Framework Recommendations
+
+| **Industry**               | **Best Framework**          | **Why?**                                                                      |
+| -------------------------- | --------------------------- | ----------------------------------------------------------------------------- |
+| **Fintech & Banking Apps** | **KMP**                     | **Native UI, security, and compliance-focused**                               |
+| **Consumer Social Apps**   | **React Native**            | **Fast development, reusable UI, great for web-to-mobile teams**              |
+| **E-commerce & Retail**    | **Flutter or React Native** | **UI-heavy, needs smooth product displays and a unified shopping experience** |
+| **SaaS & Enterprise Apps** | **KMP**                     | **Backend integration, security, and long-term maintainability**              |
+| **Highly Customized UI**   | **Flutter**                 | **Best rendering engine, pixel-perfect UI consistency**                       |
+
+## Company Stage & Framework Suitability
+
+The right framework also depends on **where a company is in its growth cycle**:
+
+#### Startups & MVPs – Why React Native or Flutter?
+
+- **Speed-to-market is the #1 priority** → Faster iterations are needed.
+- **Lower development cost** → Fewer engineers needed.
+- **Shared codebase** → Web & mobile can be developed simultaneously.
+
+**Best Fit:** **React Native (if web is a priority) or Flutter (if UI consistency is key).**
+
+#### **Growth-Stage Companies – Why Flutter or KMP?**
+
+- **Scalability becomes more important** → Needs a solid foundation.
+- **Refactoring from MVP to production-grade app** → Need better performance & maintainability.
+
+**Best Fit:** **Flutter (for multi-platform growth) or KMP (for native scaling).**
+
+#### **Enterprises & Large Organizations – Why KMP or Flutter?**
+
+- **Security & compliance are the top concerns**.
+- **Long-term support & maintainability** → Avoid reliance on third-party tools.
+- **Direct integration with enterprise backends** (Java/Kotlin stacks).
+
+**Best Fit:** **KMP (best for backend security & integration) or Flutter (for UI-heavy enterprise apps).**
+
+### Summary: Framework Choice Based on Company Stage
+
+| **Company Stage**                     | **Best Framework**          | **Why?**                                               |
+| ------------------------------------- | --------------------------- | ------------------------------------------------------ |
+| **Startups & MVPs**                   | **React Native or Flutter** | **Faster iteration, lower costs**                      |
+| **Growth-Stage Companies**            | **Flutter or KMP**          | **Scaling across platforms, improved maintainability** |
+| **Enterprises & Large Organizations** | **KMP or Flutter**          | **Security, long-term stability, compliance**          |
+
+## Developer Availability & Hiring Difficulty
+
+**Why It Matters:**
+
+- A framework with **a larger developer pool** is **easier and cheaper** to hire for.
+- A framework with **scarce talent** means **higher salaries and longer hiring cycles**.
+
+#### **React Native – Easier to Hire, Large Talent Pool**
+
+- **One of the easiest frameworks to hire for** due to JavaScript’s popularity.
+- **Many web developers already know React**, so they can transition into RN.
+- **Freelancers & agencies are widely available**, reducing outsourcing costs.
+
+**Hiring Difficulty: LOW** (many JavaScript & React developers available).
+
+#### **Flutter – Growing, but Still Fewer Devs than React Native**
+
+- **Dart is easier to learn than native languages (Swift/Kotlin)**, but fewer devs specialize in it.
+- **Hiring Flutter developers is easier than KMP but harder than RN**.
+- **Google is pushing Flutter adoption, so talent availability is improving**.
+
+**Hiring Difficulty: MEDIUM** (growing community, but still smaller than RN).
+
+#### **Kotlin Multiplatform (KMP) – Hardest to Hire For**
+
+- **Fewer developers specialize in KMP**, as it's still a niche technology.
+- **Requires developers with both Kotlin & iOS knowledge**, making hiring harder.
+- **Most KMP devs come from the Android world**, meaning finding one with iOS experience can be a challenge.
+
+**Hiring Difficulty: HIGH** (small talent pool, requires strong Android/iOS expertise).
+
+| **Framework**    | **Developer Availability**                        | **Hiring Difficulty** | **Talent Pool Growth**             |
+| ---------------- | ------------------------------------------------- | --------------------- | ---------------------------------- |
+| **React Native** | **Largest talent pool** (JavaScript & React devs) | **Easy to hire**      | Growing steadily                   |
+| **Flutter**      | **Moderate talent pool**                          | **Medium difficulty** | Growing (Google-backed)            |
+| **KMP**          | **Small talent pool**                             | **Hard to hire**      | Slower growth (enterprise-focused) |
+
+## Developer Salaries & Hiring Costs
+
+**Why It Matters:**
+
+- **Scarcity = higher salaries.**
+- More developers mean **lower hiring costs**, as competition among devs drives salaries down.
+
+#### **React Native – Cheapest Hiring Costs**
+
+- **JavaScript developers are abundant**, so RN dev salaries are lower than KMP/Flutter.
+- Startups often **outsource RN development cheaply**.
+- **Freelance RN devs are widely available.**
+
+#### **Flutter – Slightly Higher Salaries**
+
+- **Flutter devs are in higher demand** than supply, making salaries higher than RN.
+- **More specialized skill set required** (Dart + cross-platform mindset).
+
+#### **Kotlin Multiplatform (KMP) – Most Expensive Hiring Costs**
+
+- **KMP requires strong Kotlin knowledge**, limiting the talent pool.
+- **Salaries are closer to native Android/iOS developers**, making KMP devs the most expensive.
+- **Few freelancers specialize in KMP**, meaning most companies hire full-time devs instead of outsourcing.
+
+**Key Takeaway:**
+
+- **React Native is the cheapest to hire for** due to its large talent pool.
+- **Flutter is slightly more expensive but still more affordable than KMP.**
+- **KMP has the highest hiring costs** since it requires native-level expertise.
+
+## Long-Term Maintenance & Cost of Ownership
+
+**Why It Matters:**
+
+- **Short-term development costs ≠ long-term costs.**
+- A framework with **higher maintenance needs** will cost more **over time**.
+
+#### **React Native – Cheaper at First, But Higher Maintenance Costs**
+
+- **PROS:**
+  - **Fastest time-to-market** (lower initial cost).
+- **CONS:**
+  - **Heavy reliance on third-party libraries** can break.
+  - **Frequent updates to React Native itself**, requiring ongoing maintenance.
+  - **Native modules increase long-term complexity.**
+
+**Total Cost of Ownership: MEDIUM-HIGH**
+
+- Starts cheap, but maintenance costs increase over time.
+
+#### **Flutter – Moderate Maintenance Costs**
+
+**PROS:**
+
+- **Google-backed, fewer breaking changes than RN.**
+- **Fewer dependencies compared to RN, reducing risk of breaking updates.**
+
+**CONS:**
+
+- **Larger app size can impact long-term performance on lower-end devices.**
+
+**Total Cost of Ownership: MEDIUM**
+
+- **Lower maintenance than RN, but more than KMP.**
+
+#### **KMP – Highest Initial Cost, Lowest Long-Term Maintenance**
+
+**PROS:**
+
+- **Works seamlessly with existing native apps, reducing long-term tech debt.**
+- **Lower reliance on third-party dependencies, making maintenance easier.**
+
+**CONS:**
+
+- **Harder to develop upfront due to talent scarcity.**
+
+**Total Cost of Ownership: LOWEST**
+
+- **Expensive at first, but cheaper in the long run due to lower maintenance.**
+
+| **Framework**    | **Initial Development Cost** | **Long-Term Maintenance Cost**                              | **Overall Cost Efficiency**            |
+| ---------------- | ---------------------------- | ----------------------------------------------------------- | -------------------------------------- |
+| **React Native** | **Lowest**                   | **High (frequent updates, third-party dependencies)**       | **Starts cheap but gets expensive**    |
+| **Flutter**      | **Medium**                   | **Medium (fewer dependencies than RN)**                     | **Good balance**                       |
+| **KMP**          | **Highest (harder to hire)** | **Lowest (better long-term stability, fewer dependencies)** | **Best for long-term cost efficiency** |
+
+#### **Final Takeaways**
+
+- **Hiring Cost:**
+  - **React Native is cheapest** due to JavaScript’s large talent pool.
+  - **Flutter is moderately priced.**
+  - **KMP is the most expensive to hire for.**
+- **Long-Term Cost Efficiency:**
+  - **RN is cheap upfront but has high maintenance costs.**
+  - **Flutter is balanced.**
+  - **KMP is expensive upfront but cheapest in the long run.**
+
+## Final Takeaways – Which Framework is Best for Your Needs?
+
+**Choosing the right framework depends on your priorities:**
+
+##### **Choose Kotlin Multiplatform (KMP) if:**
+
+- **Security, compliance, and backend integration** are top priorities (e.g., fintech, enterprise, SaaS).
+- You want **long-term cost efficiency** (lower maintenance, fewer third-party dependencies).
+- You’re **building a native-quality app** with shared business logic but platform-specific UI.
+
+**Best for:** **Fintech, enterprise SaaS, security-heavy applications.**
+
+#####
+
+##### **Choose React Native (RN) if:**
+
+- You need **fast time-to-market** and an **easily scalable developer team**.
+- Your app is **consumer-focused**, with frequent updates and a **strong web-to-mobile connection**.
+- You’re on a **tight budget** and want **lower initial development costs**.
+
+**Best for:** **Social media, content-based apps, startups, e-commerce.**
+
+##### **Choose Flutter if:**
+
+- You want **a single UI codebase across mobile, web, and desktop** (multi-platform reach).
+- Your app **requires highly customized UI or animations** (e.g., media, entertainment, or design-heavy apps).
+- You need **better performance than RN** but still want a **cross-platform solution**.
+
+**Best for:** **Retail, creative tools, design-heavy applications, animation-focused apps.**
+
+### Key Decision-Making Factors at a Glance:
+
+| **Factor**                     | **Kotlin Multiplatform (KMP)**                | **React Native (RN)**                            | **Flutter**                                      |
+| ------------------------------ | --------------------------------------------- | ------------------------------------------------ | ------------------------------------------------ |
+| **Security & Compliance**      | Best (native encryption, backend integration) | Weaker (JavaScript vulnerabilities)              | Moderate (custom engine)                         |
+| **Developer Availability**     | Hardest to hire                               | Easiest to hire                                  | Growing but fewer devs than RN                   |
+| **Initial Development Cost**   | High (fewer devs, complex setup)              | Low (fast, many devs)                            | Medium (smaller talent pool)                     |
+| **Long-Term Maintenance Cost** | Lowest (fewer third-party dependencies)       | High (frequent library updates)                  | Medium (better than RN, but Google-controlled)   |
+| **Performance & UI**           | Best for native performance                   | Slower (JS bridge overhead)                      | Best for UI-heavy apps                           |
+| **Best For**                   | **Fintech, SaaS, security-heavy apps**        | **Startups, social, e-commerce, fast iteration** | **Retail, creative tools, animation-heavy apps** |
+
+**Final Thought:**
+
+- **If security & backend integration matter most → KMP.**
+- **If you need fast development & web-to-mobile synergy → React Native.**
+- **If you want pixel-perfect UI & multi-platform reach → Flutter.**
