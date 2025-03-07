@@ -5,8 +5,21 @@ import { Border } from '@/components/Border'
 import { GrayscaleTransitionImage } from '@/components/GrayscaleTransitionImage'
 import { StatList, StatListItem } from '@/components/StatList'
 import { TagList, TagListItem } from '@/components/TagList'
+import { BulletedList, BulletedListItem } from '@/components/BulletedList'
 
 export const MDXComponents = {
+  ul: function Ul({ ...props }) {
+    return <ul className="" {...props} />
+  },
+  ol: function Ol({ ...props }) {
+    return <ol className="marker:text-leading-none m-1" {...props} />
+  },
+  li: function Li({ ...props }) {
+    return <li className="m-1" {...props} />
+  },
+  p: function P({ ...props }) {
+    return <p {...props} />
+  },
   Blockquote({
     className,
     ...props
@@ -27,7 +40,7 @@ export const MDXComponents = {
         <GrayscaleTransitionImage
           {...props}
           sizes="(min-width: 768px) 42rem, 100vw"
-          className="aspect-[16/10] w-full object-cover"
+          className="aspect-[16/10] w-full object-contain"
         />
       </div>
     )
