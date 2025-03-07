@@ -1,0 +1,162 @@
+import imageLeslieAlexander from '@/images/jurgen-karir-cropped.jpg'
+import { MDXComponents } from '@/components/MDXComponents'
+import { List, ListItem } from '@/components/List'
+import { BulletedList, BulletedListItem } from '@/components/BulletedList'
+
+export const article = {
+  date: '2025-03-07',
+  title:
+    'React Native vs Kotlin Multiplatform vs Flutter: A Strategic Guide - Part 1',
+  description:
+    'React Native, Kotlin Multiplatform, and Flutter are the top cross-platform frameworks today. But which one should you choose? This article breaks down the technical differences and strategic implications of each framework.',
+  author: {
+    name: 'Jürgen Karir',
+    role: 'Fractional CTO',
+    image: { src: imageLeslieAlexander },
+  },
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+## Table of Contents
+
+1. [Introduction: The Cross-Platform Dilemma](#item-1)
+2. [A Brief History and Where We Are Today](#item-2)
+3. [The Technology Behind Each Framework: How Do They Work?](#item-3)
+
+   1. [How Are These Different?](#item-3.1)
+   2. [What This Means For Startups & Teams](#item-3.2)
+   3. [React Native: Javascript and Native Bridge](#item-3.3)
+   4. [Flutter: A Custom Rendering Engine](#item-3.4)
+   5. [KMP: Native Business Logic, Separate UI](#item-3.5)
+
+4. [Framework Evolution And Adoption – Where Are These Frameworks Headed?](#item-4)
+
+   1. [Flutter: Expanding Beyond Mobile](#item-4.1)
+   2. [React Native: Architectural Shift with Fabric](#item-4.2)
+   3. [Kotlin Multiplatform: Steady Growth in Enterprise](#item-4.3)
+
+5. [Conclusion: Key Takeaways And Where To Go Next](#item-5)
+
+<a id="item-1"></a>
+## Introduction: The Cross-Platform Dilemma
+
+A mobile app is a **must-have** for almost every company today. For some, it's their **primary business driver**. Every organization aims to offer a seamless experience on both iOS and Android, and relying solely on a web app often _isn’t enough_.
+
+However, developing two separate apps with shared functionality is both **costly** and **time-consuming**. This is especially challenging for startups and small to medium-sized businesses that need **speed and efficiency** to hit their goals—whether launching an **MVP**, iterating to find _product-market fit_, or scaling up.
+
+Cross-platform solutions like **React Native, Kotlin Multiplatform (KMP), and Flutter** solve this problem. Their _"code once, run everywhere"_ approach speeds up development, reduces costs, and makes scaling easier. Even **major tech companies** have embraced this strategy because of its business advantages.
+
+The question then is: **which framework should you use?** The answer, as is often the case, _isn't just a technical one_—**it’s a strategic decision**. This article will help you understand which solution best fits your needs and supports your **business goals**.
+
+<a id="item-2"></a>
+## A Brief History and Where We Are Today
+
+React Native was the first of the three to emerge in **2015**. Introduced by **Facebook (Meta)**, it quickly gained steam, mainly because it's based on **React's web development model**, which was and still is a development framework of choice for many front-end web developers. Given that and the impressive ecosystem surrounding React, React Native enjoys a considerable 38% market share.
+
+**Google**'s answer to React Native was the introduction of Flutter in **2017**. Its powerful tooling and commitment to achieving near-native performance have pushed it past React Native. Over time, Flutter expanded beyond mobile to **web, desktop, and embedded platforms**, becoming a full-stack UI toolkit and it currently leads the cross-platform market with a 42% adoption rate.
+
+In that same year, **2017** saw **JetBrains**, the authors of the Kotlin programming language, announcing their cross-platform framework, Kotlin Multiplatform. Designed to integrate seamlessly with **existing native applications**, making it attractive for enterprises. However, since it only became production-ready in late 2023, it has a corresponding small market share of around 2%.
+
+<a id="item-3"></a>
+## The Technology Behind Each Framework: How Do They Work?
+
+Before diving into how these frameworks work, it helps to first clarify **what they are not**. They are **not** designed for building web or hybrid mobile apps like **Cordova** or **Ionic**.
+
+The latter rely heavily on front-end web technologies such as HTML, Javascript, and CSS and render their content in a **web browser**, which can limit performance and the overall user experience.
+
+In contrast, the cross-platform frameworks being discussed here-**React Native, Kotlin Multiplatform (KMP), and Flutter**-help developers build **fully native apps**.
+
+<a id="item-3.1"></a>
+### How Are These Different?
+
+In a fully native approach, the **UI components are rendered directly by the operating system**. There is no browser, just a fully native experience. There’s _no embedded web browser_, just a seamless, platform-native experience.
+
+Each framework takes a **unique approach** to achieving this, but they all rely on:
+
+- A **dedicated programming language**
+- A **specific development workflow**
+- A **set of tools** that enable deployment across multiple platforms
+
+<a id="item-3.2"></a>
+### What This Means For Startups & Teams
+
+Not surprisingly, all three frameworks vary in **architecture, strengths, and trade-offs**. The right choice depends on factors like development speed, scalability, and team expertise. **Startups and engineering teams** looking to adopt cross-platform development need to evaluate **which framework best aligns with their goals**.
+
+<a id="item-3.3"></a>
+### React Native: Javascript and Native Bridge
+
+**React Native** is built on **React**, allowing developers to use **JavaScript and JSX** (or **TypeScript and TSX**) to create native mobile apps. The development process feels **very similar** to building a web application.
+
+A core feature of React Native is its **declarative UI approach**. Developers assemble **reusable UI components**, making it easier to build **dynamic, responsive interfaces** that run on both **iOS and Android** using **native UI components and APIs**.
+
+For example, a **\<View\>** in **React Native** maps to a **ViewGroup** on Android to a **UIView** on iOS.
+
+One of React Native’s **biggest advantages** is its ability to share a **significant amount of functionality** across platforms. This includes:
+
+- **UI components** that work on both iOS and Android.
+- **Business logic** written in JavaScript, reducing the need for platform-specific code.
+
+However, React Native **relies on a JavaScript bridge** to communicate with **native modules** for rendering and executing logic. This extra step **introduces overhead**, which can lead to latency issues. Because of this, React Native apps **cannot match the performance** of fully native applications. Over time, Meta invested in improving performance (**Hermes engine, Fabric architecture**), but the JS bridge remains a challenge.
+
+![React Native Architecture](/src/app/blog/react-native-kmp-flutter-part-1/rn.png 'React Native Architecture')
+
+<a id="item-3.4"></a>
+### Flutter: A Custom Rendering Engine
+
+**Flutter** takes a similar approach to **React Native's** strategy of implementing **UI and business logic once** and applying it across all targeted platforms.
+
+However, unlike React Native, which uses the **OS’s native UI elements**, Flutter **renders everything from scratch** using a **dedicated rendering engine (Skia)**. This gives Flutter **full control** over how the UI looks and behaves, ensuring a **consistent user experience** across platforms. In a way, Flutter works more like a **game engine**, drawing everything itself rather than relying on platform-specific components.
+
+Flutter uses the **Dart programming language** to implement both **UI and business logic**. Since it owns the **entire rendering stack**, Flutter apps run **incredibly close** to **fully native performance**. This level of control allows for smooth animations, fast load times, and a highly responsive user interface.
+
+![Flutter architecture](/src/app/blog/react-native-kmp-flutter-part-1/flutter.png 'Flutter Architecture')
+
+<a id="item-3.5"></a>
+### KMP: Native Business Logic, Separate UI
+
+Compared to **React Native** and **Flutter, Kotlin Multiplatform (KMP)** takes a **different approach**. Instead of sharing both **UI and business logic**, KMP focuses primarily on **business logic**, while leaving the **UI to be handled natively** on each platform. _This makes it fundamentally different from React Native and Flutter, which aim to unify UI development as well_.
+
+As the name suggests, **Kotlin** is the programming language used to develop the **shared functionality**. This shared code can then be added to a native app as a **dependency**, allowing teams to reuse business logic without modifying the UI layer. **With this approach, developers maintain full control over the user experience on iOS and Android** while benefiting from code reusability on the backend.
+
+KMP compiles to **native Kotlin** for Android and **Kotlin Native** for iOS. Since there’s no extra runtime or intermediary bridge, the code runs **directly on the native platform**, ensuring better performance compared to frameworks that rely on JavaScript bridges.
+
+Because of its **modular nature, KMP can be integrated into existing apps** without requiring a complete rewrite. This makes it an excellent option for companies that want to **introduce cross-platform functionality gradually**, rather than committing to a full migration upfront.
+
+_Note: Compose Multiplatform has not been included in this article since iOS support is still only in beta at the time of writing._
+
+![KMP Architecture](/src/app/blog/react-native-kmp-flutter-part-1/kmp.png 'KMP Architecture')
+
+<a id="item-4"></a>
+## Framework Evolution And Adoption – Where Are These Frameworks Headed?
+
+As with any technology decision, it’s essential to consider the **long-term viability** of the frameworks you choose. Here’s a brief overview of how each framework is positioned for the future:
+
+<a id="item-4.1"></a>
+### Flutter: Expanding Beyond Mobile
+
+- Flutter is expanding rapidly beyond mobile into **web, desktop, and embedded systems**, positioning itself as a full-stack UI framework.
+- Google is investing heavily in Flutter’s multi-platform capabilities, making it a strong option for companies looking for a unified UI solution.
+
+<a id="item-4.2"></a>
+### React Native: Architectural Shift with Fabric
+
+- React Native is undergoing a **significant architectural shift with Fabric**, aiming to improve performance and native integration, though it may introduce breaking changes.
+- Meta is also refining **Hermes**, its custom JavaScript engine, to enhance execution speed and efficiency.
+
+<a id="item-4.3"></a>
+### Kotlin Multiplatform: Steady Growth in Enterprise
+
+- Kotlin Multiplatform is steadily growing in **enterprise environments**, particularly in **Android-first companies**.
+- However, KMP’s iOS support is still evolving, requiring additional effort to achieve full parity with native development.
+- JetBrains is continuously improving **Compose Multiplatform**, making it more viable for companies that want a **shared UI codebase while keeping native performance**.
+
+<a id="item-5"></a>
+## Conclusion: Key Takeaways And Where To Go Next
+
+**Final Thought**: The way **cross-platform frameworks** have evolved isn’t just a technical shift—it’s a **strategic transformation**. Whether it's **Kotlin Multiplatform** refining its **enterprise appeal**, **React Native** undergoing a **deep architectural overhaul**, or **Flutter** pushing boundaries **beyond mobile**, each framework represents a **distinct vision for cross-platform development**. Understanding their **histories, adoption trends, and technical foundations** allows businesses to anticipate **where the industry is headed** and make **informed, future-proof technology choices**.
+
+In **Part 2**, I'll shift from the technical breakdown to the **real-world business impact** of choosing a cross-platform framework. I’ll explore **how each framework fits different industries, company growth stages, hiring needs, and long-term costs**. The goal is to move past the hype and focus on **practical, strategic decisions** that affect your business and development roadmap. Stay tuned!

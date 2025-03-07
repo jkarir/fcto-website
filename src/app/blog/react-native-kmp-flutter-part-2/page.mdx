@@ -5,7 +5,8 @@ import { BulletedList, BulletedListItem } from '@/components/BulletedList'
 
 export const article = {
   date: '2023-02-18',
-  title: 'React Native vs Kotlin Multiplatform vs Flutter: A Strategic Guide',
+  title:
+    'React Native vs Kotlin Multiplatform vs Flutter: A Strategic Guide - Part 2',
   description:
     'You want to build a mobile app, most likely targeting iOS and Android, but which framework should you use?',
   author: {
@@ -113,7 +114,7 @@ One of React Native’s **biggest advantages** is its ability to share a **signi
 
 However, React Native **relies on a JavaScript bridge** to communicate with **native modules** for rendering and executing logic. This extra step **introduces overhead**, which can lead to latency issues. Because of this, React Native apps **cannot match the performance** of fully native applications.
 
-![React Native Architecture](/src/app/blog/react-native-kmp-flutter/rn.png 'React Native Architecture')
+![React Native Architecture](/src/app/blog/react-native-kmp-flutter-part-1/rn.png 'React Native Architecture')
 
 <a id="item-3.4"></a>
 ### Flutter: A Custom Rendering Engine
@@ -124,7 +125,7 @@ However, unlike React Native, which uses the **OS’s native UI elements**, Flut
 
 Flutter uses the **Dart programming language** to implement both **UI and business logic**. Since it owns the **entire rendering stack**, Flutter apps run **incredibly close** to **fully native performance**. This level of control allows for smooth animations, fast load times, and a highly responsive user interface.
 
-![Flutter architecture](/src/app/blog/react-native-kmp-flutter/flutter.png 'Flutter Architecture')
+![Flutter architecture](/src/app/blog/react-native-kmp-flutter-part-1/flutter.png 'Flutter Architecture')
 
 <a id="item-3.5"></a>
 ### KMP: Native Business Logic, Separate UI
@@ -139,7 +140,7 @@ Because of its **modular nature, KMP can be integrated into existing apps** with
 
 _Note: Compose Multiplatform has not been included in this article since iOS support is still only in beta at the time of writing._
 
-![KMP Architecture](/src/app/blog/react-native-kmp-flutter/kmp.png 'KMP Architecture')
+![KMP Architecture](/src/app/blog/react-native-kmp-flutter-part-1/kmp.png 'KMP Architecture')
 
 <a id="item-4"></a>
 ## Business Use Cases: Which Framework Fits Best?
