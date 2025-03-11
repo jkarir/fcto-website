@@ -5,9 +5,18 @@ import { Border } from '@/components/Border'
 import { GrayscaleTransitionImage } from '@/components/GrayscaleTransitionImage'
 import { StatList, StatListItem } from '@/components/StatList'
 import { TagList, TagListItem } from '@/components/TagList'
-import { BulletedList, BulletedListItem } from '@/components/BulletedList'
+import { GridList, GridListItem } from '@/components/GridList'
 
 export const MDXComponents = {
+  GridList({
+    className,
+    ...props
+  }: React.ComponentPropsWithoutRef<typeof GridList>) {
+    return (
+      <GridList className={clsx('my-32 !max-w-none', className)} {...props} />
+    )
+  },
+  GridListItem,
   ul: function Ul({ ...props }) {
     return <ul className="" {...props} />
   },
