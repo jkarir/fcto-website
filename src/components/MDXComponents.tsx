@@ -16,7 +16,10 @@ export const MDXComponents = {
       <GridList
         className={clsx('my-0 w-full !max-w-none grid-cols-1 pt-8', className)}
       >
-        <GridListItem className="col-span-full w-full" {...props} />
+        <GridListItem
+          className={clsx('col-span-full w-full', className)}
+          {...props}
+        />
       </GridList>
     )
   },
