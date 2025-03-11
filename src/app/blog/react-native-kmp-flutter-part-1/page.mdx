@@ -120,7 +120,11 @@ As a result, for the vast majority of apps, most functionality can be reused acr
 
 To address this, **Meta introduced JSI (JavaScript Interface)**, which enables **direct, synchronous** **communication between** JavaScript and native code, significantly improving performance. With JSI, **React Native no longer depends on the old bridge**, but **some legacy modules and third-party libraries may still use it** until fully migrated to the new system.
 
-![React Native Architecture](/src/app/blog/react-native-kmp-flutter-part-1/rn.png 'React Native Architecture')
+<AnnotatedImage title="React Native High-Level Architecture">
+  ![React Native
+  Architecture](/src/app/blog/react-native-kmp-flutter-part-1/rn.png 'React
+  Native Architecture')
+</AnnotatedImage>
 
 <a id="item-3.4"></a>
 ### Flutter: A Custom Rendering Engine
@@ -131,7 +135,11 @@ However, unlike **React Native**, which uses the **OS’s native UI elements**
 
 Flutter uses the **Dart programming language** to implement both **UI and business logic**. Since it owns the **entire rendering stack**, Flutter apps run **incredibly close** to **fully native performance**. This level of control allows for **smooth animations, fast load times,** and a highly **responsive** user interface. However, because Flutter does not rely on the **OS’s native UI components**, integrating some **system-specific features**, especially on **iOS**, may require additional effort compared to **React Native** or fully **native development**.
 
-![Flutter architecture](/src/app/blog/react-native-kmp-flutter-part-1/flutter.png 'Flutter Architecture')
+<AnnotatedImage title="Flutter High-Level Architecture">
+  ![Flutter
+  architecture](/src/app/blog/react-native-kmp-flutter-part-1/flutter.png
+  'Flutter Architecture')
+</AnnotatedImage>
 
 <a id="item-3.5"></a>
 ### KMP: Native Business Logic, Separate UI
@@ -148,7 +156,10 @@ Because of its **modular nature, KMP can be integrated into existing apps** with
 
 _**Note:** **[Compose Multiplatform](https://www.jetbrains.com/compose-multiplatform/)** is not included in this article as its **iOS support is still in beta** at the time of writing._
 
-![KMP Architecture](/src/app/blog/react-native-kmp-flutter-part-1/kmp.png 'KMP Architecture')
+<AnnotatedImage title="KMP High-Level Architecture">
+  ![KMP Architecture](/src/app/blog/react-native-kmp-flutter-part-1/kmp.png 'KMP
+  Architecture')
+</AnnotatedImage>
 
 <a id="item-4"></a>
 ## Framework Evolution And Adoption – Where Are These Frameworks Headed?
