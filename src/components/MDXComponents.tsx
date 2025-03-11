@@ -14,12 +14,12 @@ export const MDXComponents = {
   }: React.ComponentPropsWithoutRef<typeof GridListItem> & { title: string }) {
     return (
       <GridList
-        className={clsx(
-          'my-32 mb-0 mt-0 !max-w-none pt-8 lg:grid-cols-1',
-          className,
-        )}
+        className={clsx('my-0 w-full !max-w-none grid-cols-1 pt-8', className)}
       >
-        <GridListItem {...props} />
+        <GridListItem
+          className={clsx('col-span-full w-full', className)}
+          {...props}
+        />
       </GridList>
     )
   },
