@@ -2,14 +2,41 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Clients } from './index'
 import { faker } from '@faker-js/faker'
 import React from 'react'
-import { clients, ClientRecord } from '../../../lib/clients'
 
-// const mockClients: Array<[string, string]> = Array.from({ length: 8 }, () => [
-//   faker.company.name(),
-//   faker.image.dataUri({ width: 158, height: 48 }),
-// ])
-
-const mockClients: ClientRecord = clients
+const mockClients = {
+  client1: {
+    name: 'Acme Corp',
+    image: {
+      light: faker.image.url(),
+      dark: faker.image.url(),
+      imageisName: false,
+    },
+  },
+  client2: {
+    name: 'TechStart',
+    image: {
+      light: faker.image.url(),
+      dark: faker.image.url(),
+      imageisName: true,
+    },
+  },
+  client3: {
+    name: 'Innovation Labs',
+    image: {
+      light: faker.image.url(),
+      dark: faker.image.url(),
+      imageisName: false,
+    },
+  },
+  client4: {
+    name: 'Future Systems',
+    image: {
+      light: faker.image.url(),
+      dark: faker.image.url(),
+      imageisName: true,
+    },
+  },
+}
 
 const meta = {
   title: 'pages/home/clients',
@@ -19,11 +46,12 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <div className="min-h-screen bg-white">
+      <div className="bg-white">
         <Story />
       </div>
     ),
   ],
+  tags: ['autodocs'],
 } satisfies Meta<typeof Clients>
 
 export default meta
@@ -45,12 +73,7 @@ export const WithCustomTitle: Story = {
 
 export const Mobile: Story = {
   args: {
-    clients: [
-      mockClients['LCI'],
-      mockClients['CBC'],
-      mockClients['Cossette'],
-      mockClients['Hyundai'],
-    ],
+    clients: mockClients,
   },
   parameters: {
     viewport: {
@@ -62,5 +85,31 @@ export const Mobile: Story = {
 export const Loading: Story = {
   args: {
     clients: [],
+  },
+}
+
+export const SingleClient: Story = {
+  args: {
+    clients: {
+      client1: mockClients.client1,
+    },
+  },
+}
+
+export const ManyClients: Story = {
+  args: {
+    clients: Object.fromEntries(
+      Array.from({ length: 8 }, (_, i) => [
+        `client${i + 1}`,
+        {
+          name: faker.company.name(),
+          image: {
+            light: faker.image.url(),
+            dark: faker.image.url(),
+            imageisName: i % 2 === 0,
+          },
+        },
+      ]),
+    ),
   },
 }
