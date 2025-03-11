@@ -1,4 +1,4 @@
-import imageLeslieAlexander from '@/images/jurgen-karir-cropped.jpg'
+import imageJurgenKarir from '@/images/jurgen-karir-cropped.jpg'
 import { MDXComponents } from '@/components/MDXComponents'
 import { List, ListItem } from '@/components/List'
 import { BulletedList, BulletedListItem } from '@/components/BulletedList'
@@ -12,23 +12,82 @@ export const article = {
   author: {
     name: 'Jürgen Karir',
     role: 'Fractional CTO',
-    image: { src: imageLeslieAlexander },
+    image: { src: imageJurgenKarir },
   },
 }
 
 export const metadata = {
   title: article.title,
   description: article.description,
+  openGraph: {
+    title: article.title,
+    description: article.description,
+    type: 'article',
+    publishedTime: article.date,
+    authors: [article.author.name],
+    images: [
+      {
+        url: '/blog/react-native-kmp-flutter-part-1/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'React Native vs Kotlin Multiplatform vs Flutter comparison guide',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: article.title,
+    description: article.description,
+    creator: '@jurgenkarir',
+    images: ['/blog/react-native-kmp-flutter-part-1/og-image.png'],
+  },
+  alternates: {
+    canonical: 'https://jurgenkarir.com/blog/react-native-kmp-flutter-part-1',
+  },
+}
+
+export const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: article.title,
+  description: article.description,
+  image: '/blog/react-native-kmp-flutter-part-1/og-image.png',
+  datePublished: article.date,
+  author: {
+    '@type': 'Person',
+    name: article.author.name,
+    jobTitle: article.author.role,
+    url: 'https://jurgenkarir.com',
+  },
+  keywords: [
+    'React Native',
+    'Kotlin Multiplatform',
+    'Flutter',
+    'Cross-platform development',
+    'Mobile development',
+    'Technical leadership',
+    'Mobile frameworks comparison',
+  ],
+  articleSection: 'Technical Guide',
+  wordCount: '3000',
+  publisher: {
+    '@type': 'Organization',
+    name: 'Jürgen Karir',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://jurgenkarir.com/logo.png',
+    },
+  },
 }
 
 <GridList className="lg:grid-cols-3">
-  <GridListItem title="React Native">
+  <GridListItem title="React Native" className="pr-6 sm:pr-0">
     ![React Native](/src/app/blog/react-native-kmp-flutter-part-1/react.svg)
   </GridListItem>
-  <GridListItem title="Flutter">
+  <GridListItem title="Flutter" className="pr-6 sm:pr-0">
     ![Flutter](/src/app/blog/react-native-kmp-flutter-part-1/flutter.svg)
   </GridListItem>
-  <GridListItem title="Kotlin Multiplatform">
+  <GridListItem title="Kotlin Multiplatform" className="pr-6 sm:pr-0">
     ![Kotlin
     Multiplatform](/src/app/blog/react-native-kmp-flutter-part-1/kmp.svg)
   </GridListItem>
