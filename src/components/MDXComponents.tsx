@@ -11,7 +11,7 @@ export const MDXComponents = {
   AnnotatedImage({
     className,
     ...props
-  }: React.ComponentPropsWithoutRef<typeof GridListItem & { title: string }>) {
+  }: React.ComponentPropsWithoutRef<typeof GridListItem> & { title: string }) {
     return (
       <GridList
         className={clsx(
