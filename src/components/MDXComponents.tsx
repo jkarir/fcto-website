@@ -8,6 +8,21 @@ import { TagList, TagListItem } from '@/components/TagList'
 import { GridList, GridListItem } from '@/components/GridList'
 
 export const MDXComponents = {
+  AnnotatedImage({
+    className,
+    ...props
+  }: React.ComponentPropsWithoutRef<typeof GridListItem & { title: string }>) {
+    return (
+      <GridList
+        className={clsx(
+          'my-32 mb-0 mt-0 !max-w-none pt-8 lg:grid-cols-1',
+          className,
+        )}
+      >
+        <GridListItem {...props} />
+      </GridList>
+    )
+  },
   GridList({
     className,
     ...props
