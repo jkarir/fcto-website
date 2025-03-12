@@ -1,5 +1,4 @@
 import { type Metadata } from 'next'
-import { siteConfig } from '@/config/site'
 
 import { Clients } from '@/_pages/home/clients'
 import { ContactSection } from '@/components/ContactSection'

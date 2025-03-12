@@ -18,7 +18,7 @@ export function Services({}: React.PropsWithChildren<ServicesProps>) {
           user experience and efficiency.
         </GridListItem>
         <GridListItem title="Technical Due Diligence">
-          valuating technology, AI readiness, architecture, and team
+          Evaluating technology, AI readiness, architecture, and team
           capabilities to ensure scalability and product-market fit.
         </GridListItem>
         <GridListItem title="Startup Advisory">
