@@ -1,6 +1,6 @@
-import { SectionTitle } from '@/components/SectionTitle'
-import { Button } from '@/components/Button'
 import { GridList, GridListItem } from '@/components/GridList'
+import { MarginButton } from '@/components/MarginButton'
+import { SectionTitle } from '@/components/SectionTitle'
 
 interface AdvantagesProps {
   className?: string
@@ -14,25 +14,26 @@ export function Advantages({}: React.PropsWithChildren<AdvantagesProps>) {
     <div className="space-y-10">
       <SectionTitle>Why Work With Me?</SectionTitle>
       <GridList className="lg:grid-cols-4">
-        <GridListItem title="I take a value-first approach">
-          Every decision is focused on impact, not just technology for
+        <GridListItem title="I focus on impact, not just technology">
+          Every decision I make is about real business value, not
           technology&apos;s sake.
         </GridListItem>
-        <GridListItem title="I've been there">
-          Leading teams, building products, and solving complex engineering
-          challenges.
+        <GridListItem title="I've led teams and built products">
+          I understand the challenges of scaling technology, managing teams, and
+          delivering real results.
         </GridListItem>
-        <GridListItem title="I'm both strategic & hands-on">
-          I don&apos;t just advise; I help implement real solutions.
+        <GridListItem title="I don't just advise—I build">
+          Strategy is important, but so is execution. I work alongside teams to
+          implement real solutions, not just give recommendations.
         </GridListItem>
-        <GridListItem title="I tailor my approach">
-          Every company is different, and I adapt to your specific needs and
-          stage of growth.
+        <GridListItem title="I adapt to your needs">
+          Every company is different, and I adjust my approach to fit your
+          goals, challenges, and stage of growth.
         </GridListItem>
       </GridList>
-      <Button href="/engagement-models" aria-label="Engagement Models">
+      <MarginButton href="/engagement-models" aria-label="Engagement Models">
         Let&apos;s Work Together
-      </Button>
+      </MarginButton>
     </div>
   )
 }
