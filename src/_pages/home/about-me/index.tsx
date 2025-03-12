@@ -64,10 +64,22 @@ export function AboutMe() {
           <Services />
           <Advantages />
           <StatList>
-            <StatListItem value="19" label="Teams led" />
-            <StatListItem value="17" label="Mobile apps shipped" />
-            <StatListItem value="15" label="Websites launched" />
-            <StatListItem value="14" label="Successful clients" />
+            <StatListItem
+              value="19"
+              label="Engineering teams led across startups and enterprises."
+            />
+            <StatListItem
+              value="17"
+              label="Mobile apps shipped for iOS and Android."
+            />
+            <StatListItem
+              value="15"
+              label="Web platforms built and deployed."
+            />
+            <StatListItem
+              value="14"
+              label="Companies delivered better products with smarter tech."
+            />
           </StatList>
         </div>
       </Container>
