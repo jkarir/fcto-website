@@ -4,10 +4,7 @@ export const EngagementModelSchema = z.object({
   title: z.string(),
   description: z.string(),
   features: z.array(z.string()),
-  pricing: z.object({
-    headline: z.string(),
-    detail: z.string(),
-  }),
+  pricingDetail: z.string(),
   idealFor: z.string(),
 })
 
