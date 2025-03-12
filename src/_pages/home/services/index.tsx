@@ -1,6 +1,6 @@
-import { SectionTitle } from '@/components/SectionTitle'
-import { Button } from '@/components/Button'
 import { GridList, GridListItem } from '@/components/GridList'
+import { MarginButton } from '@/components/MarginButton'
+import { SectionTitle } from '@/components/SectionTitle'
 
 interface ServicesProps {}
 
@@ -11,25 +11,24 @@ export function Services({}: React.PropsWithChildren<ServicesProps>) {
       <GridList className="lg:grid-cols-4">
         <GridListItem title="Fractional CTO Services">
           Strategic technology leadership to align engineering with business
-          goals, improve development processes, and foster a high-performing
-          engineering culture.
+          goals, streamline development, and build a high-performing team.
         </GridListItem>
         <GridListItem title="Full-Stack & Mobile Development">
-          Building modern, high-performance apps that scale with your users.
+          Creating modern, scalable apps and AI-powered solutions that enhance
+          user experience and efficiency.
         </GridListItem>
         <GridListItem title="Technical Due Diligence">
-          Assess technology, architecture, and team capabilities to ensure
-          long-term scalability and product-market fit.
+          Evaluating technology, AI readiness, architecture, and team
+          capabilities to ensure scalability and product-market fit.
         </GridListItem>
         <GridListItem title="Startup Advisory">
-          Guidance on MVP development, product strategy, technical hiring, team
-          mentorship, and roadmap execution to build sustainable and high-value
-          solutions.
+          Guidance on MVP development, product strategy, AI integrations,
+          technical hiring, and team mentorship to build long-term success.
         </GridListItem>
       </GridList>
-      <Button href="/services" aria-label="Explore my services">
+      <MarginButton href="/services" aria-label="Explore my services">
         Explore My Services
-      </Button>
+      </MarginButton>
     </div>
   )
 }

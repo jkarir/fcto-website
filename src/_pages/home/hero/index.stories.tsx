@@ -12,11 +12,12 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <div className="min-h-screen bg-white">
+      <div className="bg-white">
         <Story />
       </div>
     ),
   ],
+  tags: ['autodocs'],
 } satisfies Meta<typeof Hero>
 
 export default meta
@@ -86,5 +87,11 @@ export const WithCustomDescription: Story = {
         professional formatting.
       </>
     ),
+  },
+}
+
+export const Dark: Story = {
+  parameters: {
+    backgrounds: { default: 'dark' },
   },
 }

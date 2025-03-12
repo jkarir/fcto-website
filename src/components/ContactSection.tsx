@@ -10,12 +10,12 @@ export function ContactSection() {
         <div className="mx-auto max-w-5xl">
           <div>
             <h2 className="font-display text-3xl font-medium text-white [text-wrap:balance] sm:text-4xl">
-              Let&apos;s discuss your technical challenges and how I can help.
+              Let&apos;s build smarter, faster, better.
             </h2>
 
             <p className="mt-6 text-lg text-neutral-400">
-              Whether you&apos;re launching, scaling, or optimizing your
-              engineering team, I&apos;d love to chat.
+              Launching an MVP, scaling fast, or optimizing your tech?
+              Let&apos;s make it work.
             </p>
             <div className="mt-8 flex">
               <Button href="/contact" invert>
