@@ -1,19 +1,98 @@
 import { type Metadata } from 'next'
-
 import { ContactSection } from '@/components/ContactSection'
 import { PageIntro } from '@/components/PageIntro'
 import { SectionIntro } from '@/components/SectionIntro'
 import { BulletedList, BulletedListItem } from '@/components/BulletedList'
 
 export const metadata: Metadata = {
-  title: 'About Me',
+  title: 'About Jürgen Karir | Software Engineering & Fractional CTO',
   description:
-    'We believe that our strength lies in our collaborative approach, which puts our clients at the center of everything we do.',
+    'With 20+ years of experience in building scalable software, leading engineering teams, and solving complex technical challenges across industries from startups to enterprises.',
+  keywords: [
+    'Fractional CTO',
+    'Software Engineering',
+    'Technical Leadership',
+    'Full Stack Development',
+    'Mobile Development',
+    'React Native',
+    'Next.js',
+    'Engineering Team Leadership',
+    'Technology Strategy',
+    'Startup Technology',
+  ],
+  alternates: {
+    canonical: 'https://jurgenkarir.com/about-me',
+  },
+  openGraph: {
+    title: 'About Jürgen Karir | Software Engineering & Fractional CTO',
+    description:
+      'With 20+ years of experience in building scalable software, leading engineering teams, and solving complex technical challenges.',
+    url: 'https://jurgenkarir.com/about-me',
+    siteName: 'Jürgen Karir',
+    locale: 'en_US',
+    type: 'profile',
+    images: [
+      {
+        url: 'https://jurgenkarir.com/images/about-me-og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Jürgen Karir - Fractional CTO & Software Engineering Consultant',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Jürgen Karir | Software Engineering & Fractional CTO',
+    description:
+      'With 20+ years of experience in building scalable software, leading engineering teams, and solving complex technical challenges.',
+    creator: '@jurgenkarir',
+    images: ['https://jurgenkarir.com/images/about-me-og.png'],
+  },
 }
 
-export default async function About() {
+export const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Jürgen Karir',
+  jobTitle: 'Fractional CTO & Software Engineering Consultant',
+  description:
+    'With 20+ years of experience in building scalable software, leading engineering teams, and solving complex technical challenges across industries.',
+  image: 'https://jurgenkarir.com/images/jurgen-karir.jpg',
+  url: 'https://jurgenkarir.com',
+  sameAs: [
+    'https://www.linkedin.com/in/jurgenkarir/',
+    'https://github.com/jurgenkarir',
+    'https://twitter.com/jurgenkarir',
+  ],
+  knowsAbout: [
+    'Software Engineering',
+    'Technical Leadership',
+    'React',
+    'Next.js',
+    'Node.js',
+    'React Native',
+    'iOS Development',
+    'Flutter',
+    'Cloud Platforms',
+    'MACH Architecture',
+    'Composable Commerce',
+    'Engineering Team Management',
+  ],
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Blue Pixel Software',
+    url: 'https://bluepixel.software',
+  },
+}
+
+export default function Page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+
       <PageIntro
         eyebrow="About Me"
         title="Building Scalable, High-Performing Tech for Startups & Scale-Ups"
