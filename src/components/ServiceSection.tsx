@@ -61,9 +61,10 @@ export function ServiceSection({ service }: ServiceSectionProps) {
             ),
           )}
         </List>
-        <p className="text-lg">
-          <div dangerouslySetInnerHTML={{ __html: service.bestFor }} />
-        </p>
+        <p
+          className="text-lg"
+          dangerouslySetInnerHTML={{ __html: service.bestFor }}
+        />
       </div>
     </ImageSection>
   )
