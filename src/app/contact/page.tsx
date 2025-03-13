@@ -17,15 +17,20 @@ export default function Contact() {
       <PageIntro eyebrow="Contact Me" title="Let's Connect">
         <div className="space-y-6">
           <p>
-            Building something new? Scaling up? Facing technical roadblocks?
-            I&apos;d love to help.
+            <strong>
+              Building something new? Scaling up? Facing technical roadblocks?
+            </strong>{' '}
+            Let’s talk.
           </p>
           <p>
             Whether you need a{' '}
-            <strong>fractional CTO, technical leadership</strong>, or just a
-            fresh perspective on your product&apos;s architecture, I bring
-            experience, clarity, and a no-nonsense approach to solving complex
-            challenges.
+            <strong>
+              Fractional CTO, technical leadership, or a fresh perspective on
+              your product’s architecture
+            </strong>
+            , I bring{' '}
+            <strong>experience, clarity, and a no-nonsense approach</strong> to
+            solving complex challenges.
           </p>
         </div>
       </PageIntro>
@@ -33,15 +38,15 @@ export default function Contact() {
         <SectionIntro title="What To Expect" smaller>
           <BulletedList>
             <BulletedListItem>
-              A response within <strong>24 hours.</strong>
+              <strong>A response within 24 hours.</strong>
             </BulletedListItem>
             <BulletedListItem>
-              An <strong>initial conversation</strong> to understand your
+              <strong>An initial conversation</strong> to understand your
               challenges and goals.
             </BulletedListItem>
             <BulletedListItem>
-              A <strong>clear path forward</strong> to solving your technical
-              challenges.
+              <strong>A clear, actionable path forward</strong> to solving your
+              technical challenges.
             </BulletedListItem>
           </BulletedList>
         </SectionIntro>
