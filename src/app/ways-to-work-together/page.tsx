@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   },
 }
 
-export const structuredData = {
+const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Fractional CTO Services',
