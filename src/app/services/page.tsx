@@ -18,10 +18,14 @@ export default function Services() {
         title="Helping Startups & Scale-Ups Build Great Software"
       >
         <p>
-          I partner with startups and growing companies to turn ambitious ideas
-          into reality. With over 20 years in software engineering, I help teams
-          build solid, scalable technology while making the development process
-          smoother and more efficient.
+          I partner with startups and growing companies to turn{' '}
+          <strong>ambitious ideas into reality</strong>. With over{' '}
+          <strong>20 years in software engineering</strong>, I help teams{' '}
+          <strong>
+            build scalable technology, optimize workflows, and accelerate
+            development
+          </strong>
+          —without unnecessary complexity.
         </p>
       </PageIntro>
 
