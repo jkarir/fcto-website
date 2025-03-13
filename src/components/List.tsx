@@ -22,12 +22,14 @@ export function List({
 export function ListItem({
   children,
   title,
+  className,
 }: {
   children: React.ReactNode
   title?: string
+  className?: string
 }) {
   return (
-    <li className="group mt-10 first:mt-0">
+    <li className={clsx('group mt-10 first:mt-0', className)}>
       <FadeIn>
         <Border className="pt-10 group-first:pt-0 group-first:before:hidden group-first:after:hidden">
           {title && (

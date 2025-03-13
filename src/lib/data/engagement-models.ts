@@ -4,39 +4,33 @@ export const engagementModels: EngagementModel[] = [
   {
     title: 'Rapid MVP Launch',
     description:
-      'For early-stage startups looking to go from idea to product quickly.',
+      '<strong>For early-stage startups looking to go from idea to product quickly.</strong>',
     features: [
-      'Define a scalable architecture from day one',
-      'Build a functional, investor-ready MVP',
-      'Choose the right tech stack to accelerate growth',
-      'Validate product-market fit with lean, effective development',
-      'Ensure a smooth transition from MVP to scalable product',
+      '<strong>Define a scalable architecture</strong> from day one',
+      '<strong>Build a functional, investor-ready MVP</strong>',
+      '<strong>Choose the right tech stack</strong> to accelerate growth',
+      '<strong>Validate product-market fit</strong> with lean, efficient development',
+      '<strong>Ensure a smooth transition</strong> from MVP to a scalable product',
     ],
-    pricing: {
-      headline: 'Value-Based Pricing',
-      detail:
-        'You pay for a successful MVP launch, not endless development cycles.',
-    },
+    pricingDetail:
+      '<strong>Value-Based Pricing:</strong> You pay for a <strong>successful MVP launch</strong>, not endless development cycles.',
     idealFor:
-      'Ideal for founders who need a technical leader to validate, build, and launch fast.',
+      '<strong>Best for:</strong> Founders who need a <strong>technical leader to validate, build, and launch quickly.</strong>',
   },
   {
     title: 'Fractional CTO & Technical Leadership',
     description:
-      'For startups and scale-ups that need experienced technical leadership without a full-time hire.',
+      '<strong>For startups and scale-ups that need experienced technical leadership without a full-time hire.</strong>',
     features: [
-      'Define and execute a strong technical vision',
-      'Build a scalable, high-performing tech foundation',
-      'Lead technology strategy, product development, and team growth',
-      'Hire, mentor, and scale your engineering team',
-      'Optimize development workflows for better productivity',
+      '<strong>Define and execute a strong technical vision</strong>',
+      '<strong>Build a scalable, high-performing tech foundation</strong>',
+      '<strong>Lead technology strategy, product development, and team growth</strong>',
+      '<strong>Hire, mentor, and scale your engineering team</strong>',
+      '<strong>Optimize development workflows</strong> for better productivity',
     ],
-    pricing: {
-      headline: 'Value-Based Pricing',
-      detail:
-        'Your investment is based on business outcomes—scalability, team efficiency, and technical excellence—not a fixed number of hours.',
-    },
+    pricingDetail:
+      '<strong>Value-Based Pricing:</strong> Your investment is based on <strong>business outcomes</strong>—scalability, team efficiency, and technical excellence—<strong>not a fixed number of hours.</strong>',
     idealFor:
-      'Best for growing startups that need both strategic leadership and hands-on execution without committing to a full-time CTO.',
+      '<strong>Best for:</strong> Growing startups that need <strong>strategic leadership and hands-on execution</strong> without committing to a full-time CTO.',
   },
 ]

@@ -1,68 +1,154 @@
 import { type Metadata } from 'next'
-
 import { ContactSection } from '@/components/ContactSection'
 import { PageIntro } from '@/components/PageIntro'
 import { SectionIntro } from '@/components/SectionIntro'
+import { BulletedList, BulletedListItem } from '@/components/BulletedList'
 
 export const metadata: Metadata = {
-  title: 'About Me',
+  title: 'About Jürgen Karir | Software Engineering & Fractional CTO',
   description:
-    'We believe that our strength lies in our collaborative approach, which puts our clients at the center of everything we do.',
+    'With 20+ years of experience in building scalable software, leading engineering teams, and solving complex technical challenges across industries from startups to enterprises.',
+  keywords: [
+    'Fractional CTO',
+    'Software Engineering',
+    'Technical Leadership',
+    'Full Stack Development',
+    'Mobile Development',
+    'React Native',
+    'Next.js',
+    'Engineering Team Leadership',
+    'Technology Strategy',
+    'Startup Technology',
+  ],
+  alternates: {
+    canonical: 'https://jurgenkarir.com/about-me',
+  },
+  openGraph: {
+    title: 'About Jürgen Karir | Software Engineering & Fractional CTO',
+    description:
+      'With 20+ years of experience in building scalable software, leading engineering teams, and solving complex technical challenges.',
+    url: 'https://jurgenkarir.com/about-me',
+    siteName: 'Jürgen Karir',
+    locale: 'en_US',
+    type: 'profile',
+    images: [
+      {
+        url: 'https://jurgenkarir.com/images/about-me-og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Jürgen Karir - Fractional CTO & Software Engineering Consultant',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Jürgen Karir | Software Engineering & Fractional CTO',
+    description:
+      'With 20+ years of experience in building scalable software, leading engineering teams, and solving complex technical challenges.',
+    creator: '@jurgenkarir',
+    images: ['https://jurgenkarir.com/images/about-me-og.png'],
+  },
 }
 
-export default async function About() {
+export const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Jürgen Karir',
+  jobTitle: 'Fractional CTO & Software Engineering Consultant',
+  description:
+    'With 20+ years of experience in building scalable software, leading engineering teams, and solving complex technical challenges across industries.',
+  image: 'https://jurgenkarir.com/images/jurgen-karir.jpg',
+  url: 'https://jurgenkarir.com',
+  sameAs: [
+    'https://www.linkedin.com/in/jurgenkarir/',
+    'https://github.com/jurgenkarir',
+    'https://twitter.com/jurgenkarir',
+  ],
+  knowsAbout: [
+    'Software Engineering',
+    'Technical Leadership',
+    'React',
+    'Next.js',
+    'Node.js',
+    'React Native',
+    'iOS Development',
+    'Flutter',
+    'Cloud Platforms',
+    'MACH Architecture',
+    'Composable Commerce',
+    'Engineering Team Management',
+  ],
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Blue Pixel Software',
+    url: 'https://bluepixel.software',
+  },
+}
+
+export default function Page() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+
       <PageIntro
         eyebrow="About Me"
         title="Building Scalable, High-Performing Tech for Startups & Scale-Ups"
       >
         <p>
-          For over 20 years, I&apos;ve been building software, leading teams,
-          and solving tough technical challenges across a variety of industries.
-          My experience spans <strong>full-stack and mobile development</strong>
-          , <strong>MACH and composable commmerce</strong>, and{' '}
-          <strong>technical leadership</strong>, but at my core, I love solving
-          complex problems and helping companies build software that{' '}
-          <strong>delivers real value</strong>.
+          For over 20 years, I&apos;ve been{' '}
+          <strong>building software, leading teams,</strong> and solving tough
+          technical challenges across industries. My expertise spans{' '}
+          <strong>
+            full-stack and mobile development, MACH and composable commerce,
+          </strong>{' '}
+          and <strong>technical leadership</strong>. At my core, I&apos;m driven
+          by <strong>solving complex problems</strong> and helping companies{' '}
+          <strong>build software that delivers real value</strong>.
         </p>
       </PageIntro>
       <br />
       <SectionIntro title="My Approach" smaller fullWidth>
         <div className="space-y-6">
           <p>
-            I believe technology should be <strong>a business enabler</strong>,{' '}
-            <strong>not a roadblock</strong>. Over the years, I&apos;ve worked
-            with startups and scale-ups, helping them:
+            Technology should be a{' '}
+            <strong>business enabler, not a roadblock</strong>. I&apos;ve worked
+            with startups and scale-ups to:
           </p>
-          <ul className="ms-4 list-outside list-disc">
-            <li>
-              <p>
-                Define and execute <strong>technical strategy</strong> that
-                aligns with their goals
-              </p>
-            </li>
-            <li>
-              Build <strong>scalable and maintainable systems</strong> that
-              support growth
-            </li>
-            <li>
-              Improve <strong>engineering teams&apos; performance</strong>{' '}
-              through better processes and mentorship
-            </li>
-            <li>
-              Navigate <strong>startup advisory and tech due diligence</strong>{' '}
-              to mitigate risks
-            </li>
-            <li>
-              Explore <strong>AI and ML opportunities</strong> where they make
-              sense
-            </li>
-          </ul>
+
+          <BulletedList>
+            <BulletedListItem>
+              <strong>Define and execute technical strategy</strong> that aligns
+              with business goals.
+            </BulletedListItem>
+            <BulletedListItem>
+              <strong>Build scalable, maintainable systems</strong> using
+              technologies like{' '}
+              <strong>React, Next.js, Node.js, and cloud platforms</strong> for
+              full-stack applications, and{' '}
+              <strong>React Native, iOS, and Flutter</strong> for mobile
+              solutions.
+            </BulletedListItem>
+            <BulletedListItem>
+              <strong>Optimize engineering teams</strong> through better
+              processes, mentorship, and leadership.
+            </BulletedListItem>
+            <BulletedListItem>
+              <strong>Navigate startup advisory and tech due diligence</strong>{' '}
+              to mitigate risks.
+            </BulletedListItem>
+            <BulletedListItem>
+              <strong>Explore AI and ML opportunities</strong> where they create
+              real impact.
+            </BulletedListItem>
+          </BulletedList>
           <p>
-            I approach every project with a <strong>pragmatic mindset</strong>,
-            focusing on what actually moves the needle rather than getting lost
-            in trends or over-engineering.
+            I take a <strong>pragmatic, results-driven approach</strong>,
+            focusing on{' '}
+            <strong>what actually moves the business forward</strong>, rather
+            than chasing trends or over-engineering solutions.
           </p>
         </div>
       </SectionIntro>
@@ -70,48 +156,65 @@ export default async function About() {
       <SectionIntro title="My Background" smaller fullWidth>
         <div className="space-y-6">
           <p>
-            I&apos;m the{' '}
+            As the{' '}
             <strong>
               Founder and Software Consultant at Blue Pixel Software
             </strong>
-            , where I&apos;ve taken on{' '}
-            <strong>technical leadership roles</strong> as a{' '}
-            <strong>Tech Lead and Staff Engineer</strong>, driving strategy,
-            mentoring teams, and helping companies scale their engineering
-            efforts. I specialize in both{' '}
-            <strong>full-stack development</strong> (React, Node.js, cloud
-            platforms) and <strong>mobile engineering</strong> (React Native,
-            iOS), ensuring that teams build scalable, maintainable, and
-            high-performing systems.
-          </p>
-          <p>
-            I&apos;ve always had an <strong>entrepreneurial drive</strong>,
-            which has shaped how I approach technology and leadership. Whether
-            working with startups or established companies, I bring a{' '}
-            <strong>founder&apos;s mindset</strong>—focused on efficiency,
-            scalability, and long-term impact. Over the years, I&apos;ve led
-            teams and guided technical decisions across{' '}
+            , I&apos;ve taken on{' '}
             <strong>
-              video games, news media, streaming services, e-commerce, health,
-              lotteries, banking, and education
+              technical leadership roles as a Tech Lead and Staff Engineer
             </strong>
-            , helping organizations navigate complex challenges with{' '}
+            , driving strategy, mentoring teams, and helping companies{' '}
+            <strong>scale their engineering efforts</strong>. My work spans both{' '}
+            <strong>full-stack development</strong> using{' '}
+            <strong>React, Next.js, Node.js, and cloud platforms</strong>, and{' '}
+            <strong>mobile engineering</strong> with{' '}
+            <strong>React Native, iOS, and Flutter</strong>— ensuring teams
+            build{' '}
+            <strong>scalable, maintainable, and high-performing systems</strong>
+            .
+          </p>
+
+          <p>
+            I&apos;ve always had an <strong>entrepreneurial mindset</strong>,
+            shaping how I approach{' '}
+            <strong>technology, leadership, and decision-making</strong>.
+            Whether working with{' '}
+            <strong>startups or established companies</strong>, I bring a{' '}
+            <strong>founder’s perspective</strong>— focused on{' '}
+            <strong>efficiency, scalability, and long-term impact</strong>. Over
+            the years, I&apos;ve{' '}
+            <strong>led teams and guided technical decisions</strong> in
+            industries including{' '}
             <strong>
-              strong leadership, strategic thinking, and hands-on expertise
+              Gaming & Interactive Entertainment, Media & Publishing, Streaming
+              & Digital Media, E-Commerce & Retail, Healthcare & HealthTech,
+              Lotteries & Gaming, Banking & FinTech, and EdTech & Education
+            </strong>
+            . I help organizations navigate{' '}
+            <strong>
+              complex technical challenges with strong leadership, strategic
+              thinking, and hands-on expertise
             </strong>
             .
           </p>
+
           <p>
-            Beyond writing code, my focus has always been on{' '}
+            Beyond <strong>hands-on development</strong>, I focus on{' '}
             <strong>building and empowering high-performing teams</strong>. I
-            help organizations establish{' '}
+            help organizations{' '}
             <strong>
-              technical vision, improve engineering culture, and implement
-              processes that enable teams to scale efficiently
+              establish technical vision, improve engineering culture,
+            </strong>{' '}
+            and implement{' '}
+            <strong>processes that enable teams to scale efficiently</strong>.{' '}
+            Whether it&apos;s{' '}
+            <strong>
+              defining architecture, optimizing workflows, or mentoring
+              engineers
             </strong>
-            . Whether defining architecture, optimizing workflows, or mentoring
-            engineers, I aim to create an environment where teams can thrive and
-            deliver meaningful impact.
+            , my goal is to create an environment where{' '}
+            <strong>teams thrive and deliver meaningful impact</strong>.
           </p>
         </div>
       </SectionIntro>

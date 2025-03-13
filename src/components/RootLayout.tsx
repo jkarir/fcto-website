@@ -134,8 +134,8 @@ function Navigation() {
   return (
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
-        <NavigationItem href="/engagement-models">
-          Engagement Models
+        <NavigationItem href="/ways-to-work-together">
+          Ways To Work Together
         </NavigationItem>
         <NavigationItem href="/about-me">About Me</NavigationItem>
       </NavigationRow>

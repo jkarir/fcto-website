@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import EngagementModels from './page'
+import WaysToWorkTogether from './page'
 import React from 'react'
 
 const meta = {
-  title: 'app/engagement-models',
-  component: EngagementModels,
+  title: 'app/ways-to-work-together',
+  component: WaysToWorkTogether,
   parameters: {
     layout: 'fullscreen',
     nextjs: {
@@ -18,7 +18,7 @@ const meta = {
       </div>
     ),
   ],
-} satisfies Meta<typeof EngagementModels>
+} satisfies Meta<typeof WaysToWorkTogether>
 
 export default meta
 
