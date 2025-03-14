@@ -13,46 +13,50 @@ export function AboutMe() {
         title="Helping Startups & Scale-Ups Build the Right Tech for Growth"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
-        <div className="mt-10 max-w-2xl space-y-6">
-          <p>
-            I&apos;m a{' '}
-            <strong>Fractional CTO and Software Engineering Consultant</strong>,{' '}
-            helping startups and scale-ups turn great ideas into{' '}
-            <strong>scalable, high-impact technology</strong>. I specialize in{' '}
-            <strong>technology strategy</strong>,{' '}
-            <strong>full-stack and mobile development</strong>,{' '}
-            <strong>system architecture</strong>,{' '}
-            <strong>engineering leadership</strong>, and{' '}
-            <strong>AI-driven solutions</strong>&mdash; all focused on{' '}
-            <strong>delivering real business value</strong>.
-          </p>
-          <p>
-            I&apos;ve worked with{' '}
-            <strong>startups, scale-ups, and enterprises</strong> across
-            industries, <strong>leading and managing engineering teams</strong>{' '}
-            to{' '}
-            <strong>
-              build technology that empowers businesses, enhances user
-              experience, and drives measurable results.
-            </strong>
-          </p>
-          <div className="space-y-2">
+        <div className="space-y-10">
+          <div className="mt-10 max-w-2xl space-y-6">
             <p>
-              <strong>My mission is simple:</strong>
-            </p>
-            <p>
+              I&apos;m a{' '}
               <strong>
-                Align technology with business objectives to create high-value
-                products.
-              </strong>{' '}
-              Whether you need <strong>technical leadership</strong>,{' '}
-              <strong>a scalable tech strategy</strong>, or a{' '}
-              <strong>hands-on expert</strong> to grow your team, I provide{' '}
-              <strong>
-                CTO-level expertise&mdash;without the full-time cost
+                Fractional CTO and Software Engineering Consultant
               </strong>
-              .
+              , helping startups and scale-ups turn great ideas into{' '}
+              <strong>scalable, high-impact technology</strong>. I specialize in{' '}
+              <strong>technology strategy</strong>,{' '}
+              <strong>full-stack and mobile development</strong>,{' '}
+              <strong>system architecture</strong>,{' '}
+              <strong>engineering leadership</strong>, and{' '}
+              <strong>AI-driven solutions</strong>&mdash; all focused on{' '}
+              <strong>delivering real business value</strong>.
             </p>
+            <p>
+              I&apos;ve worked with{' '}
+              <strong>startups, scale-ups, and enterprises</strong> across
+              industries,{' '}
+              <strong>leading and managing engineering teams</strong> to{' '}
+              <strong>
+                build technology that empowers businesses, enhances user
+                experience, and drives measurable results.
+              </strong>
+            </p>
+            <div className="space-y-2">
+              <p>
+                <strong>My mission is simple:</strong>
+              </p>
+              <p>
+                <strong>
+                  Align technology with business objectives to create high-value
+                  products.
+                </strong>{' '}
+                Whether you need <strong>technical leadership</strong>,{' '}
+                <strong>a scalable tech strategy</strong>, or a{' '}
+                <strong>hands-on expert</strong> to grow your team, I provide{' '}
+                <strong>
+                  CTO-level expertise&mdash;without the full-time cost
+                </strong>
+                .
+              </p>
+            </div>
           </div>
           <MarginButton href="/about-me" aria-label="About Me">
             About Me
