@@ -10,20 +10,23 @@ export function Services({}: React.PropsWithChildren<ServicesProps>) {
       <SectionTitle>How I Help</SectionTitle>
       <GridList className="lg:grid-cols-4">
         <GridListItem title="Fractional CTO Services">
-          Strategic technology leadership to align engineering with business
-          goals, streamline development, and build a high-performing team.
+          I provide technical strategy, hands-on leadership, and scalable
+          architecture to align engineering with business goals, mentor teams,
+          and drive growth.
         </GridListItem>
         <GridListItem title="Full-Stack & Mobile Development">
-          Creating modern, scalable apps and AI-powered solutions that enhance
-          user experience and efficiency.
+          build fast, reliable, and scalable web and mobile apps, ensuring
+          seamless user experiences and AI-driven efficiency.
         </GridListItem>
-        <GridListItem title="Technical Due Diligence">
-          Evaluating technology, AI readiness, architecture, and team
-          capabilities to ensure scalability and product-market fit.
+        <GridListItem title="Cloud & AI Engineering">
+          I design secure cloud infrastructures, optimize DevOps workflows, and
+          develop AI-powered solutions to automate processes and enhance
+          decision-making.
         </GridListItem>
         <GridListItem title="Startup Advisory">
-          Guidance on MVP development, product strategy, AI integrations,
-          technical hiring, and team mentorship to build long-term success.
+          I help startups launch MVPs, integrate AI, hire technical talent, and
+          mentor teams, ensuring they scale effectively and reach product-market
+          fit.
         </GridListItem>
       </GridList>
       <MarginButton href="/services" aria-label="Explore my services">
