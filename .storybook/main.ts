@@ -16,8 +16,8 @@ const config: StorybookConfig = {
   },
   staticDirs: [
     {
-      from: '../src/app/blog/3-lessons-we-learned-going-back-to-the-office',
-      to: '/src/app/blog/3-lessons-we-learned-going-back-to-the-office',
+      from: '../src/app/blog/react-native-kmp-flutter-part-1',
+      to: '/src/app/blog/react-native-kmp-flutter-part-1',
     },
     {
       from: '../src/images/jurgen-karir-cropped.jpg',
