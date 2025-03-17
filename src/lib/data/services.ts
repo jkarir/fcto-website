@@ -6,86 +6,71 @@ import { Service } from '@/lib/types/services-model-schema'
 export const services: Service[] = [
   {
     title: 'Fractional CTO & Technology Leadership',
-    subTitle: 'Senior Tech Leadership, Tailored to Your Needs',
-    bestFor:
-      '<strong>Best for:</strong> Startups that need <strong>expert technical leadership and hands-on execution </strong> without committing to a full-time CTO.',
+    subTitle:
+      'Technical Strategy & Leadership to Align Engineering with Business Growth',
     image: { src: imageTechnologyStrategy, shape: 0 },
     items: [
       {
         title: 'Tech Strategy, Roadmap & Growth Execution',
         description:
-          'Defining a <strong>clear roadmap</strong> that aligns with business goals, ensuring <strong>scalability, security, and long-term growth</strong>. This includes leveraging AI to optimize workflows, automate processes, and improve engineering efficiency.',
+          'I help startups define a <strong>scalable technology strategy</strong>, manage technical risks, and align product development with business goals.',
       },
       {
-        title: 'Team Leadership, Scaling & Process Optimization',
+        title: 'Business & Product Alignment',
         description:
-          'Helping engineers grow, improving team workflows, and implementing <strong>automation strategies</strong> to reduce bottlenecks and improve efficiency.',
+          'Technology should support <strong>business growth, customer needs, and long-term scalability.</strong> I ensure engineering priorities align with revenue and product-market fit.',
       },
       {
         title: 'Architecture & Scalability Consulting',
         description:
-          'Designing systems to handle growth efficiently, incorporating <strong>AI-driven insights</strong> to improve performance, reduce costs, and enhance operational resilience.',
+          'I design <strong>scalable, secure, and cost-efficient</strong> systems while incorporating modern AI, automation, and cloud strategies.',
       },
     ],
+    subItem: {
+      title: 'Scalable Full-Stack & Mobile Architecture',
+      description:
+        'I ensure your web and mobile applications are built with the right architecture and scalability in mind. From defining the right tech stack to ensuring seamless backend integration, I help you build a future-proof product.',
+    },
+    cta: {
+      title: "Let's talk",
+      header:
+        'Need a Fractional CTO to define your roadmap, scale your team, and align tech with business growth?',
+    },
   },
   {
-    title: 'Software Engineering Consulting',
-    subTitle: 'Hands-On Expertise to Build, Scale & Improve Your Software',
-    bestFor:
-      '<strong>Best for:</strong> Startups & teams looking to <strong>scale their web and mobile applications efficiently</strong> while integrating AI and automation.',
+    title: 'Fractional Engineering Management',
+    subTitle: 'Hands-On Leadership to Scale & Strengthen Your Engineering Team',
     image: { src: imageLaptop, shape: 1 },
     items: [
       {
-        title: 'Full-Stack Development',
-        items: [
-          '<strong>High-performance web applications</strong> (<strong>React, Next.js</strong>) deliver fast, scalable, and engaging experiences. These applications provide <strong>a seamless and responsive user interface</strong> optimized for performance.',
-          '<strong>Robust backend systems</strong> (<strong>REST APIs, GraphQL, PostgreSQL</strong>) ensure security, efficiency, and scalability. These systems support <strong>complex features and integrations</strong>, enabling seamless data flow.',
-        ],
+        title: 'Team Leadership & Mentorship',
+        description:
+          '<strong>Providing <strong>day-to-day engineering leadership</strong>, mentoring developers, and ensuring teams operate efficiently.',
       },
       {
-        title: 'Mobile Development',
+        title: 'Process Optimization & Delivery Execution',
         description:
-          '<strong>High-performance mobile applications</strong> (<strong>React Native, iOS, Flutter</strong>) deliver fast, reliable, and scalable experiences. These applications are designed to provide <strong>a seamless user experience across devices</strong>.',
+          'Running sprint planning, improving team collaboration, and keeping development <strong>on track and on schedule.</strong>',
       },
       {
-        title: 'Cloud Infrastructure & DevOps Optimization',
+        title: 'Technical Decision-Making Support',
         description:
-          '<strong>Designing secure, scalable cloud architectures</strong> while automating deployments with <strong>CI/CD pipelines</strong>, <strong>Infrastructure as Code</strong>, and <strong>AI-driven monitoring</strong> to optimize cost and performance.',
+          'Helping teams <strong>resolve technical blockers</strong>, improve code quality, and scale development processes without bottlenecks.',
       },
       {
-        title: 'AI Application Development',
+        title: 'Cross-Team Communication & Alignment',
         description:
-          '<strong>Building agentic systems</strong>, such as AI agents and autonomous workflows, to streamline operations, automate decision-making, and improve process efficiency.',
+          'Bridging the gap between <strong>engineering, product, and leadership</strong> to keep priorities clear and execution efficient.',
       },
     ],
-  },
-  {
-    title: 'Startup Advisory',
-    subTitle: 'From Idea to Execution: Laying a Strong Foundation',
-    bestFor:
-      '<strong>Best for:</strong> Founders who need <strong>strategic technical guidance to validate, build, and scale effectively</strong>.',
-    image: { src: imageStartupAdvisory, shape: 2 },
-    items: [
-      {
-        title: 'Technical Feasibility Assessments',
-        description:
-          'Evaluating product viability, identifying risks, and ensuring smart tech decisions.',
-      },
-      {
-        title: 'Early Product Strategy',
-        description:
-          'Shaping an MVP</strong>, prioritizing features, and aligning development with market needs, including exploring AI where it <strong>drives measurable impact</strong>.',
-      },
-      {
-        title: 'Building Your First Engineering Team',
-        description:
-          'Guidance on <strong>hiring, structuring, and leading a high-performing team</strong> from day one.',
-      },
-      {
-        title: 'From MVP to Scale',
-        description:
-          'Setting up <strong>development processes, team structures, and tech stacks</strong> that enable seamless scaling.',
-      },
-    ],
+    subItem: {
+      title: 'Full-Stack & Mobile Development Leadership',
+      description:
+        'I ensure your product is built with scalable infrastructure and best development practices while leading your team to execute efficiently.',
+    },
+    cta: {
+      title: "Let's talk",
+      header: 'Need hands-on execution and team leadership?',
+    },
   },
 ]

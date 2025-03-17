@@ -3,6 +3,8 @@ import { PageIntro } from '@/components/PageIntro'
 import { ContactSection } from '@/components/ContactSection'
 import { ServiceSection } from '@/components/ServiceSection'
 import { services } from '@/lib/data/services'
+import { SectionIntro } from '@/components/SectionIntro'
+import { faqs } from '@/lib/data/faqs'
 
 export const metadata: Metadata = {
   title: 'Fractional CTO & Software Engineering Services | Jürgen Karir',
@@ -84,14 +86,17 @@ export default function Services() {
         title="Helping Startups & Scale-Ups Build Great Software"
       >
         <p>
-          I partner with startups and growing companies to turn{' '}
-          <strong>ambitious ideas into reality</strong>. With over{' '}
-          <strong>20 years in software engineering</strong>, I help teams{' '}
           <strong>
-            build scalable technology, optimize workflows, and accelerate
-            development
+            Building great technology is hard. Scaling it is even harder.
           </strong>
-          —without unnecessary complexity.
+          Startups often face{' '}
+          <strong>
+            technical debt, slow development cycles, and inefficient teams
+          </strong>
+          —not because they lack talent, but because they lack{' '}
+          <strong>
+            the right leadership to drive technical strategy and execution.
+          </strong>
         </p>
       </PageIntro>
 
@@ -101,6 +106,70 @@ export default function Services() {
         ))}
       </div>
 
+      {/* <SectionIntro
+        smaller
+        className="mt-24 sm:mt-32 lg:mt-20"
+        title="Fractional CTO vs. Fractional Engineering Manager"
+        fullWidth
+      >
+        <div className="typography max-sm:min-w-full max-sm:flex-none max-sm:px-6">
+          <table>
+            <thead>
+              <tr>
+                <th>Role</th>
+                <th>Primary Focus</th>
+                <th>Ideal for Startups That Need...</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <strong>Fractional CTO</strong>
+                </td>
+                <td>
+                  Defining tech strategy, architecture, & long-term scalability.
+                </td>
+                <td>
+                  Building a strong technical foundation, ensuring investor
+                  readiness, & scaling technology.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Fractional Engineering Manager</strong>
+                </td>
+                <td>
+                  Leading teams, optimizing processes, & ensuring execution.
+                </td>
+                <td>
+                  Improving engineering velocity, optimizing workflows, &
+                  scaling an existing team.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </SectionIntro> */}
+      <SectionIntro
+        smaller
+        className="mt-24 sm:mt-32 lg:mt-20"
+        title="Frequently Asked Questions"
+        fullWidth
+      >
+        <div className="space-y-6">
+          {faqs.map((faq, index) => (
+            <div key={index}>
+              <p>
+                <strong>- {faq.question}</strong>
+              </p>
+              <p
+                className="mt-2"
+                dangerouslySetInnerHTML={{ __html: faq.answer }}
+              />
+            </div>
+          ))}
+        </div>
+      </SectionIntro>
       <ContactSection />
     </>
   )

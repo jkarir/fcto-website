@@ -30,12 +30,16 @@ export const ServiceItemSchema = z.union([
 export const ServiceSchema = z.object({
   title: z.string(),
   subTitle: z.string(),
-  bestFor: z.string(),
   image: z.object({
     src: z.custom<StaticImageData>(),
     shape: z.number(),
   }),
   items: z.array(ServiceItemSchema),
+  subItem: ServiceItemWithDescription,
+  cta: z.object({
+    header: z.string(),
+    title: z.string(),
+  }),
 })
 
 // TypeScript types inferred from the schemas
