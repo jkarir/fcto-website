@@ -16,47 +16,30 @@ export function AboutMe() {
         <div className="space-y-10">
           <div className="mt-10 max-w-2xl space-y-6">
             <p>
-              I&apos;m a{' '}
+              I help startups and scale-ups{' '}
+              <strong>define scalable technology strategies</strong>,{' '}
+              <strong>build high-performing engineering teams</strong>, and{' '}
+              <strong>develop innovative products</strong>—providing{' '}
               <strong>
-                Fractional CTO and Software Engineering Consultant
+                CTO-level leadership without the full-time commitment
               </strong>
-              , helping startups and scale-ups turn great ideas into{' '}
-              <strong>scalable, high-impact technology</strong>. I specialize in{' '}
-              <strong>technology strategy</strong>,{' '}
-              <strong>full-stack and mobile development</strong>,{' '}
-              <strong>system architecture</strong>,{' '}
-              <strong>engineering leadership</strong>, and{' '}
-              <strong>AI-driven solutions</strong>&mdash; all focused on{' '}
-              <strong>delivering real business value</strong>.
+              .
             </p>
             <p>
-              I&apos;ve worked with{' '}
-              <strong>startups, scale-ups, and enterprises</strong> across
-              industries,{' '}
-              <strong>leading and managing engineering teams</strong> to{' '}
-              <strong>
-                build technology that empowers businesses, enhances user
-                experience, and drives measurable results.
-              </strong>
+              With extensive experience leading engineering teams, I ensure
+              technology becomes a <strong>growth enabler</strong>, not a{' '}
+              <strong>bottleneck</strong>—helping businesses build{' '}
+              <strong>fast, scalable, and AI-powered solutions</strong> that
+              drive long-term success.
             </p>
-            <div className="space-y-2">
-              <p>
-                <strong>My mission is simple:</strong>
-              </p>
-              <p>
-                <strong>
-                  Align technology with business objectives to create high-value
-                  products.
-                </strong>{' '}
-                Whether you need <strong>technical leadership</strong>,{' '}
-                <strong>a scalable tech strategy</strong>, or a{' '}
-                <strong>hands-on expert</strong> to grow your team, I provide{' '}
-                <strong>
-                  CTO-level expertise&mdash;without the full-time cost
-                </strong>
-                .
-              </p>
-            </div>
+            <p>
+              Whether you need <strong>strategic technology leadership</strong>,{' '}
+              <strong>expert product engineering</strong>, or{' '}
+              <strong>technical mentorship for your team</strong>, I provide the
+              expertise to help you{' '}
+              <strong>build scalable, high-impact technology</strong>—without
+              the full-time cost.
+            </p>
           </div>
           <MarginButton href="/about-me" aria-label="About Me">
             About Me
@@ -70,19 +53,19 @@ export function AboutMe() {
           <StatList>
             <StatListItem
               value="19"
-              label="Engineering teams led across startups and enterprises."
+              label="Engineering teams led—guiding teams to deliver high-impact products across startups and enterprises."
             />
             <StatListItem
               value="17"
-              label="Mobile apps shipped for iOS and Android."
+              label="Mobile apps shipped—optimized for performance, scalability, and seamless user experience, driving engagement."
             />
             <StatListItem
               value="15"
-              label="Web platforms built and deployed."
+              label="Web platforms launched—helping businesses turn ideas into scalable, fully deployed products."
             />
             <StatListItem
               value="14"
-              label="Companies delivered better products with smarter tech."
+              label="Companies transformed—leveraging smarter tech decisions to build better products and drive growth."
             />
           </StatList>
         </div>
