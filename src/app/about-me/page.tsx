@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   },
 }
 
-export const structuredData = {
+const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Jürgen Karir',
@@ -98,14 +98,14 @@ export default function Page() {
         title="Building Scalable, High-Performing Tech for Startups & Scale-Ups"
       >
         <p>
-          I've spent the past 20 years building software, leading teams, and
-          solving tough technical challenges across industries. I’ve worked with
-          startups and scale-ups to define technical strategy, build scalable
-          systems, and grow strong engineering teams. At my core, I love solving
-          complex problems and helping companies build software that actually
-          delivers value—not just ticking boxes or chasing trends. I take a
-          pragmatic, business-first approach, making sure technology enables
-          growth rather than becoming a bottleneck.
+          I&apos;ve spent the past 20 years building software, leading teams,
+          and solving tough technical challenges across industries. I&apos;ve
+          worked with startups and scale-ups to define technical strategy, build
+          scalable systems, and grow strong engineering teams. At my core, I
+          love solving complex problems and helping companies build software
+          that actually delivers value—not just ticking boxes or chasing trends.
+          I take a pragmatic, business-first approach, making sure technology
+          enables growth rather than becoming a bottleneck.
         </p>
       </PageIntro>
       <br />
@@ -149,25 +149,26 @@ export default function Page() {
       <SectionIntro title="My Background" smaller fullWidth>
         <div className="space-y-6">
           <p>
-            As the founder of Blue Pixel Software, I’ve taken on tech lead and
-            staff engineering roles, helping companies scale their engineering
-            efforts. I’ve worked across full-stack and mobile development,
-            ensuring teams build robust, high-performing software that lasts.
+            As the founder of Blue Pixel Software, I&apos;ve taken on tech lead
+            and staff engineering roles, helping companies scale their
+            engineering efforts. I&apos;ve worked across full-stack and mobile
+            development, ensuring teams build robust, high-performing software
+            that lasts.
           </p>
 
           <p>
             I approach technology like a founder—balancing innovation with
-            real-world constraints. Over the years, I’ve helped companies in
-            industries like gaming, media, streaming, e-commerce, healthcare,
+            real-world constraints. Over the years, I&apos;ve helped companies
+            in industries like gaming, media, streaming, e-commerce, healthcare,
             fintech, and edtech.
           </p>
 
           <p>
             Beyond writing code, I focus on building great teams and creating
-            environments where engineers can do their best work. Whether it’s
-            defining architecture, optimizing workflows, or mentoring teams, my
-            goal is to help companies build software that lasts and teams that
-            thrive.
+            environments where engineers can do their best work. Whether
+            it&apos;s defining architecture, optimizing workflows, or mentoring
+            teams, my goal is to help companies build software that lasts and
+            teams that thrive.
           </p>
         </div>
       </SectionIntro>
