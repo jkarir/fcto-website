@@ -6,7 +6,8 @@ import { SectionIntro } from '@/components/SectionIntro'
 import { SectionTitle } from '@/components/SectionTitle'
 import { type Metadata } from 'next'
 import { type EngagementModel } from '@/lib/types/engagement-model-schema'
-import { engagementModels } from '@/lib/data/engagement-models'
+import { engagementModels } from '@/lib/data/engagement-model'
+import { Container } from '@/components/Container'
 
 export const metadata: Metadata = {
   title: 'Fractional CTO Services & Engagement Models | Ways To Work Together',
@@ -78,7 +79,7 @@ const structuredData = {
     offers: engagementModels.map((model) => ({
       '@type': 'Offer',
       name: model.title,
-      description: model.description.replace(/<\/?[^>]+(>|$)/g, ''), // Strip HTML
+      description: model.subtitle,
     })),
   },
 }
@@ -88,19 +89,25 @@ function EngagementModel({ model }: { model: EngagementModel }) {
     <ListItem>
       <div className="space-y-6">
         <SectionTitle>{model.title}</SectionTitle>
-        <div dangerouslySetInnerHTML={{ __html: model.description }} />
+        <strong>{model.subtitle}</strong>
         <BulletedList>
           {model.features.map((feature) => (
-            <BulletedListItem key={feature}>
-              <div dangerouslySetInnerHTML={{ __html: feature }} />
-            </BulletedListItem>
+            <BulletedListItem key={feature}>{feature}</BulletedListItem>
           ))}
         </BulletedList>
         <p>
-          <div dangerouslySetInnerHTML={{ __html: model.pricingDetail }} />
+          {model.highlights.map((highlight) => (
+            <span key={highlight.label}>
+              <strong>{highlight.label}:</strong> {highlight.value} <br />
+            </span>
+          ))}
         </p>
         <p>
-          <div dangerouslySetInnerHTML={{ __html: model.idealFor }} />
+          {model.additionalInfo?.map((info) => (
+            <span key={info.question}>
+              <strong>{info.question}:</strong> {info.answer}
+            </span>
+          ))}
         </p>
       </div>
     </ListItem>
@@ -116,46 +123,90 @@ export default function Page() {
       />
       <PageIntro
         eyebrow="Ways To Work Together"
-        title="The Right Technical Leadership, Tailored to Your Needs"
+        title="Flexible, high-impact technical leadership for early-stage startups."
       >
         <div className="space-y-6">
           <p>
-            Every startup and scale-up has <strong>unique challenges</strong>
-            —whether you&apos;re{' '}
-            <strong>
-              launching an MVP, scaling your platform, or optimizing your
-              engineering team
-            </strong>
-            . I offer <strong>flexible ways to collaborate</strong> designed to
-            meet you where you are and <strong>drive meaningful results</strong>
-            .
+            Startups need different kinds of technical leadership at different
+            stages. Some need to <strong>launch an MVP fast</strong>, others
+            need a <strong>technical leader to guide scaling</strong>, and some
+            just need <strong>expert advice on critical tech decisions</strong>.
           </p>
           <p>
-            Unlike <strong>traditional consulting or hourly billing</strong>, my
-            approach is <strong>value-based</strong>—pricing is structured
-            around <strong>impact and outcomes</strong>, not hours.{' '}
-            <strong>You invest in results, not time.</strong>
+            This page outlines my <strong>Engagement Models</strong>—the
+            different ways I work with founders to help them move faster, avoid
+            costly mistakes, and build scalable technology. Each model is
+            tailored to meet your startup&apos;s specific needs, and if none of
+            these fit perfectly, we can customize an engagement that does.
           </p>
         </div>
       </PageIntro>
-      <div className="mt-10 space-y-16">
-        <SectionIntro title="How We Can Work Together" fullWidth>
-          <p>
-            Every startup is different, and so is the{' '}
-            <strong>kind of technical leadership it needs</strong>. Below are
-            common ways I help founders and teams—whether it&apos;s{' '}
-            <strong>
-              getting an MVP off the ground, scaling an engineering org,
-            </strong>{' '}
-            or <strong>ensuring your tech won&apos;t hold you back</strong>.
-          </p>
+
+      <Container className="mx-10 mt-10">
+        <div className="space-y-16">
           <List className="mt-10 text-lg">
             {engagementModels.map((model) => (
               <EngagementModel key={model.title} model={model} />
             ))}
           </List>
-        </SectionIntro>
-      </div>
+          <div className="space-y-6 text-lg">
+            <SectionTitle>How I Work & Pricing</SectionTitle>
+            <strong>
+              I offer flexible engagement models based on your startup’s needs:
+            </strong>
+            <BulletedList>
+              <BulletedListItem>
+                <strong>Part-time Leadership</strong> - Ongoing support (1–2
+                days/week) for technical strategy and execution.
+              </BulletedListItem>
+              <BulletedListItem>
+                <strong>Dedicated Blocks of Time</strong> - Focused execution
+                for high-priority initiatives.
+              </BulletedListItem>
+              <BulletedListItem>
+                <strong>Retainer-Based Advisory</strong> - Continuous support
+                for strategic decisions and team growth.
+              </BulletedListItem>
+              <BulletedListItem>
+                <strong>Custom Engagements</strong> - Need something different?
+                Let’s design an engagement that fits your startup’s specific
+                challenges.
+              </BulletedListItem>
+            </BulletedList>
+          </div>
+          <div className="space-y-6 text-lg">
+            <SectionTitle>
+              Pricing That Scales With Your Startup’s Needs
+            </SectionTitle>
+            <strong>
+              I use value-based pricing—you’re paying for outcomes, not hours.
+            </strong>
+            <BulletedList>
+              <BulletedListItem>
+                <strong>Fixed Pricing for MVP Launches</strong> - You pay for a
+                successful MVP, not endless development cycles.
+              </BulletedListItem>
+              <BulletedListItem>
+                <strong>Retainer-Based Pricing for Fractional CTO/EM</strong> -
+                Your investment is based on team growth, efficiency, and
+                business impact.
+              </BulletedListItem>
+              <BulletedListItem>
+                <strong>Custom Engagements</strong> - If your needs don’t fit a
+                set model, we can design a pricing structure that aligns with
+                your goals.
+              </BulletedListItem>
+            </BulletedList>
+            <div>
+              <strong>
+                No hidden costs, no hourly billing—just clear pricing aligned
+                with your startup’s success.
+              </strong>
+            </div>
+          </div>
+        </div>
+      </Container>
+
       <ContactSection />
     </>
   )
