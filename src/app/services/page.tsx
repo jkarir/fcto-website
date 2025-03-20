@@ -106,50 +106,6 @@ export default function Services() {
         ))}
       </div>
 
-      {/* <SectionIntro
-        smaller
-        className="mt-24 sm:mt-32 lg:mt-20"
-        title="Fractional CTO vs. Fractional Engineering Manager"
-        fullWidth
-      >
-        <div className="typography max-sm:min-w-full max-sm:flex-none max-sm:px-6">
-          <table>
-            <thead>
-              <tr>
-                <th>Role</th>
-                <th>Primary Focus</th>
-                <th>Ideal for Startups That Need...</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <strong>Fractional CTO</strong>
-                </td>
-                <td>
-                  Defining tech strategy, architecture, & long-term scalability.
-                </td>
-                <td>
-                  Building a strong technical foundation, ensuring investor
-                  readiness, & scaling technology.
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <strong>Fractional Engineering Manager</strong>
-                </td>
-                <td>
-                  Leading teams, optimizing processes, & ensuring execution.
-                </td>
-                <td>
-                  Improving engineering velocity, optimizing workflows, &
-                  scaling an existing team.
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </SectionIntro> */}
       <SectionIntro
         smaller
         className="mt-24 sm:mt-32 lg:mt-20"

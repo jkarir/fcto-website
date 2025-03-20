@@ -35,7 +35,6 @@ export const ServiceSchema = z.object({
     shape: z.number(),
   }),
   items: z.array(ServiceItemSchema),
-  subItem: ServiceItemWithDescription,
   cta: z.object({
     header: z.string(),
     title: z.string(),

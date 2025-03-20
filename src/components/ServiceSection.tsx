@@ -63,12 +63,6 @@ export function ServiceSection({ service }: ServiceSectionProps) {
           )}
         </List>
         <div>
-          <p className="text-lg font-semibold">
-            <strong>{service.subItem.title}</strong>
-          </p>
-          <p className="italic text-gray-700">{service.subItem.description}</p>
-        </div>
-        <div>
           <strong className="text-lg">{service.cta.header}</strong>
           <MarginButton href="/contact">{service.cta.title}</MarginButton>
         </div>
