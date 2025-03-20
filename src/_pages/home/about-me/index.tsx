@@ -16,29 +16,26 @@ export function AboutMe() {
         <div className="space-y-10">
           <div className="mt-10 max-w-2xl space-y-6">
             <p>
-              I help startups and scale-ups{' '}
-              <strong>define scalable technology strategies</strong>,{' '}
-              <strong>build high-performing engineering teams</strong>, and{' '}
-              <strong>develop innovative products</strong>—providing{' '}
-              <strong>
-                CTO-level leadership without the full-time commitment
-              </strong>
-              .
+              I help <strong>startups and scale-ups</strong> build the right
+              technology foundation to scale, grow their engineering teams, and
+              launch innovative products—offering
+              <strong> CTO-level leadership</strong> without the overhead of a
+              full-time hire.
             </p>
             <p>
-              With extensive experience leading engineering teams, I ensure
-              technology becomes a <strong>growth enabler</strong>, not a{' '}
-              <strong>bottleneck</strong>—helping businesses build{' '}
-              <strong>fast, scalable, and AI-powered solutions</strong> that
-              drive long-term success.
+              With years of hands-on experience leading engineering teams, I
+              ensure
+              <strong> technology accelerates your business</strong> rather than
+              holding it back. Whether it’s architecting{' '}
+              <strong>fast, scalable systems</strong> or integrating{' '}
+              <strong>AI to unlock new capabilities</strong>, I focus on
+              practical, high-impact solutions that drive long-term success.
             </p>
             <p>
-              Whether you need <strong>strategic technology leadership</strong>,{' '}
-              <strong>expert product engineering</strong>, or{' '}
-              <strong>technical mentorship for your team</strong>, I provide the
-              expertise to help you{' '}
-              <strong>build scalable, high-impact technology</strong>—without
-              the full-time cost.
+              If you need <strong>strategic technology leadership</strong>,
+              expert product development, or mentorship to level up your team, I
+              bring the expertise to help you
+              <strong> build and scale—without the full-time cost</strong>.
             </p>
           </div>
           <MarginButton href="/about-me" aria-label="About Me">

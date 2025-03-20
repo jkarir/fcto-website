@@ -98,57 +98,50 @@ export default function Page() {
         title="Building Scalable, High-Performing Tech for Startups & Scale-Ups"
       >
         <p>
-          For over 20 years, I&apos;ve been{' '}
-          <strong>building software, leading teams,</strong> and solving tough
-          technical challenges across industries. My expertise spans{' '}
-          <strong>
-            full-stack and mobile development, MACH and composable commerce,
-          </strong>{' '}
-          and <strong>technical leadership</strong>. At my core, I&apos;m driven
-          by <strong>solving complex problems</strong> and helping companies{' '}
-          <strong>build software that delivers real value</strong>.
+          I've spent the past 20 years building software, leading teams, and
+          solving tough technical challenges across industries. I’ve worked with
+          startups and scale-ups to define technical strategy, build scalable
+          systems, and grow strong engineering teams. At my core, I love solving
+          complex problems and helping companies build software that actually
+          delivers value—not just ticking boxes or chasing trends. I take a
+          pragmatic, business-first approach, making sure technology enables
+          growth rather than becoming a bottleneck.
         </p>
       </PageIntro>
       <br />
       <SectionIntro title="My Approach" smaller fullWidth>
         <div className="space-y-6">
           <p>
-            Technology should be a{' '}
-            <strong>business enabler, not a roadblock</strong>. I&apos;ve worked
-            with startups and scale-ups to:
+            As a <strong>Fractional CTO</strong> or{' '}
+            <strong>Fractional Engineering Manager</strong>, I help early-stage
+            startups:
           </p>
 
           <BulletedList>
             <BulletedListItem>
-              <strong>Define and execute technical strategy</strong> that aligns
-              with business goals.
+              <strong>Define a clear technical roadmap</strong> that aligns with
+              business goals.
             </BulletedListItem>
             <BulletedListItem>
-              <strong>Build scalable, maintainable systems</strong> using
-              technologies like{' '}
-              <strong>React, Next.js, Node.js, and cloud platforms</strong> for
-              full-stack applications, and{' '}
-              <strong>React Native, iOS, and Flutter</strong> for mobile
-              solutions.
+              <strong>Build a strong engineering foundation</strong> for
+              scalability and growth
             </BulletedListItem>
             <BulletedListItem>
-              <strong>Optimize engineering teams</strong> through better
-              processes, mentorship, and leadership.
+              <strong>Hire and scale the right engineering team</strong> at the
+              right time
             </BulletedListItem>
             <BulletedListItem>
-              <strong>Navigate startup advisory and tech due diligence</strong>{' '}
-              to mitigate risks.
+              <strong>Improve execution and development speed</strong> to ship
+              faster
             </BulletedListItem>
             <BulletedListItem>
-              <strong>Explore AI and ML opportunities</strong> where they create
-              real impact.
+              <strong>Avoid costly technical mistakes</strong> through better
+              decisions and due diligence
             </BulletedListItem>
           </BulletedList>
           <p>
-            I take a <strong>pragmatic, results-driven approach</strong>,
-            focusing on{' '}
-            <strong>what actually moves the business forward</strong>, rather
-            than chasing trends or over-engineering solutions.
+            I focus on <strong>practical, high-impact solutions</strong> that
+            help startups move fast and scale smart.
           </p>
         </div>
       </SectionIntro>
@@ -156,65 +149,25 @@ export default function Page() {
       <SectionIntro title="My Background" smaller fullWidth>
         <div className="space-y-6">
           <p>
-            As the{' '}
-            <strong>
-              Founder and Software Consultant at Blue Pixel Software
-            </strong>
-            , I&apos;ve taken on{' '}
-            <strong>
-              technical leadership roles as a Tech Lead and Staff Engineer
-            </strong>
-            , driving strategy, mentoring teams, and helping companies{' '}
-            <strong>scale their engineering efforts</strong>. My work spans both{' '}
-            <strong>full-stack development</strong> using{' '}
-            <strong>React, Next.js, Node.js, and cloud platforms</strong>, and{' '}
-            <strong>mobile engineering</strong> with{' '}
-            <strong>React Native, iOS, and Flutter</strong>— ensuring teams
-            build{' '}
-            <strong>scalable, maintainable, and high-performing systems</strong>
-            .
+            As the founder of Blue Pixel Software, I’ve taken on tech lead and
+            staff engineering roles, helping companies scale their engineering
+            efforts. I’ve worked across full-stack and mobile development,
+            ensuring teams build robust, high-performing software that lasts.
           </p>
 
           <p>
-            I&apos;ve always had an <strong>entrepreneurial mindset</strong>,
-            shaping how I approach{' '}
-            <strong>technology, leadership, and decision-making</strong>.
-            Whether working with{' '}
-            <strong>startups or established companies</strong>, I bring a{' '}
-            <strong>founder’s perspective</strong>— focused on{' '}
-            <strong>efficiency, scalability, and long-term impact</strong>. Over
-            the years, I&apos;ve{' '}
-            <strong>led teams and guided technical decisions</strong> in
-            industries including{' '}
-            <strong>
-              Gaming & Interactive Entertainment, Media & Publishing, Streaming
-              & Digital Media, E-Commerce & Retail, Healthcare & HealthTech,
-              Lotteries & Gaming, Banking & FinTech, and EdTech & Education
-            </strong>
-            . I help organizations navigate{' '}
-            <strong>
-              complex technical challenges with strong leadership, strategic
-              thinking, and hands-on expertise
-            </strong>
-            .
+            I approach technology like a founder—balancing innovation with
+            real-world constraints. Over the years, I’ve helped companies in
+            industries like gaming, media, streaming, e-commerce, healthcare,
+            fintech, and edtech.
           </p>
 
           <p>
-            Beyond <strong>hands-on development</strong>, I focus on{' '}
-            <strong>building and empowering high-performing teams</strong>. I
-            help organizations{' '}
-            <strong>
-              establish technical vision, improve engineering culture,
-            </strong>{' '}
-            and implement{' '}
-            <strong>processes that enable teams to scale efficiently</strong>.{' '}
-            Whether it&apos;s{' '}
-            <strong>
-              defining architecture, optimizing workflows, or mentoring
-              engineers
-            </strong>
-            , my goal is to create an environment where{' '}
-            <strong>teams thrive and deliver meaningful impact</strong>.
+            Beyond writing code, I focus on building great teams and creating
+            environments where engineers can do their best work. Whether it’s
+            defining architecture, optimizing workflows, or mentoring teams, my
+            goal is to help companies build software that lasts and teams that
+            thrive.
           </p>
         </div>
       </SectionIntro>

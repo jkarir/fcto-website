@@ -110,7 +110,7 @@ export default function Services() {
       <SectionIntro
         smaller
         className="mt-24 sm:mt-32 lg:mt-20"
-        title="Frequently Asked Questions"
+        title="FAQ: How I Help Early-Stage Startups"
         fullWidth
       >
         <div className="space-y-6">
