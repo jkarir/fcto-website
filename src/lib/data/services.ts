@@ -7,28 +7,28 @@ export const services: Service[] = [
   {
     title: 'Fractional CTO & Technology Leadership',
     subTitle:
-      'Technical Strategy & Leadership to Align Engineering with Business Growth',
+      'Hands-on technical leadership to help you scale fast, avoid tech debt, and stay focused on growth',
     image: { src: imageTechnologyStrategy, shape: 0 },
     items: [
       {
-        title: 'Tech Strategy, Roadmap & Growth Execution',
+        title: 'Startup Tech Strategy & Execution',
         description:
-          "I'll help you build a tech strategy that aligns with your business vision, making sure your engineering efforts are focused on achieving your goals. Together, we'll create a clear roadmap that guides your growth while minimizing risks and ensuring scalability.",
+          'I help you define a <strong>clear, actionable tech roadmap</strong> that aligns with your business vision. Whether you’re building your MVP, preparing to scale, or optimizing development processes, I provide the technical strategy to keep you moving <strong>fast without breaking things</strong>.',
       },
       {
-        title: 'Business & Product Alignment',
+        title: 'Engineering & Product Alignment',
         description:
-          'I ensure your engineering team’s efforts are directly tied to your product’s goals and business objectives, making sure your technology solves real customer problems, fits market demands, and supports business growth.',
+          'Engineering should drive business success—not just ship code. I ensure your development efforts are focused on <strong>building the right features, solving real customer problems, and hitting key milestones</strong>, so you don’t waste time or resources.',
       },
       {
-        title: 'Tech-Driven Business Strategy',
+        title: 'Smart Architecture & Scalability Planning',
         description:
-          'I align your technology strategy with your business goals, using tech to differentiate your company, streamline operations, and create new revenue opportunities, all while positioning you for long-term success.',
+          'Scaling too early is a waste; scaling too late is a disaster. I design <strong>lean, scalable architectures that grow with your business</strong>, ensuring you avoid <strong>technical debt, costly rewrites, and scaling bottlenecks</strong> when your startup takes off.',
       },
       {
-        title: 'Architecture & Scalability Consulting',
+        title: 'Early-Stage Tech Team Leadership',
         description:
-          'I help design secure and scalable systems that grow with your business. From creating a strategic tech architecture to implementing cloud solutions and automation, I ensure your infrastructure is future-proof and capable of supporting long-term growth.',
+          'Early-stage teams need <strong>clarity, focus, and the right technical culture</strong>. I help you set up strong engineering processes, improve team efficiency, and provide <strong>mentorship and guidance</strong>—even if you’re not ready for a full-time CTO.',
       },
     ],
     cta: {
@@ -39,33 +39,34 @@ export const services: Service[] = [
   },
   {
     title: 'Fractional Engineering Management',
-    subTitle: 'Hands-On Leadership to Scale & Strengthen Your Engineering Team',
+    subTitle:
+      'Hands-on leadership to keep your engineering team focused, productive, and aligned with business goals.',
     image: { src: imageLaptop, shape: 1 },
     items: [
       {
-        title: 'Team Leadership & Mentorship',
+        title: 'Engineering Team Leadership & Growth',
         description:
-          "I bring hands-on leadership to help guide your engineers, fostering a culture of collaboration and growth. I'm there to help your team stay motivated, communicate effectively, and keep development on track.",
+          'Your early-stage engineers need <strong>guidance, structure, and mentorship</strong> to stay efficient and grow with the company. I provide <strong>hands-on leadership</strong> to help your team <strong>stay motivated, collaborate effectively, and level up their skills</strong>, even if you’re not ready for a full-time EM.',
       },
       {
-        title: 'Process Optimization & Delivery Execution',
+        title: 'Efficient Development & Faster Delivery',
         description:
-          "I'll work with your team to streamline workflows, remove bottlenecks, and improve collaboration. My focus is on making sure your development processes are efficient and that your team delivers quality work on time, every time.",
+          'Speed matters in early-stage startups. I help <strong>streamline workflows, remove bottlenecks, and improve collaboration</strong> so your team can build and ship high-quality products <strong>faster—without cutting corners</strong>.',
       },
       {
-        title: 'Technical Decision-Making Support',
+        title: 'Smart, Fast Technical Decision-Making',
         description:
-          "When technical challenges arise, I'm there to provide the guidance needed to make the right decisions quickly. I'll help your team navigate blockers, improve code quality, and keep development moving forward without bottlenecks.",
+          'Startups can’t afford costly mistakes. When technical challenges arise, I provide <strong>practical guidance on architecture, trade-offs, and best practices</strong>, ensuring your team makes the <strong>right decisions quickly</strong> and avoids technical debt that slows you down later.',
       },
       {
         title: 'Cross-Team Communication & Alignment',
         description:
-          'I ensure your engineering, product, and leadership teams are always aligned on priorities and goals. With clear communication and a shared vision, your team can focus on what matters most—delivering great products.',
+          'Misalignment between <strong>engineering, product, and leadership</strong> kills momentum. I make sure your team is always <strong>focused on the right priorities</strong>, keeping stakeholders aligned so engineers can build <strong>without distractions or wasted effort</strong>.',
       },
       {
         title: 'Full-Stack & Mobile Development Leadership',
         description:
-          'I lead your development teams in building solid, scalable systems using the best practices in full-stack and mobile development. I’ll help ensure your team works efficiently, executes seamlessly, and builds products that are ready to scale.',
+          "If you're building <strong>full-stack or mobile applications</strong>, I provide <strong>deep technical leadership</strong> to ensure your team follows best practices, builds scalable systems, and delivers a <strong>high-quality product that can grow with your business</strong>.",
       },
     ],
     cta: {
