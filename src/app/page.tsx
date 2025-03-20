@@ -9,9 +9,9 @@ import { Hero } from '@/_pages/home/hero'
 import { clients } from '@/lib/clients'
 
 export const metadata: Metadata = {
-  title: 'Fractional CTO & Software Engineering Consultant | Jürgen Karir',
+  title: 'Jürgen Karir | Fractional CTO & Software Engineering Consultant',
   description:
-    'Helping startups & scale-ups build scalable software, optimize engineering teams, and accelerate product development. Expert in full-stack, mobile, and AI-driven solutions.',
+    'Expert Fractional CTO helping startups build scalable software, optimize engineering teams, and accelerate product development with full-stack, mobile, and AI solutions.',
   keywords: [
     'Fractional CTO',
     'Software Consultant',
@@ -20,17 +20,18 @@ export const metadata: Metadata = {
     'Mobile Development',
     'iOS Development',
     'React Native',
-    'AI & ML Solutions',
+    'AI Solutions',
     'Startup Tech Strategy',
     'Engineering Leadership',
+    'Technical Leadership',
   ],
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://www.jurgenkarir.com',
-    title: 'Fractional CTO & Software Engineering Consultant | Jürgen Karir',
+    title: 'Jürgen Karir | Fractional CTO & Software Engineering Consultant',
     description:
-      'Helping startups & scale-ups build scalable software, optimize engineering teams, and accelerate product development.',
+      'Expert Fractional CTO helping startups build scalable software, optimize engineering teams, and accelerate product development.',
     siteName: 'Jürgen Karir',
     images: [
       {
@@ -43,9 +44,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Fractional CTO & Software Engineering Consultant | Jürgen Karir',
+    title: 'Jürgen Karir | Fractional CTO & Software Engineering Consultant',
     description:
-      'Helping startups & scale-ups build scalable software, optimize engineering teams, and accelerate product development.',
+      'Expert Fractional CTO helping startups build scalable software, optimize engineering teams, and accelerate product development.',
     creator: '@jurgenkarir',
     images: ['https://www.jurgenkarir.com/og-image.png'],
   },
@@ -57,44 +58,79 @@ export const metadata: Metadata = {
   },
 }
 
+// Enhanced structured data with multiple schema types for better SEO
 const structuredData = {
   '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Jürgen Karir',
-  jobTitle: 'Fractional CTO & Software Engineering Consultant',
-  description: metadata.description,
-  image: 'https://www.jurgenkarir.com/jurgen-karir.jpg',
-  url: 'https://www.jurgenkarir.com',
-  sameAs: [
-    'https://github.com/jurgenkarir',
-    'https://linkedin.com/in/jurgenkarir',
-    'https://twitter.com/jurgenkarir',
-  ],
-  knowsAbout: [
-    'Software Architecture',
-    'Technical Leadership',
-    'Mobile Development',
-    'Full Stack Development',
-    'React Native',
-    'AI & Machine Learning',
-  ],
-  offers: {
-    '@type': 'Offer',
-    itemOffered: [
-      {
-        '@type': 'Service',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': 'https://www.jurgenkarir.com/#website',
+      url: 'https://www.jurgenkarir.com',
+      name: 'Jürgen Karir',
+      description: metadata.description,
+      publisher: {
+        '@id': 'https://www.jurgenkarir.com/#person',
+      },
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://www.jurgenkarir.com/#person',
+      name: 'Jürgen Karir',
+      jobTitle: 'Fractional CTO & Software Engineering Consultant',
+      description: metadata.description,
+      image: 'https://www.jurgenkarir.com/jurgen-karir.jpg',
+      url: 'https://www.jurgenkarir.com',
+      sameAs: [
+        'https://github.com/jurgenkarir',
+        'https://linkedin.com/in/jurgenkarir',
+        'https://twitter.com/jurgenkarir',
+      ],
+      knowsAbout: [
+        'Software Architecture',
+        'Technical Leadership',
+        'Mobile Development',
+        'Full Stack Development',
+        'React Native',
+        'AI & Machine Learning',
+      ],
+    },
+    {
+      '@type': 'ProfessionalService',
+      '@id': 'https://www.jurgenkarir.com/#organization',
+      name: 'Jürgen Karir - Fractional CTO Services',
+      url: 'https://www.jurgenkarir.com',
+      logo: 'https://www.jurgenkarir.com/logo.png',
+      description:
+        'Fractional CTO and software engineering services for startups and scale-ups',
+      founder: {
+        '@id': 'https://www.jurgenkarir.com/#person',
+      },
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
         name: 'Fractional CTO Services',
-        description:
-          'Strategic technical leadership for startups and scale-ups',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Fractional CTO Services',
+              description:
+                'Strategic technical leadership for startups and scale-ups',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Software Engineering Consulting',
+              description:
+                'Expert guidance on architecture, development, and team optimization',
+            },
+          },
+        ],
       },
-      {
-        '@type': 'Service',
-        name: 'Software Engineering Consulting',
-        description:
-          'Expert guidance on architecture, development, and team optimization',
-      },
-    ],
-  },
+    },
+  ],
 }
 
 export default async function Home() {

@@ -14,21 +14,24 @@ export function Advantages({}: React.PropsWithChildren<AdvantagesProps>) {
     <div className="space-y-10">
       <SectionTitle>Why Work With Me?</SectionTitle>
       <GridList className="lg:grid-cols-4">
-        <GridListItem title="I focus on impact, not just technology">
-          Every decision I make is about real business value, not
-          technology&apos;s sake.
+        <GridListItem title="I align technology with business growth">
+          Too many startups overbuild or choose the wrong tech. I help you make
+          smart, strategic decisions so technology fuels growth, not slows it
+          down.
         </GridListItem>
-        <GridListItem title="I've led teams and built products">
-          I understand the challenges of scaling technology, managing teams, and
-          delivering real results.
+        <GridListItem title="I've led technical teams and built complex systems">
+          I understand the challenges of managing engineering teams, delivering
+          scalable products, and aligning tech with business needs—because
+          I&apos;ve done it firsthand.
         </GridListItem>
-        <GridListItem title="I don't just advise—I build">
-          Strategy is important, but so is execution. I work alongside teams to
-          implement real solutions, not just give recommendations.
+        <GridListItem title="More than strategy—I execute">
+          I take a hands-on approach, working alongside teams to implement real
+          solutions that deliver results—not just recommendations.
         </GridListItem>
-        <GridListItem title="I adapt to your needs">
-          Every company is different, and I adjust my approach to fit your
-          goals, challenges, and stage of growth.
+        <GridListItem title="Tailored to your startup's needs">
+          Every company is different. I adapt my approach to your goals,
+          challenges, and growth stage so you get exactly what you need, when
+          you need it.
         </GridListItem>
       </GridList>
       <MarginButton

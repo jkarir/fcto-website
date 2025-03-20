@@ -9,17 +9,20 @@ export function Hero() {
       <FadeIn className="flex flex-col-reverse items-center gap-12 md:flex-row md:items-center md:justify-between">
         <div className="max-w-4xl flex-1 text-center md:text-left">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            Technology Strategy, When You Need It.
+            Fractional CTO & Engineering Leadership
           </h1>
           <h2 className="mt-6 text-2xl font-bold tracking-tight text-neutral-950 [text-wrap:balance]">
-            You don&apos;t need a full-time CTO—just the right one when it
-            matters most.
+            You don&apos;t need a full-time CTO—just the right expertise at the
+            right time.
           </h2>
           <div className="mt-4 text-xl text-neutral-800 [text-wrap:balance]">
             <p>
-              I&apos;m <strong>Jürgen Karir</strong>, and I help startups build{' '}
-              <strong>scalable, efficient, and high-performing software</strong>{' '}
-              —without the overhead.
+              I&rsquo;m <strong>J&uuml;rgen Karir</strong>, a{' '}
+              <strong>Fractional CTO &amp; Engineering Leader</strong> helping
+              startups
+              <br />
+              build scalable technology, grow high-performing teams, and deliver
+              great software&mdash;without the overhead.
             </p>
           </div>
         </div>
@@ -35,7 +38,9 @@ export function Hero() {
             <p className="font-display text-base/6 font-semibold tracking-wide text-white">
               Jürgen Karir
             </p>
-            <p className="mt-2 text-sm text-white">Fractional CTO</p>
+            <p className="mt-2 text-sm text-white">
+              Fractional CTO | Engineering Leader
+            </p>
           </div>
         </div>
       </FadeIn>

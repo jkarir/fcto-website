@@ -8,6 +8,7 @@ import {
 import { BulletedList, BulletedListItem } from './BulletedList'
 import { ImageSection } from './ImageSection'
 import { List, ListItem } from './List'
+import { MarginButton } from './MarginButton'
 
 function ServiceItemGroup(serviceItemGroup: ServiceItemWithItemsType) {
   return (
@@ -51,7 +52,7 @@ export function ServiceSection({ service }: ServiceSectionProps) {
             : 0,
       }}
     >
-      <div className="space-y-6 text-base text-neutral-600">
+      <div className="space-y-12 text-base text-neutral-600">
         <List className="mt-8 text-lg">
           {service.items.map((item) =>
             isServiceItemWithItems(item) ? (
@@ -61,10 +62,10 @@ export function ServiceSection({ service }: ServiceSectionProps) {
             ),
           )}
         </List>
-        <p
-          className="text-lg"
-          dangerouslySetInnerHTML={{ __html: service.bestFor }}
-        />
+        <div>
+          <strong className="text-lg">{service.cta.header}</strong>
+          <MarginButton href="/contact">{service.cta.title}</MarginButton>
+        </div>
       </div>
     </ImageSection>
   )

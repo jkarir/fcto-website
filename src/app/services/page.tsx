@@ -3,6 +3,9 @@ import { PageIntro } from '@/components/PageIntro'
 import { ContactSection } from '@/components/ContactSection'
 import { ServiceSection } from '@/components/ServiceSection'
 import { services } from '@/lib/data/services'
+import { SectionIntro } from '@/components/SectionIntro'
+import { faqs } from '@/lib/data/faqs'
+import { BulletedList, BulletedListItem } from '@/components/BulletedList'
 
 export const metadata: Metadata = {
   title: 'Fractional CTO & Software Engineering Services | Jürgen Karir',
@@ -84,14 +87,17 @@ export default function Services() {
         title="Helping Startups & Scale-Ups Build Great Software"
       >
         <p>
-          I partner with startups and growing companies to turn{' '}
-          <strong>ambitious ideas into reality</strong>. With over{' '}
-          <strong>20 years in software engineering</strong>, I help teams{' '}
           <strong>
-            build scalable technology, optimize workflows, and accelerate
-            development
+            Building great technology is hard. Scaling it is even harder.
           </strong>
-          —without unnecessary complexity.
+          Startups often face{' '}
+          <strong>
+            technical debt, slow development cycles, and inefficient teams
+          </strong>
+          —not because they lack talent, but because they lack{' '}
+          <strong>
+            the right leadership to drive technical strategy and execution.
+          </strong>
         </p>
       </PageIntro>
 
@@ -101,6 +107,41 @@ export default function Services() {
         ))}
       </div>
 
+      <SectionIntro
+        smaller
+        className="mt-24 sm:mt-32 lg:mt-20"
+        title="Frequently Asked Questions"
+        fullWidth
+      >
+        <div className="space-y-6">
+          {faqs.map((faq, index) => (
+            <div key={index}>
+              <p>
+                <strong>- {faq.question}</strong>
+              </p>
+              <div className="ml-3 mt-2">
+                {faq.intro && (
+                  <div
+                    className="mb-2"
+                    dangerouslySetInnerHTML={{ __html: faq.intro }}
+                  />
+                )}
+                {Array.isArray(faq.answer) ? (
+                  <BulletedList>
+                    {faq.answer.map((answer, index) => (
+                      <BulletedListItem key={index}>
+                        <div dangerouslySetInnerHTML={{ __html: answer }} />
+                      </BulletedListItem>
+                    ))}
+                  </BulletedList>
+                ) : (
+                  <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </SectionIntro>
       <ContactSection />
     </>
   )

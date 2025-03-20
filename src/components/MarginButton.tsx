@@ -11,7 +11,7 @@ interface MarginButtonProps {
 export function MarginButton({
   href,
   ariaLabel,
-  className = 'mt-10',
+  className = 'mt-8',
   children,
 }: MarginButtonProps) {
   return (
