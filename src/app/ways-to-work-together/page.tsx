@@ -142,7 +142,7 @@ export default function Page() {
         </div>
       </PageIntro>
 
-      <Container className="mx-10 mt-10">
+      <Container className="mt-10">
         <div className="space-y-16">
           <List className="mt-10 text-lg">
             {engagementModels.map((model) => (
