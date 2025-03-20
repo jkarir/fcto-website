@@ -5,6 +5,7 @@ import { ServiceSection } from '@/components/ServiceSection'
 import { services } from '@/lib/data/services'
 import { SectionIntro } from '@/components/SectionIntro'
 import { faqs } from '@/lib/data/faqs'
+import { BulletedList, BulletedListItem } from '@/components/BulletedList'
 
 export const metadata: Metadata = {
   title: 'Fractional CTO & Software Engineering Services | Jürgen Karir',
@@ -118,10 +119,25 @@ export default function Services() {
               <p>
                 <strong>- {faq.question}</strong>
               </p>
-              <p
-                className="mt-2"
-                dangerouslySetInnerHTML={{ __html: faq.answer }}
-              />
+              <div className="ml-3 mt-2">
+                {faq.intro && (
+                  <div
+                    className="mb-2"
+                    dangerouslySetInnerHTML={{ __html: faq.intro }}
+                  />
+                )}
+                {Array.isArray(faq.answer) ? (
+                  <BulletedList>
+                    {faq.answer.map((answer, index) => (
+                      <BulletedListItem key={index}>
+                        <div dangerouslySetInnerHTML={{ __html: answer }} />
+                      </BulletedListItem>
+                    ))}
+                  </BulletedList>
+                ) : (
+                  <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                )}
+              </div>
             </div>
           ))}
         </div>
