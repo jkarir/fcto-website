@@ -5,24 +5,23 @@ export const faqs: FAQs = [
     question:
       "What's the difference between a Fractional CTO and a Fractional Engineering Manager?",
     answer: [
-      'As your <strong>Fractional CTO</strong>, I help you <strong>define and execute a technical strategy</strong> that aligns with your business goals. I focus on <strong>scalability, architecture, and long-term growth</strong>, ensuring your startup is built to last',
-      'As your <strong>Fractional Engineering Manager</strong>, I work directly with your development team to <strong>optimize workflows, improve execution, and remove bottlenecks</strong>, so your team builds and ships faster and more efficiently.',
+      'As a <strong>Fractional CTO</strong>, I define and execute your technical strategy—focusing on architecture, scalability, and aligning tech with business growth.',
+      'As a <strong>Fractional Engineering Manager</strong>, I work hands-on with your team—improving workflows, boosting execution, and helping engineers ship faster.',
     ],
   },
   {
-    question: 'Do you write code, or do you only provide leadership?',
+    question: 'Do you write code, or just lead?',
     answer:
-      'My focus is <strong>technical leadership</strong>, but I also provide <strong>hands-on developmen</strong>t when needed—especially for <strong>critical architectural decisions, code reviews, and proof-of-concept work</strong>. Whether it’s <strong>full-stack, mobile, or AI-driven applications</strong>, I ensure your technology is built for <strong>speed and scalability</strong>.',
+      "Primarily, I lead—but I jump in when needed. I write code for critical decisions, architecture work, code reviews, and proof-of-concepts. Whether it's full-stack, mobile, or AI-driven, I make sure your tech is fast, scalable, and built right.",
   },
   {
-    question: 'Can you help us hire developers and build an engineering team?',
-    intro:
-      'Yes! While I may not directly <strong>execute hiring</strong>, I help you:',
+    question: 'Can you help us hire and build an engineering team?',
+    intro: 'Yes. While I don’t act as a recruiter, I help you:',
     answer: [
-      'Define the <strong>right roles</strong> for your stage and tech stack.',
-      'Vet <strong>candidates</strong> for technical skills and cultural fit.',
-      ' Implement <strong>onboarding processes</strong> to make new hires productive fast.',
-      'Create a <strong>strong engineering culture</strong> that attracts and retains top talent.',
+      'Define the right roles based on your stage and stack',
+      'Vet candidates for technical skills and team fit',
+      'Set up onboarding to get new hires productive fast',
+      'Build the kind of engineering culture that retains talent',
     ],
   },
 ]

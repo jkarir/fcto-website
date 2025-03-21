@@ -7,28 +7,28 @@ export const services: Service[] = [
   {
     title: 'Fractional CTO & Technology Leadership',
     subTitle:
-      'Hands-on technical leadership to help you scale fast, avoid tech debt, and stay focused on growth',
+      'Hands-on technical leadership to help you scale fast, avoid tech debt, and stay focused on what matters.',
     image: { src: imageTechnologyStrategy, shape: 0 },
     items: [
       {
         title: 'Startup Tech Strategy & Execution',
         description:
-          'I help you define a <strong>clear, actionable tech roadmap</strong> that aligns with your business vision. Whether you’re building your MVP, preparing to scale, or optimizing development processes, I provide the technical strategy to keep you moving <strong>fast without breaking things</strong>.',
+          "I help you define a clear, actionable roadmap that aligns with your business goals—whether you're building your MVP, scaling systems, or unblocking execution.",
       },
       {
         title: 'Engineering & Product Alignment',
         description:
-          'Engineering should drive business success—not just ship code. I ensure your development efforts are focused on <strong>building the right features, solving real customer problems, and hitting key milestones</strong>, so you don’t waste time or resources.',
+          'I keep your team focused on building the right features, solving real problems, and hitting key milestones—so nothing slows you down.',
       },
       {
         title: 'Smart Architecture & Scalability Planning',
         description:
-          'Scaling too early is a waste; scaling too late is a disaster. I design <strong>lean, scalable architectures that grow with your business</strong>, ensuring you avoid <strong>technical debt, costly rewrites, and scaling bottlenecks</strong> when your startup takes off.',
+          'I design lean, scalable systems that grow with your business—avoiding costly rewrites, bottlenecks, or premature complexity.',
       },
       {
         title: 'Early-Stage Tech Team Leadership',
         description:
-          'Early-stage teams need <strong>clarity, focus, and the right technical culture</strong>. I help you set up strong engineering processes, improve team efficiency, and provide <strong>mentorship and guidance</strong>—even if you’re not ready for a full-time CTO.',
+          'I guide early teams with the right technical culture, lightweight processes, and mentorship to help them stay efficient and focused.',
       },
     ],
     cta: {
@@ -44,29 +44,29 @@ export const services: Service[] = [
     image: { src: imageLaptop, shape: 1 },
     items: [
       {
-        title: 'Engineering Team Leadership & Growth',
+        title: 'Team Leadership & Growth',
         description:
-          'Your early-stage engineers need <strong>guidance, structure, and mentorship</strong> to stay efficient and grow with the company. I provide <strong>hands-on leadership</strong> to help your team <strong>stay motivated, collaborate effectively, and level up their skills</strong>, even if you’re not ready for a full-time EM.',
+          'Early-stage engineers need guidance to stay efficient and grow with your company. I provide structure, mentorship, and technical leadership—even if you’re not ready for a full-time EM.',
       },
       {
-        title: 'Efficient Development & Faster Delivery',
+        title: 'Faster, More Efficient Delivery',
         description:
-          'Speed matters in early-stage startups. I help <strong>streamline workflows, remove bottlenecks, and improve collaboration</strong> so your team can build and ship high-quality products <strong>faster—without cutting corners</strong>.',
+          'I streamline workflows, remove bottlenecks, and improve collaboration so your team ships high-quality software—faster and with fewer setbacks.',
       },
       {
-        title: 'Smart, Fast Technical Decision-Making',
+        title: 'Smart, Fast Decision-Making',
         description:
-          'Startups can’t afford costly mistakes. When technical challenges arise, I provide <strong>practical guidance on architecture, trade-offs, and best practices</strong>, ensuring your team makes the <strong>right decisions quickly</strong> and avoids technical debt that slows you down later.',
+          'When challenges come up, I help your team make the right calls—balancing speed, quality, and long-term sustainability to avoid technical debt.',
       },
       {
-        title: 'Cross-Team Communication & Alignment',
+        title: 'Cross-Functional Alignment',
         description:
-          'Misalignment between <strong>engineering, product, and leadership</strong> kills momentum. I make sure your team is always <strong>focused on the right priorities</strong>, keeping stakeholders aligned so engineers can build <strong>without distractions or wasted effort</strong>.',
+          'I keep engineering, product, and leadership aligned—ensuring teams stay focused on the right priorities and momentum doesn’t get lost in translation.',
       },
       {
-        title: 'Full-Stack & Mobile Development Leadership',
+        title: 'Full-Stack & Mobile Leadership',
         description:
-          "If you're building <strong>full-stack or mobile applications</strong>, I provide <strong>deep technical leadership</strong> to ensure your team follows best practices, builds scalable systems, and delivers a <strong>high-quality product that can grow with your business</strong>.",
+          'If you’re building web or mobile apps, I bring deep technical guidance to ensure your systems scale and your product quality holds up as you grow.',
       },
     ],
     cta: {
