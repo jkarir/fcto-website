@@ -80,36 +80,26 @@ export default function Contact() {
       <PageIntro eyebrow="Contact Me" title="Let's Connect">
         <div className="space-y-6">
           <p>
-            <strong>
-              Building something new? Scaling up? Facing technical roadblocks?
-            </strong>{' '}
+            Building something new? Scaling up? Stuck on a technical decision?
             Let’s talk.
           </p>
           <p>
-            Whether you need a{' '}
-            <strong>
-              Fractional CTO, technical leadership, or a fresh perspective on
-              your product’s architecture
-            </strong>
-            , I bring{' '}
-            <strong>experience, clarity, and a no-nonsense approach</strong> to
-            solving complex challenges.
+            Whether you need a Fractional CTO, hands-on leadership, or clarity
+            on your architecture, I bring experience, focus, and a no-fluff
+            approach to solving tough challenges.
           </p>
         </div>
       </PageIntro>
       <div className="mt-10 space-y-16">
         <SectionIntro title="What To Expect" smaller>
           <BulletedList>
+            <BulletedListItem>A reply within 24 hours</BulletedListItem>
             <BulletedListItem>
-              <strong>A response within 24 hours.</strong>
+              A quick, focused call to understand your goals and current
+              challenges
             </BulletedListItem>
             <BulletedListItem>
-              <strong>An initial conversation</strong> to understand your
-              challenges and goals.
-            </BulletedListItem>
-            <BulletedListItem>
-              <strong>A clear, actionable path forward</strong> to solving your
-              technical challenges.
+              A clear next step toward solving your technical challenges
             </BulletedListItem>
           </BulletedList>
         </SectionIntro>
