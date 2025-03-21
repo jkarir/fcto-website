@@ -16,26 +16,21 @@ export function AboutMe() {
         <div className="space-y-10">
           <div className="mt-10 max-w-2xl space-y-6">
             <p>
-              I help <strong>startups and scale-ups</strong> build the right
-              technology foundation to scale, grow their engineering teams, and
-              launch innovative products—offering
-              <strong> CTO-level leadership</strong> without the overhead of a
-              full-time hire.
+              I help startups and scale-ups build scalable tech, grow strong
+              engineering teams, and launch innovative products — without the
+              cost of a full-time CTO.
             </p>
             <p>
               With years of hands-on experience leading engineering teams, I
-              ensure
-              <strong> technology accelerates your business</strong> rather than
-              holding it back. Whether it’s architecting{' '}
-              <strong>fast, scalable systems</strong> or integrating{' '}
-              <strong>AI to unlock new capabilities</strong>, I focus on
-              practical, high-impact solutions that drive long-term success.
+              focus on practical, high-impact solutions that move your business
+              forward. From architecting fast, reliable systems to integrating
+              AI for new capabilities, I ensure technology is a growth driver —
+              not a bottleneck.
             </p>
             <p>
-              If you need <strong>strategic technology leadership</strong>,
-              expert product development, or mentorship to level up your team, I
-              bring the expertise to help you
-              <strong> build and scale—without the full-time cost</strong>.
+              Need strategic tech leadership, expert product development, or
+              team mentorship? I&rsquo;ll help you build and scale with
+              confidence — without the overhead.
             </p>
           </div>
           <MarginButton href="/about-me" aria-label="About Me">
@@ -50,19 +45,19 @@ export function AboutMe() {
           <StatList>
             <StatListItem
               value="19"
-              label="Engineering teams led—guiding teams to deliver high-impact products across startups and enterprises."
+              label="Engineering teams led—guiding teams from startups to enterprises."
             />
             <StatListItem
               value="17"
-              label="Mobile apps shipped—optimized for performance, scalability, and seamless user experience, driving engagement."
+              label="Mobile apps shipped—built for performance, scalability, and seamless user experience."
             />
             <StatListItem
               value="15"
-              label="Web platforms launched—helping businesses turn ideas into scalable, fully deployed products."
+              label="Web platforms launched—turning ideas into fully deployed, scalable products."
             />
             <StatListItem
               value="14"
-              label="Companies transformed—leveraging smarter tech decisions to build better products and drive growth."
+              label="Companies transformed—leveraging smarter tech decisions to accelerate growth"
             />
           </StatList>
         </div>

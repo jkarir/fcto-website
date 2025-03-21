@@ -9,23 +9,23 @@ export function Services({}: React.PropsWithChildren<ServicesProps>) {
     <div className="space-y-10">
       <SectionTitle>How I Help</SectionTitle>
       <GridList className="lg:grid-cols-4">
-        <GridListItem title="Fractional CTO & Engineering Leadership">
-          I align engineering with business goals, mentor teams, and design
-          scalable architectures to drive growth—without the cost of a full-time
-          CTO.
+        <GridListItem title="Fractional CTO for Early-Stage Startups">
+          I help founders make smart technical decisions early—building only
+          what’s needed, avoiding tech debt, and staying focused on product and
+          growth.
         </GridListItem>
-        <GridListItem title="Engineering Team Execution & Optimization">
-          I help startups improve execution, streamline development processes,
-          and implement AI-driven workflows to increase efficiency.
+        <GridListItem title="MVP Strategy & Product Acceleration">
+          From idea to launch, I guide you through building a lean, scalable MVP
+          that gets to market fast and lays the groundwork for future growth.
         </GridListItem>
-        <GridListItem title="Startup Advisory & MVP Acceleration">
-          I help startups validate ideas, build scalable MVPs, and leverage AI
-          to differentiate their products—while assembling the right technical
-          foundation for growth.
+        <GridListItem title="Engineering Team Setup & Execution">
+          I help you hire right, set up lightweight processes, and coach your
+          team to ship faster, stay aligned, and work like a high-performing
+          unit.
         </GridListItem>
-        <GridListItem title="AI-Powered Mobile & Web Apps">
-          I help startups build intelligent apps that automate processes and
-          optimize performance to drive growth and efficiency.
+        <GridListItem title="Mobile & Web App Development Leadership">
+          Hands-on technical guidance to build fast, reliable, AI-enabled
+          apps—so you can move quickly without cutting corners.
         </GridListItem>
       </GridList>
       <MarginButton href="/services" aria-label="Explore my services">
