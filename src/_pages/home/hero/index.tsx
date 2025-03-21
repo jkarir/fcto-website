@@ -12,17 +12,16 @@ export function Hero() {
             Fractional CTO & Engineering Leadership
           </h1>
           <h2 className="mt-6 text-2xl font-bold tracking-tight text-neutral-950 [text-wrap:balance]">
-            You don&apos;t need a full-time CTO—just the right expertise at the
-            right time.
+            The right tech leadership, exactly when you need it.
           </h2>
           <div className="mt-4 text-xl text-neutral-800 [text-wrap:balance]">
             <p>
-              I&rsquo;m <strong>J&uuml;rgen Karir</strong>, a{' '}
-              <strong>Fractional CTO &amp; Engineering Leader</strong> helping
-              startups
-              <br />
-              build scalable technology, grow high-performing teams, and deliver
-              great software&mdash;without the overhead.
+              I&rsquo;m <strong>Jürgen Karir</strong>, a{' '}
+              <strong>Fractional CTO</strong> helping startups{' '}
+              <strong>
+                scale technology, build strong teams, and ship great
+                software—without the full-time cost
+              </strong>
             </p>
           </div>
         </div>

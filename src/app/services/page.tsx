@@ -88,20 +88,15 @@ export default function Services() {
       >
         <p>
           <strong>
-            Building great technology is hard. Scaling it is even harder.
+            Startups rarely fail because of bad code—they fail because of the
+            wrong technical decisions.
           </strong>
-          Startups often face{' '}
-          <strong>
-            technical debt, slow development cycles, and inefficient teams
-          </strong>
-          —not because they lack talent, but because they lack{' '}
-          <strong>
-            the right leadership to drive technical strategy and execution.
-          </strong>
+          . Without clear leadership, tech debt piles up, teams slow down, and
+          product momentum stalls.
         </p>
       </PageIntro>
 
-      <div className="mt-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:mt-40 lg:space-y-40">
+      <div className="mt-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:mt-20 lg:space-y-20">
         {services.map((service) => (
           <ServiceSection key={service.title} service={service} />
         ))}

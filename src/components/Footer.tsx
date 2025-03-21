@@ -11,6 +11,7 @@ const navigation = [
     links: [
       { title: 'About Me', href: '/about-me' },
       { title: 'Services', href: '/services' },
+      { title: 'Ways To Work Together', href: '/ways-to-work-together' },
       { title: 'Blog', href: '/blog' },
       { title: 'Contact Me', href: '/contact' },
     ],
