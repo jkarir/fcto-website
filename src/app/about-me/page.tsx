@@ -140,8 +140,8 @@ export default function Page() {
             </BulletedListItem>
           </BulletedList>
           <p>
-            I focus on <strong>practical, high-impact solutions</strong> that
-            help startups move fast and scale smart.
+            I focus on practical, high-impact solutions that help startups move
+            fast and scale smart.
           </p>
         </div>
       </SectionIntro>

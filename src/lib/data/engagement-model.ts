@@ -2,13 +2,14 @@ import { EngagementModel } from '@/lib/types/engagement-model-schema'
 
 export const engagementModels: EngagementModel[] = [
   {
-    title: 'MVP Launch: Get to Market Fast',
-    subtitle: 'For founders who need to go from idea to product quickly.',
+    title: '1.  MVP Launch: Get to Market Fast',
+    subtitle:
+      'For founders who need to go from idea to product—quickly and with confidence.',
     features: [
       'Architect and build an investor-ready MVP',
-      'Choose the right tech stack for speed and scalability',
+      'Choose the right tech stack for speed and scale',
       'Validate product-market fit through lean development',
-      'Ensure a smooth transition from MVP to a scalable product',
+      'Set the stage for smooth post-MVP scaling',
     ],
     highlights: [
       {
@@ -24,19 +25,19 @@ export const engagementModels: EngagementModel[] = [
     ],
     additionalInfo: [
       {
-        question: "Don't have a technical team yet?",
+        question: "Don't have a tech team yet?",
         answer:
-          "I'll help you make the right early decisions and, if needed, bring in the right resources to get your MVP built efficiently.",
+          "I'll guide your early decisions and bring in trusted resources if needed.",
       },
     ],
   },
   {
-    title: 'Fractional CTO: Scale Without a Full-Time Hire',
+    title: '2.  Fractional CTO: Scale Without a Full-Time Hire',
     subtitle:
       "For startups that need strategic technical leadership but aren't ready to hire a full-time CTO.",
     features: [
       'Define and execute a strong technical vision',
-      'Build scalable, high-performing systems',
+      'Build systems that grow with your business',
       'Lead product development and engineering execution',
       'Hire, mentor, and scale your technical team',
     ],
@@ -56,26 +57,25 @@ export const engagementModels: EngagementModel[] = [
       {
         question: 'Already have an engineering team?',
         answer:
-          'I integrate as a fractional leader, working with your existing developers to improve execution and bridge the gap between business and technology.',
+          "I'll integrate with your team to align execution with strategy and accelerate progress.",
       },
     ],
   },
   {
-    title: 'Fractional Engineering Manager: Optimize Your Team & Execution',
+    title: '3.  Fractional Engineering Manager: Optimize Your Team & Execution',
     subtitle:
-      'For startups scaling their engineering team and needing structure, execution, and leadership.',
+      'For startups growing their team and needing strong execution, structure, and coaching.',
     features: [
-      'Establish engineering best practices and improve team efficiency',
-      'Implement processes to scale the team and accelerate delivery',
-      'Provide hands-on mentorship and coaching for engineers',
-      'Reduce technical debt while keeping development fast and focused',
+      'Establish engineering best practices and clear processes',
+      'Improve delivery speed and collaboration',
+      'Mentor engineers and level up your team',
+      'Reduce technical debt without slowing development',
     ],
     highlights: [
       {
         icon: '💡',
         label: 'Best for',
-        value:
-          'Startups growing their engineering team and looking for execution-focused leadership.',
+        value: 'Startups scaling their engineering team.',
       },
       {
         icon: '💰',
@@ -87,7 +87,7 @@ export const engagementModels: EngagementModel[] = [
       {
         question: 'Need a balance between strategy and execution?',
         answer:
-          'I provide both technical leadership and hands-on mentorship to help your engineering team operate at its best.',
+          'I provide leadership and mentorship to keep your team focused and effective.',
       },
     ],
   },

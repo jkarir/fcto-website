@@ -123,21 +123,18 @@ export default function Page() {
       />
       <PageIntro
         eyebrow="Ways To Work Together"
-        title="Flexible, high-impact technical leadership for early-stage startups."
+        title="Flexible, Effective Technical Leadership For Early-Stage Startups."
       >
         <div className="space-y-6">
           <p>
-            Startups need different kinds of technical leadership at different
-            stages. Some need to <strong>launch an MVP fast</strong>, others
-            need a <strong>technical leader to guide scaling</strong>, and some
-            just need <strong>expert advice on critical tech decisions</strong>.
+            Startups need different kinds of tech leadership at different
+            stages. Some need to launch fast, others need help scaling, and some
+            just need expert guidance on key decisions.
           </p>
           <p>
-            This page outlines my <strong>Engagement Models</strong>—the
-            different ways I work with founders to help them move faster, avoid
-            costly mistakes, and build scalable technology. Each model is
-            tailored to meet your startup&apos;s specific needs, and if none of
-            these fit perfectly, we can customize an engagement that does.
+            Below are the flexible ways we can work together—each tailored to
+            your stage, goals, and challenges. If nothing fits exactly, we’ll
+            shape an engagement that does.
           </p>
         </div>
       </PageIntro>
@@ -152,25 +149,29 @@ export default function Page() {
           <div className="space-y-6 text-lg">
             <SectionTitle>How I Work & Pricing</SectionTitle>
             <strong>
-              I offer flexible engagement models based on your startup’s needs:
+              I offer flexible engagement models tailored to your startup’s
+              stage, goals, and resources:
             </strong>
             <BulletedList>
               <BulletedListItem>
-                <strong>Part-time Leadership</strong> - Ongoing support (1–2
-                days/week) for technical strategy and execution.
+                <strong>Part-time Leadership</strong> - Ongoing CTO-level
+                support (1–2 days/week) for strategy, architecture, and team
+                leadership.
               </BulletedListItem>
               <BulletedListItem>
-                <strong>Dedicated Blocks of Time</strong> - Focused execution
-                for high-priority initiatives.
+                <strong>Dedicated Blocks of Time</strong> - Focused time for
+                critical initiatives like MVP delivery, scaling infrastructure,
+                or unblocking teams.
               </BulletedListItem>
               <BulletedListItem>
-                <strong>Retainer-Based Advisory</strong> - Continuous support
-                for strategic decisions and team growth.
+                <strong>Retainer-Based Advisory</strong> - Consistent guidance
+                for technical decisions, team growth, and keeping engineering
+                aligned with business goals.
               </BulletedListItem>
               <BulletedListItem>
-                <strong>Custom Engagements</strong> - Need something different?
-                Let’s design an engagement that fits your startup’s specific
-                challenges.
+                <strong>Custom Engagements</strong> - Every startup is
+                different. If you need a mix of strategy, execution, or
+                mentorship—we’ll design an approach that fits.
               </BulletedListItem>
             </BulletedList>
           </div>
@@ -183,26 +184,19 @@ export default function Page() {
             </strong>
             <BulletedList>
               <BulletedListItem>
-                <strong>Fixed Pricing for MVP Launches</strong> - You pay for a
-                successful MVP, not endless development cycles.
+                <strong>Fixed Pricing for MVP Launches</strong> - Pay for a
+                successful MVP, not an open-ended dev cycle.
               </BulletedListItem>
               <BulletedListItem>
                 <strong>Retainer-Based Pricing for Fractional CTO/EM</strong> -
-                Your investment is based on team growth, efficiency, and
-                business impact.
+                Your investment is tied to impact: team growth, better
+                execution, and faster delivery.
               </BulletedListItem>
               <BulletedListItem>
-                <strong>Custom Engagements</strong> - If your needs don’t fit a
-                set model, we can design a pricing structure that aligns with
-                your goals.
+                <strong>Custom Engagements</strong> - Need something different?
+                We’ll shape a pricing model that fits your goals and stage.
               </BulletedListItem>
             </BulletedList>
-            <div>
-              <strong>
-                No hidden costs, no hourly billing—just clear pricing aligned
-                with your startup’s success.
-              </strong>
-            </div>
           </div>
         </div>
       </Container>
