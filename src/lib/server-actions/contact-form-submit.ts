@@ -1,7 +1,7 @@
 'use server'
 
 import { redirect } from 'next/navigation'
-import { ContactFormValues } from '../types/contact-form-model-schema'
+import { ContactFormValues } from '@/lib/types/contact-form-model-schema'
 import { EmailTemplate } from '@/components/EmailTemplate'
 import { Resend } from 'resend'
 
