@@ -4,7 +4,7 @@ import { faker } from '@faker-js/faker'
 import React from 'react'
 
 const meta = {
-  title: 'components/email-template/ContactFormReply',
+  title: 'components/email-templates/ContactFormReply',
   component: ContactFormReply,
   parameters: {
     layout: 'centered',
