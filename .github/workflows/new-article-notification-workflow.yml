@@ -1,0 +1,55 @@
+name: New Article Notification Workflow
+
+# This workflow can be triggered manually from the GitHub Actions tab
+on:
+  workflow_dispatch:
+    # Optional inputs that can be provided when manually triggering the workflow
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        type: choice
+        required: true
+        default: 'development'
+        options:
+          - development
+          - staging
+          - production
+      deploy_version:
+        description: 'Version to deploy'
+        type: string
+        required: false
+
+jobs:
+  manual-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Log workflow trigger
+        run: |
+          echo "Workflow manually triggered!"
+          echo "Environment: ${{ github.event.inputs.environment }}"
+          echo "Version: ${{ github.event.inputs.deploy_version || 'latest' }}"
+
+      # Add your custom workflow tasks here
+      - name: Run task based on environment
+        run: |
+          if [ "${{ github.event.inputs.environment }}" == "production" ]; then
+            echo "Running production deployment tasks..."
+            # Add production-specific commands
+          elif [ "${{ github.event.inputs.environment }}" == "staging" ]; then
+            echo "Running staging deployment tasks..."
+            # Add staging-specific commands
+          else
+            echo "Running development deployment tasks..."
+            # Add development-specific commands
+          fi
+
+      - name: Complete workflow
+        run: echo "Manual workflow completed successfully!"
