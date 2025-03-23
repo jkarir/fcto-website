@@ -2,7 +2,7 @@
 
 import { redirect } from 'next/navigation'
 import { ContactFormValues } from '@/lib/types/contact-form-model-schema'
-import { EmailTemplate } from '@/components/EmailTemplate'
+import { ContactFormReply } from '@/components/email-templates/ContactFormReply'
 import { Resend } from 'resend'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
@@ -18,7 +18,7 @@ export async function submitContactForm({
       from: 'Jürgen <jurgen@jurgenkarir.com>',
       to: [email],
       subject: 'Thanks For Reaching Out!',
-      react: EmailTemplate({
+      react: ContactFormReply({
         firstName: name,
         inquiryCompany: company,
         inquiryProjectDetails: message,

@@ -1,16 +1,16 @@
 import { Button, Tailwind } from '@react-email/components'
 
-interface EmailTemplateProps {
+interface ContactFormReplyProps {
   firstName: string
   inquiryCompany?: string
   inquiryProjectDetails: string
 }
 
-export function EmailTemplate({
+export function ContactFormReply({
   firstName,
   inquiryCompany,
   inquiryProjectDetails,
-}: Readonly<EmailTemplateProps>) {
+}: Readonly<ContactFormReplyProps>) {
   return (
     <Tailwind>
       <div className="font-sans">
