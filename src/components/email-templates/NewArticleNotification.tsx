@@ -1,4 +1,5 @@
 import { Button, Tailwind } from '@react-email/components'
+import Image from 'next/image'
 
 interface NewArticleNotificationProps {
   articleTitle: string
@@ -35,14 +36,14 @@ export function NewArticleNotification({
 
           <div className="mb-6 space-y-6">
             <p>
-              I've just published a new article that might be relevant to your
-              interests.
+              I&apos;ve just published a new article that might be relevant to
+              your interests.
             </p>
 
             <div className="overflow-hidden rounded-2xl border border-neutral-200">
               {coverImageUrl && (
                 <div className="relative h-48 w-full bg-neutral-100">
-                  <img
+                  <Image
                     src={coverImageUrl}
                     alt={articleTitle}
                     className="h-full w-full object-cover"
@@ -60,7 +61,7 @@ export function NewArticleNotification({
                 <p className="mt-4">{articleDescription}</p>
 
                 <div className="mt-6 border-l-4 border-neutral-200 pl-4 italic">
-                  "{articleExcerpt}"
+                  &quot;{articleExcerpt}&quot;
                 </div>
 
                 <div className="mt-6">
