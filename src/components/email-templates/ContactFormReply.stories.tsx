@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { EmailTemplate } from './EmailTemplate'
+import { ContactFormReply } from './ContactFormReply'
 import { faker } from '@faker-js/faker'
 import React from 'react'
 
 const meta = {
-  title: 'components/email-template',
-  component: EmailTemplate,
+  title: 'components/email-templates/ContactFormReply',
+  component: ContactFormReply,
   parameters: {
     layout: 'centered',
     backgrounds: {
@@ -40,7 +40,7 @@ const meta = {
       required: true,
     },
   },
-} satisfies Meta<typeof EmailTemplate>
+} satisfies Meta<typeof ContactFormReply>
 
 export default meta
 

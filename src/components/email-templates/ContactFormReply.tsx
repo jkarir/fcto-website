@@ -1,16 +1,16 @@
 import { Button, Tailwind } from '@react-email/components'
 
-interface EmailTemplateProps {
+interface ContactFormReplyProps {
   firstName: string
   inquiryCompany?: string
   inquiryProjectDetails: string
 }
 
-export function EmailTemplate({
+export function ContactFormReply({
   firstName,
   inquiryCompany,
   inquiryProjectDetails,
-}: Readonly<EmailTemplateProps>) {
+}: Readonly<ContactFormReplyProps>) {
   return (
     <Tailwind>
       <div className="font-sans">
@@ -25,13 +25,13 @@ export function EmailTemplate({
 
           <div className="mb-6 space-y-6">
             <p>
-              Really appreciate you getting in touch. I&apos;d love to hear more
-              about what you&apos;re working on and what prompted you to reach
-              out.
+              Thanks for reaching out. I&apos;d be glad to learn more about your
+              project and what led you to get in touch.
             </p>
             <p>
-              Let&apos;s set up a quick call to chat—just let me know what time
-              works for you, or you can grab a spot on my calendar here:
+              Let&apos;s arrange a quick call to connect—feel free to suggest a
+              time that works for you, or you can schedule directly using my
+              calendar here:
             </p>
             <Button
               href="https://calendly.com/jurgen-karir/quick-intro-chat"
