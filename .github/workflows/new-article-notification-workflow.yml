@@ -81,7 +81,7 @@ jobs:
           echo "Using production audience from Resend API"
 
           # Install curl and jq for API request and JSON parsing
-          apt-get update && apt-get install -y curl jq
+          sudo apt-get update && sudo apt-get install -y curl jq
 
           # Fetch contacts from Resend audience API
           RESPONSE=$(curl -s -X GET "https://api.resend.com/audiences/${AUDIENCE_ID}/contacts" \
