@@ -1,9 +1,7 @@
 name: New Article Notification Workflow
 
-# This workflow can be triggered manually from the GitHub Actions tab
 on:
   workflow_dispatch:
-    # Required inputs for the article notification
     inputs:
       articleTitle:
         description: 'Article title'
@@ -68,8 +66,8 @@ jobs:
           # Escape description and excerpt for JSON
           DESCRIPTION=$(echo '${{ github.event.inputs.articleDescription }}' | jq -Rs .)
           EXCERPT=$(echo '${{ github.event.inputs.articleExcerpt }}' | jq -Rs .)
-          echo "description=$DESCRIPTION" >> $GITHUB_OUTPUT
-          echo "excerpt=$EXCERPT" >> $GITHUB_OUTPUT
+          echo "description=${DESCRIPTION}" >> "$GITHUB_OUTPUT"
+          echo "excerpt=${EXCERPT}" >> "$GITHUB_OUTPUT"
 
       # Prepare audience list - using production by default
       - name: Prepare audience list
@@ -91,10 +89,10 @@ jobs:
           # Check if the API call was successful
           if echo "$RESPONSE" | jq -e . >/dev/null 2>&1; then
             CONTACTS=$(echo "$RESPONSE" | jq -r '.data[].email' | tr '\n' ',' | sed 's/,$//')
-            echo "recipients=$CONTACTS" >> $GITHUB_OUTPUT
+            echo "recipients=${CONTACTS}" >> "$GITHUB_OUTPUT"
             # Store the recipients as a JSON array for later use
             RECIPIENTS_JSON=$(echo "$RESPONSE" | jq -r '.data[].email' | jq -R . | jq -s .)
-            echo "recipients_json=$RECIPIENTS_JSON" >> $GITHUB_OUTPUT
+            echo "recipients_json=${RECIPIENTS_JSON}" >> "$GITHUB_OUTPUT"
           else
             echo "Error: Failed to fetch contacts from Resend API" >&2
             exit 1
@@ -110,7 +108,6 @@ jobs:
           const path = require('path');
           const fs = require('fs');
 
-          // Dynamic import for ESM modules
           async function renderEmails() {
             try {
               // Import the email component dynamically
