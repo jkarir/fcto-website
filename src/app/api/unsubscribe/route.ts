@@ -20,6 +20,14 @@ export async function GET(request: NextRequest) {
     const { searchParams } = new URL(request.url)
     const email = searchParams.get('email')
 
+    // Check if email parameter is missing
+    if (!email) {
+      return NextResponse.json(
+        { success: false, error: 'Email parameter is missing' },
+        { status: 400 },
+      )
+    }
+
     // Validate the request
     const result = UnsubscribeSchema.safeParse({ email })
     if (!result.success) {
