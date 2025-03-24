@@ -94,7 +94,7 @@ jobs:
 
       # Send email using Resend
       - name: Send email notification
-        uses: resendlabs/action-emails@latest
+        uses: resend/action-emails@latest
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
         with:
