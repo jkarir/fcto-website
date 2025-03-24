@@ -10,11 +10,11 @@ on:
         type: string
         required: true
       articleDescription:
-        description: 'Article description'
+        description: 'Article description (supports multiline)'
         type: string
         required: true
       articleExcerpt:
-        description: 'Article excerpt (quote)'
+        description: 'Article excerpt/quote (supports multiline)'
         type: string
         required: true
       articleUrl:
@@ -34,15 +34,10 @@ on:
         description: 'URL to the article cover image'
         type: string
         required: false
-      unsubscribeUrl:
-        description: 'Unsubscribe URL'
-        type: string
-        required: true
 
 jobs:
   send-email-notification:
     runs-on: ubuntu-latest
-    # No environment specification needed as we removed the input
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -60,6 +55,16 @@ jobs:
         run: |
           echo "Sending email notification for new article:"
           echo "Title: ${{ github.event.inputs.articleTitle }}"
+
+      # Prepare variables and escape multiline inputs for JSON
+      - name: Prepare variables
+        id: vars
+        run: |
+          # Escape description and excerpt for JSON
+          DESCRIPTION=$(echo '${{ github.event.inputs.articleDescription }}' | jq -Rs .)
+          EXCERPT=$(echo '${{ github.event.inputs.articleExcerpt }}' | jq -Rs .)
+          echo "description=$DESCRIPTION" >> $GITHUB_OUTPUT
+          echo "excerpt=$EXCERPT" >> $GITHUB_OUTPUT
 
       # Prepare audience list - using production by default
       - name: Prepare audience list
@@ -86,6 +91,7 @@ jobs:
             echo "Error: Failed to fetch contacts from Resend API" >&2
             exit 1
           fi
+
       # Send email using Resend
       - name: Send email notification
         uses: resendlabs/action-emails@latest
@@ -99,13 +105,12 @@ jobs:
           react-props: |
             {
               "articleTitle": "${{ github.event.inputs.articleTitle }}",
-              "articleDescription": "${{ github.event.inputs.articleDescription }}",
-              "articleExcerpt": "${{ github.event.inputs.articleExcerpt }}",
+              "articleDescription": ${{ steps.vars.outputs.description }},
+              "articleExcerpt": ${{ steps.vars.outputs.excerpt }},
               "articleUrl": "${{ github.event.inputs.articleUrl }}",
               "publicationDate": "${{ github.event.inputs.publicationDate }}",
               "authorName": "${{ github.event.inputs.authorName }}",
-              "coverImageUrl": "${{ github.event.inputs.coverImageUrl }}",
-              "unsubscribeUrl": "${{ github.event.inputs.unsubscribeUrl }}"
+              "coverImageUrl": "${{ github.event.inputs.coverImageUrl }}"
             }
 
       - name: Log completion
