@@ -9,7 +9,7 @@ interface NewArticleNotificationProps {
   publicationDate: string
   authorName?: string
   coverImageUrl?: string
-  unsubscribeUrl: string
+  recipientEmail: string
 }
 
 export function NewArticleNotification({
@@ -20,8 +20,12 @@ export function NewArticleNotification({
   publicationDate,
   authorName = 'Jürgen Karir',
   coverImageUrl,
-  unsubscribeUrl,
+  recipientEmail,
 }: Readonly<NewArticleNotificationProps>) {
+  // Encode the email for use in the URL
+  const encodedEmail = encodeURIComponent(recipientEmail)
+  const unsubscribeApiUrl = `/api/unsubscribe?email=${encodedEmail}`
+
   return (
     <Tailwind>
       <div className="font-sans">
@@ -102,7 +106,7 @@ export function NewArticleNotification({
               updates.
             </p>
             <a
-              href={unsubscribeUrl}
+              href={unsubscribeApiUrl}
               className="text-neutral-500 underline hover:text-neutral-700"
             >
               Unsubscribe from these emails
