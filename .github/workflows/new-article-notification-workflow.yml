@@ -66,8 +66,8 @@ jobs:
           # Escape description and excerpt for JSON
           DESCRIPTION=$(echo '${{ github.event.inputs.articleDescription }}' | jq -Rs .)
           EXCERPT=$(echo '${{ github.event.inputs.articleExcerpt }}' | jq -Rs .)
-          echo "description=${DESCRIPTION}" >> "$GITHUB_OUTPUT"
-          echo "excerpt=${EXCERPT}" >> "$GITHUB_OUTPUT"
+          echo "description=${DESCRIPTION}" >> $GITHUB_OUTPUT
+          echo "excerpt=${EXCERPT}" >> $GITHUB_OUTPUT
 
       # Prepare audience list - using production by default
       - name: Prepare audience list
@@ -88,11 +88,13 @@ jobs:
 
           # Check if the API call was successful
           if echo "$RESPONSE" | jq -e . >/dev/null 2>&1; then
+            # Create a comma-separated list of email addresses for display purposes
             CONTACTS=$(echo "$RESPONSE" | jq -r '.data[].email' | tr '\n' ',' | sed 's/,$//')
-            echo "recipients=${CONTACTS}" >> "$GITHUB_OUTPUT"
-            # Store the recipients as a JSON array for later use
-            RECIPIENTS_JSON=$(echo "$RESPONSE" | jq -r '.data[].email' | jq -R . | jq -s .)
-            echo "recipients_json=${RECIPIENTS_JSON}" >> "$GITHUB_OUTPUT"
+            echo "recipients=${CONTACTS}" >> $GITHUB_OUTPUT
+            
+            # Create a properly formatted JSON array of emails with no whitespace issues
+            RECIPIENTS_JSON=$(echo "$RESPONSE" | jq -c '{emails: [.data[].email]}')
+            echo "recipients_json=${RECIPIENTS_JSON}" >> $GITHUB_OUTPUT
           else
             echo "Error: Failed to fetch contacts from Resend API" >&2
             exit 1
@@ -114,7 +116,7 @@ jobs:
               const { NewArticleNotification } = await import('./src/components/email-templates/NewArticleNotification.tsx');
               
               // Get recipients from environment variable
-              const recipients = JSON.parse(process.env.RECIPIENTS);
+              const { emails } = JSON.parse(process.env.RECIPIENTS);
               const emailProps = {
                 articleTitle: process.env.ARTICLE_TITLE,
                 articleDescription: JSON.parse(process.env.ARTICLE_DESCRIPTION),
@@ -128,7 +130,7 @@ jobs:
               // Create batch email payload
               const batchPayload = [];
               
-              for (const email of recipients) {
+              for (const email of emails) {
                 // Create individual email props with recipient email
                 const props = {
                   ...emailProps,
