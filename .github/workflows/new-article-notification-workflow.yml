@@ -61,8 +61,8 @@ jobs:
         id: vars
         run: |
           # Escape description and excerpt for JSON
-          DESCRIPTION=$(echo "${{ github.event.inputs.articleDescription }}" | jq -Rs .)
-          EXCERPT=$(echo "${{ github.event.inputs.articleExcerpt }}" | jq -Rs .)
+          DESCRIPTION=$(echo '${{ github.event.inputs.articleDescription }}' | jq -Rs .)
+          EXCERPT=$(echo '${{ github.event.inputs.articleExcerpt }}' | jq -Rs .)
           echo "description=$DESCRIPTION" >> $GITHUB_OUTPUT
           echo "excerpt=$EXCERPT" >> $GITHUB_OUTPUT
 
@@ -87,31 +87,110 @@ jobs:
           if echo "$RESPONSE" | jq -e . >/dev/null 2>&1; then
             CONTACTS=$(echo "$RESPONSE" | jq -r '.data[].email' | tr '\n' ',' | sed 's/,$//')
             echo "recipients=$CONTACTS" >> $GITHUB_OUTPUT
+            # Store the recipients as a JSON array for later use
+            RECIPIENTS_JSON=$(echo "$RESPONSE" | jq -r '.data[].email' | jq -R . | jq -s .)
+            echo "recipients_json=$RECIPIENTS_JSON" >> $GITHUB_OUTPUT
           else
             echo "Error: Failed to fetch contacts from Resend API" >&2
             exit 1
           fi
 
-      # Send email using Resend
-      - name: Send email notification
-        uses: resend/action-emails@latest
+      # Render the React email template to HTML
+      - name: Render email template
+        id: render
+        run: |
+          # Create a temporary script to render the email
+          cat > render-email.js << 'EOL'
+          const { renderAsync } = require('@react-email/render');
+          const path = require('path');
+          const fs = require('fs');
+
+          // Dynamic import for ESM modules
+          async function renderEmails() {
+            try {
+              // Import the email component dynamically
+              const { NewArticleNotification } = await import('./src/components/email-templates/NewArticleNotification.tsx');
+              
+              // Get recipients from environment variable
+              const recipients = JSON.parse(process.env.RECIPIENTS);
+              const emailProps = {
+                articleTitle: process.env.ARTICLE_TITLE,
+                articleDescription: JSON.parse(process.env.ARTICLE_DESCRIPTION),
+                articleExcerpt: JSON.parse(process.env.ARTICLE_EXCERPT),
+                articleUrl: process.env.ARTICLE_URL,
+                publicationDate: process.env.PUBLICATION_DATE,
+                authorName: process.env.AUTHOR_NAME || 'Jürgen Karir',
+                coverImageUrl: process.env.COVER_IMAGE_URL || undefined,
+              };
+              
+              // Create batch email payload
+              const batchPayload = [];
+              
+              for (const email of recipients) {
+                // Create individual email props with recipient email
+                const props = {
+                  ...emailProps,
+                  recipientEmail: email
+                };
+                
+                // Render email to HTML
+                const html = await renderAsync(NewArticleNotification(props));
+                
+                // Add to batch payload
+                batchPayload.push({
+                  from: 'Blog <blog@jurgenkarir.com>',
+                  to: [email],
+                  subject: `New Article: ${process.env.ARTICLE_TITLE}`,
+                  html
+                });
+              }
+              
+              // Write batch payload to file
+              fs.writeFileSync('batch-payload.json', JSON.stringify(batchPayload, null, 2));
+              console.log('Successfully rendered email templates');
+            } catch (error) {
+              console.error('Error rendering email templates:', error);
+              process.exit(1);
+            }
+          }
+
+          renderEmails();
+          EOL
+
+          # Install @react-email/render
+          npm install @react-email/render
+
+          # Run the script with environment variables
+          RECIPIENTS='${{ steps.audience.outputs.recipients_json }}' \
+          ARTICLE_TITLE='${{ github.event.inputs.articleTitle }}' \
+          ARTICLE_DESCRIPTION=${{ steps.vars.outputs.description }} \
+          ARTICLE_EXCERPT=${{ steps.vars.outputs.excerpt }} \
+          ARTICLE_URL='${{ github.event.inputs.articleUrl }}' \
+          PUBLICATION_DATE='${{ github.event.inputs.publicationDate }}' \
+          AUTHOR_NAME='${{ github.event.inputs.authorName }}' \
+          COVER_IMAGE_URL='${{ github.event.inputs.coverImageUrl }}' \
+          node render-email.js
+
+      # Send batch emails using curl
+      - name: Send batch emails
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-        with:
-          from: 'Blog <blog@jurgenkarir.com>'
-          to: ${{ steps.audience.outputs.recipients }}
-          subject: 'New Article: ${{ github.event.inputs.articleTitle }}'
-          react: './src/components/email-templates/NewArticleNotification.tsx'
-          react-props: |
-            {
-              "articleTitle": "${{ github.event.inputs.articleTitle }}",
-              "articleDescription": ${{ steps.vars.outputs.description }},
-              "articleExcerpt": ${{ steps.vars.outputs.excerpt }},
-              "articleUrl": "${{ github.event.inputs.articleUrl }}",
-              "publicationDate": "${{ github.event.inputs.publicationDate }}",
-              "authorName": "${{ github.event.inputs.authorName }}",
-              "coverImageUrl": "${{ github.event.inputs.coverImageUrl }}"
-            }
+        run: |
+          # Send batch emails using the generated payload
+          RESPONSE=$(curl -s -X POST "https://api.resend.com/emails/batch" \
+            -H "Authorization: Bearer ${RESEND_API_KEY}" \
+            -H "Content-Type: application/json" \
+            -d @batch-payload.json)
+            
+          # Check response
+          if echo "$RESPONSE" | jq -e '.error' >/dev/null 2>&1; then
+            ERROR=$(echo "$RESPONSE" | jq -r '.error.message')
+            echo "Error sending emails: $ERROR" >&2
+            exit 1
+          else
+            echo "Emails sent successfully!"
+            echo "$RESPONSE" | jq .
+          fi
 
       - name: Log completion
         run: echo "Email notification sent successfully!"
