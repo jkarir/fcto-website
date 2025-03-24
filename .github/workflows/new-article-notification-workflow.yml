@@ -104,25 +104,41 @@ jobs:
       - name: Render email template
         id: render
         run: |
-          # Create a temporary script to render the email
-          cat > render-email.js << 'EOL'
-          const { renderAsync } = require('@react-email/render');
-          const path = require('path');
-          const fs = require('fs');
+          # Setup for TypeScript support
+          pnpm add typescript ts-node @types/node @react-email/render
+
+          # Create a tsconfig.json for ts-node
+          cat > tsconfig.json << 'EOL'
+          {
+            "compilerOptions": {
+              "target": "ES2022",
+              "module": "NodeNext",
+              "moduleResolution": "NodeNext",
+              "esModuleInterop": true,
+              "jsx": "react-jsx",
+              "skipLibCheck": true
+            },
+            "include": ["src/**/*", "render-email.ts"]
+          }
+          EOL
+
+          # Create a temporary script to render the email with TypeScript
+          cat > render-email.ts << 'EOL'
+          import { renderAsync } from '@react-email/render';
+          import fs from 'fs';
+          import path from 'path';
+          import { NewArticleNotification } from './src/components/email-templates/NewArticleNotification';
 
           async function renderEmails() {
             try {
-              // Import the email component dynamically
-              const { NewArticleNotification } = await import('./src/components/email-templates/NewArticleNotification.tsx');
-              
               // Get recipients from environment variable
-              const { emails } = JSON.parse(process.env.RECIPIENTS);
+              const { emails } = JSON.parse(process.env.RECIPIENTS || '{"emails":[]}');
               const emailProps = {
-                articleTitle: process.env.ARTICLE_TITLE,
-                articleDescription: JSON.parse(process.env.ARTICLE_DESCRIPTION),
-                articleExcerpt: JSON.parse(process.env.ARTICLE_EXCERPT),
-                articleUrl: process.env.ARTICLE_URL,
-                publicationDate: process.env.PUBLICATION_DATE,
+                articleTitle: process.env.ARTICLE_TITLE || '',
+                articleDescription: JSON.parse(process.env.ARTICLE_DESCRIPTION || '""'),
+                articleExcerpt: JSON.parse(process.env.ARTICLE_EXCERPT || '""'),
+                articleUrl: process.env.ARTICLE_URL || '',
+                publicationDate: process.env.PUBLICATION_DATE || '',
                 authorName: process.env.AUTHOR_NAME || 'Jürgen Karir',
                 coverImageUrl: process.env.COVER_IMAGE_URL || undefined,
               };
@@ -161,10 +177,7 @@ jobs:
           renderEmails();
           EOL
 
-          # Install @react-email/render using pnpm
-          pnpm add @react-email/render
-
-          # Run the script with environment variables
+          # Run the TypeScript script with ts-node
           RECIPIENTS='${{ steps.audience.outputs.recipients_json }}' \
           ARTICLE_TITLE='${{ github.event.inputs.articleTitle }}' \
           ARTICLE_DESCRIPTION=${{ steps.vars.outputs.description }} \
@@ -173,7 +186,7 @@ jobs:
           PUBLICATION_DATE='${{ github.event.inputs.publicationDate }}' \
           AUTHOR_NAME='${{ github.event.inputs.authorName }}' \
           COVER_IMAGE_URL='${{ github.event.inputs.coverImageUrl }}' \
-          node render-email.js
+          npx ts-node --esm render-email.ts
 
       # Send batch emails using curl
       - name: Send batch emails
