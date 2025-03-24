@@ -3,25 +3,46 @@ name: New Article Notification Workflow
 # This workflow can be triggered manually from the GitHub Actions tab
 on:
   workflow_dispatch:
-    # Optional inputs that can be provided when manually triggering the workflow
+    # Required inputs for the article notification
     inputs:
-      environment:
-        description: 'Environment to deploy to'
-        type: choice
+      articleTitle:
+        description: 'Article title'
+        type: string
         required: true
-        default: 'development'
-        options:
-          - development
-          - staging
-          - production
-      deploy_version:
-        description: 'Version to deploy'
+      articleDescription:
+        description: 'Article description'
+        type: string
+        required: true
+      articleExcerpt:
+        description: 'Article excerpt (quote)'
+        type: string
+        required: true
+      articleUrl:
+        description: 'URL to the published article'
+        type: string
+        required: true
+      publicationDate:
+        description: 'Publication date (e.g., "June 12, 2023")'
+        type: string
+        required: true
+      authorName:
+        description: 'Author name (default: Jürgen Karir)'
         type: string
         required: false
+        default: 'Jürgen Karir'
+      coverImageUrl:
+        description: 'URL to the article cover image'
+        type: string
+        required: false
+      unsubscribeUrl:
+        description: 'Unsubscribe URL'
+        type: string
+        required: true
 
 jobs:
-  manual-job:
+  send-email-notification:
     runs-on: ubuntu-latest
+    # No environment specification needed as we removed the input
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -30,26 +51,62 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
 
       - name: Log workflow trigger
         run: |
-          echo "Workflow manually triggered!"
-          echo "Environment: ${{ github.event.inputs.environment }}"
-          echo "Version: ${{ github.event.inputs.deploy_version || 'latest' }}"
+          echo "Sending email notification for new article:"
+          echo "Title: ${{ github.event.inputs.articleTitle }}"
 
-      # Add your custom workflow tasks here
-      - name: Run task based on environment
+      # Prepare audience list - using production by default
+      - name: Prepare audience list
+        id: audience
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          AUDIENCE_ID: '68312168-2f2f-465a-b88e-6ecf2fb51107'
         run: |
-          if [ "${{ github.event.inputs.environment }}" == "production" ]; then
-            echo "Running production deployment tasks..."
-            # Add production-specific commands
-          elif [ "${{ github.event.inputs.environment }}" == "staging" ]; then
-            echo "Running staging deployment tasks..."
-            # Add staging-specific commands
-          else
-            echo "Running development deployment tasks..."
-            # Add development-specific commands
-          fi
+          echo "Using production audience from Resend API"
 
-      - name: Complete workflow
-        run: echo "Manual workflow completed successfully!"
+          # Install curl and jq for API request and JSON parsing
+          apt-get update && apt-get install -y curl jq
+
+          # Fetch contacts from Resend audience API
+          RESPONSE=$(curl -s -X GET "https://api.resend.com/audiences/${AUDIENCE_ID}/contacts" \
+            -H "Authorization: Bearer ${RESEND_API_KEY}" \
+            -H "Content-Type: application/json")
+
+          # Check if the API call was successful
+          if echo "$RESPONSE" | jq -e . >/dev/null 2>&1; then
+            CONTACTS=$(echo "$RESPONSE" | jq -r '.data[].email' | tr '\n' ',' | sed 's/,$//')
+            echo "recipients=$CONTACTS" >> $GITHUB_OUTPUT
+          else
+            echo "Error: Failed to fetch contacts from Resend API" >&2
+            exit 1
+          fi
+      # Send email using Resend
+      - name: Send email notification
+        uses: resendlabs/action-emails@latest
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+        with:
+          from: 'Blog <blog@jurgenkarir.com>'
+          to: ${{ steps.audience.outputs.recipients }}
+          subject: 'New Article: ${{ github.event.inputs.articleTitle }}'
+          react: './src/components/email-templates/NewArticleNotification.tsx'
+          react-props: |
+            {
+              "articleTitle": "${{ github.event.inputs.articleTitle }}",
+              "articleDescription": "${{ github.event.inputs.articleDescription }}",
+              "articleExcerpt": "${{ github.event.inputs.articleExcerpt }}",
+              "articleUrl": "${{ github.event.inputs.articleUrl }}",
+              "publicationDate": "${{ github.event.inputs.publicationDate }}",
+              "authorName": "${{ github.event.inputs.authorName }}",
+              "coverImageUrl": "${{ github.event.inputs.coverImageUrl }}",
+              "unsubscribeUrl": "${{ github.event.inputs.unsubscribeUrl }}"
+            }
+
+      - name: Log completion
+        run: echo "Email notification sent successfully!"
