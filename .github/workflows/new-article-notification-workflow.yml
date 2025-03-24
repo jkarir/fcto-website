@@ -74,12 +74,18 @@ jobs:
           apt-get update && apt-get install -y curl jq
 
           # Fetch contacts from Resend audience API
-          CONTACTS=$(curl -s -X GET "https://api.resend.com/audiences/${AUDIENCE_ID}/contacts" \
+          RESPONSE=$(curl -s -X GET "https://api.resend.com/audiences/${AUDIENCE_ID}/contacts" \
             -H "Authorization: Bearer ${RESEND_API_KEY}" \
-            -H "Content-Type: application/json" | jq -r '.data[].email' | tr '\n' ',' | sed 's/,$//')
+            -H "Content-Type: application/json")
 
-          echo "recipients=$CONTACTS" >> $GITHUB_OUTPUT
-
+          # Check if the API call was successful
+          if echo "$RESPONSE" | jq -e . >/dev/null 2>&1; then
+            CONTACTS=$(echo "$RESPONSE" | jq -r '.data[].email' | tr '\n' ',' | sed 's/,$//')
+            echo "recipients=$CONTACTS" >> $GITHUB_OUTPUT
+          else
+            echo "Error: Failed to fetch contacts from Resend API" >&2
+            exit 1
+          fi
       # Send email using Resend
       - name: Send email notification
         uses: resendlabs/action-emails@latest
