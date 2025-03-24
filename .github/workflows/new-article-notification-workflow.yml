@@ -61,8 +61,8 @@ jobs:
         id: vars
         run: |
           # Escape description and excerpt for JSON
-          DESCRIPTION=$(echo '${{ github.event.inputs.articleDescription }}' | jq -Rs .)
-          EXCERPT=$(echo '${{ github.event.inputs.articleExcerpt }}' | jq -Rs .)
+          DESCRIPTION=$(echo "${{ github.event.inputs.articleDescription }}" | jq -Rs .)
+          EXCERPT=$(echo "${{ github.event.inputs.articleExcerpt }}" | jq -Rs .)
           echo "description=$DESCRIPTION" >> $GITHUB_OUTPUT
           echo "excerpt=$EXCERPT" >> $GITHUB_OUTPUT
 
