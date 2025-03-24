@@ -100,34 +100,41 @@ jobs:
             exit 1
           fi
 
-      # Render the React email template to HTML
+      # Render the React email template to HTML using CommonJS approach
       - name: Render email template
         id: render
         run: |
-          # Setup for TypeScript support
-          pnpm add typescript ts-node @types/node @react-email/render
+          # Setup for email rendering
+          pnpm add @react-email/render react react-dom
 
-          # Create a tsconfig.json for ts-node
-          cat > tsconfig.json << 'EOL'
-          {
-            "compilerOptions": {
-              "target": "ES2022",
-              "module": "NodeNext",
-              "moduleResolution": "NodeNext",
-              "esModuleInterop": true,
-              "jsx": "react-jsx",
-              "skipLibCheck": true
-            },
-            "include": ["src/**/*", "render-email.ts"]
-          }
-          EOL
+          # Create a JavaScript script to render the email (using CommonJS)
+          cat > render-email.js << 'EOL'
+          const { renderAsync } = require('@react-email/render');
+          const fs = require('fs');
+          const React = require('react');
+          const ReactDOMServer = require('react-dom/server');
 
-          # Create a temporary script to render the email with TypeScript
-          cat > render-email.ts << 'EOL'
-          import { renderAsync } from '@react-email/render';
-          import fs from 'fs';
-          import path from 'path';
-          import { NewArticleNotification } from './src/components/email-templates/NewArticleNotification';
+          // Load the email component via require-from-string
+          const requireFromString = (src, filename) => {
+            const Module = module.constructor;
+            const m = new Module();
+            m._compile(src, filename);
+            return m.exports;
+          };
+
+          // Read the NewArticleNotification component source and transform to CommonJS
+          const componentSource = fs.readFileSync('./src/components/email-templates/NewArticleNotification.tsx', 'utf8');
+          const transformedSource = componentSource
+            .replace(/import\s+{\s*([^}]+)\s*}\s+from\s+['"]@react-email\/components['"]/g, 'const { $1 } = require("@react-email/components")')
+            .replace(/import\s+([^{}\s]+)\s+from\s+['"]next\/image['"]/g, 'const $1 = require("next/image")')
+            .replace(/export\s+function/, 'function')
+            .replace(/interface\s+([^{]+)\s*{[^}]*}/g, '') // Remove interface declarations
+            .concat('\nmodule.exports = { NewArticleNotification };');
+
+          fs.writeFileSync('transformed-component.js', transformedSource);
+
+          // Now load the transformed component
+          const { NewArticleNotification } = require('./transformed-component.js');
 
           async function renderEmails() {
             try {
@@ -153,8 +160,9 @@ jobs:
                   recipientEmail: email
                 };
                 
-                // Render email to HTML
-                const html = await renderAsync(NewArticleNotification(props));
+                // Render email to HTML using React DOM server-side rendering
+                const component = React.createElement(NewArticleNotification, props);
+                const html = ReactDOMServer.renderToStaticMarkup(component);
                 
                 // Add to batch payload
                 batchPayload.push({
@@ -177,7 +185,7 @@ jobs:
           renderEmails();
           EOL
 
-          # Run the TypeScript script with ts-node
+          # Run the JavaScript script
           RECIPIENTS='${{ steps.audience.outputs.recipients_json }}' \
           ARTICLE_TITLE='${{ github.event.inputs.articleTitle }}' \
           ARTICLE_DESCRIPTION=${{ steps.vars.outputs.description }} \
@@ -186,7 +194,7 @@ jobs:
           PUBLICATION_DATE='${{ github.event.inputs.publicationDate }}' \
           AUTHOR_NAME='${{ github.event.inputs.authorName }}' \
           COVER_IMAGE_URL='${{ github.event.inputs.coverImageUrl }}' \
-          npx ts-node --esm render-email.ts
+          node render-email.js
 
       # Send batch emails using curl
       - name: Send batch emails
