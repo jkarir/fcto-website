@@ -138,11 +138,12 @@ function Navigation() {
           Ways To Work Together
         </NavigationItem> */}
         <NavigationItem href="/about-me">About Me</NavigationItem>
-      </NavigationRow>
-      <NavigationRow>
-        {/* <NavigationItem href="/services">Services</NavigationItem> */}
         <NavigationItem href="/blog">Blog</NavigationItem>
       </NavigationRow>
+      {/* <NavigationRow>
+        <NavigationItem href="/services">Services</NavigationItem>
+        <NavigationItem href="/blog">Blog</NavigationItem>
+      </NavigationRow> */}
     </nav>
   )
 }
