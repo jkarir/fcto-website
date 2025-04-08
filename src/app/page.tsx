@@ -9,19 +9,19 @@ import { Hero } from '@/_pages/home/hero'
 import { clients } from '@/lib/clients'
 
 export const metadata: Metadata = {
-  title: 'Jürgen Karir | Fractional CTO & Software Engineering Consultant',
+  title: 'Jürgen Karir | Engineering Leader',
   description:
-    'Expert Fractional CTO helping startups build scalable software, optimize engineering teams, and accelerate product development with full-stack, mobile, and AI solutions.',
+    'Experienced Engineering Manager helping teams build scalable software, optimize engineering processes, and accelerate product development with full-stack, mobile, and AI solutions.',
   keywords: [
-    'Fractional CTO',
-    'Software Consultant',
-    'Tech Advisor',
+    'Engineering Manager',
+    'Software Engineering Leader',
+    'Tech Leadership',
     'Full-Stack Development',
     'Mobile Development',
     'iOS Development',
     'React Native',
     'AI Solutions',
-    'Startup Tech Strategy',
+    'Engineering Strategy',
     'Engineering Leadership',
     'Technical Leadership',
   ],
@@ -29,24 +29,24 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://www.jurgenkarir.com',
-    title: 'Jürgen Karir | Fractional CTO & Software Engineering Consultant',
+    title: 'Jürgen Karir | Engineering Manager & Software Engineering Leader',
     description:
-      'Expert Fractional CTO helping startups build scalable software, optimize engineering teams, and accelerate product development.',
+      'Experienced Engineering Manager helping teams build scalable software, optimize engineering processes, and accelerate product development.',
     siteName: 'Jürgen Karir',
     images: [
       {
         url: 'https://www.jurgenkarir.com/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Jürgen Karir - Fractional CTO & Software Engineering Consultant',
+        alt: 'Jürgen Karir - Engineering Manager & Software Engineering Leader',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Jürgen Karir | Fractional CTO & Software Engineering Consultant',
+    title: 'Jürgen Karir | Engineering Manager & Software Engineering Leader',
     description:
-      'Expert Fractional CTO helping startups build scalable software, optimize engineering teams, and accelerate product development.',
+      'Experienced Engineering Manager helping teams build scalable software, optimize engineering processes, and accelerate product development.',
     creator: '@jurgenkarir',
     images: ['https://www.jurgenkarir.com/og-image.png'],
   },
@@ -76,7 +76,7 @@ const structuredData = {
       '@type': 'Person',
       '@id': 'https://www.jurgenkarir.com/#person',
       name: 'Jürgen Karir',
-      jobTitle: 'Fractional CTO & Software Engineering Consultant',
+      jobTitle: 'Engineering Manager & Software Engineering Leader',
       description: metadata.description,
       image: 'https://www.jurgenkarir.com/jurgen-karir.jpg',
       url: 'https://www.jurgenkarir.com',
@@ -87,7 +87,7 @@ const structuredData = {
       ],
       knowsAbout: [
         'Software Architecture',
-        'Technical Leadership',
+        'Engineering Leadership',
         'Mobile Development',
         'Full Stack Development',
         'React Native',
@@ -97,25 +97,25 @@ const structuredData = {
     {
       '@type': 'ProfessionalService',
       '@id': 'https://www.jurgenkarir.com/#organization',
-      name: 'Jürgen Karir - Fractional CTO Services',
+      name: 'Jürgen Karir - Engineering Leadership',
       url: 'https://www.jurgenkarir.com',
       logo: 'https://www.jurgenkarir.com/logo.png',
       description:
-        'Fractional CTO and software engineering services for startups and scale-ups',
+        'Engineering leadership and software engineering expertise for building high-performing teams',
       founder: {
         '@id': 'https://www.jurgenkarir.com/#person',
       },
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
-        name: 'Fractional CTO Services',
+        name: 'Engineering Leadership Services',
         itemListElement: [
           {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
-              name: 'Fractional CTO Services',
+              name: 'Engineering Leadership',
               description:
-                'Strategic technical leadership for startups and scale-ups',
+                'Strategic technical leadership and team management for engineering organizations',
             },
           },
           {

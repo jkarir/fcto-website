@@ -5,11 +5,11 @@ import { SectionIntro } from '@/components/SectionIntro'
 import { BulletedList, BulletedListItem } from '@/components/BulletedList'
 
 export const metadata: Metadata = {
-  title: 'About Jürgen Karir | Software Engineering & Fractional CTO',
+  title: 'About Jürgen Karir | Engineering Leader',
   description:
     'With 20+ years of experience in building scalable software, leading engineering teams, and solving complex technical challenges across industries from startups to enterprises.',
   keywords: [
-    'Fractional CTO',
+    'Engineering Manager',
     'Software Engineering',
     'Technical Leadership',
     'Full Stack Development',
@@ -18,13 +18,14 @@ export const metadata: Metadata = {
     'Next.js',
     'Engineering Team Leadership',
     'Technology Strategy',
-    'Startup Technology',
+    'Engineering Leadership',
   ],
   alternates: {
     canonical: 'https://jurgenkarir.com/about-me',
   },
   openGraph: {
-    title: 'About Jürgen Karir | Software Engineering & Fractional CTO',
+    title:
+      'About Jürgen Karir | Engineering Manager & Software Engineering Leader',
     description:
       'With 20+ years of experience in building scalable software, leading engineering teams, and solving complex technical challenges.',
     url: 'https://jurgenkarir.com/about-me',
@@ -36,13 +37,14 @@ export const metadata: Metadata = {
         url: 'https://jurgenkarir.com/images/about-me-og.png',
         width: 1200,
         height: 630,
-        alt: 'Jürgen Karir - Fractional CTO & Software Engineering Consultant',
+        alt: 'Jürgen Karir - Engineering Manager & Software Engineering Leader',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Jürgen Karir | Software Engineering & Fractional CTO',
+    title:
+      'About Jürgen Karir | Engineering Manager & Software Engineering Leader',
     description:
       'With 20+ years of experience in building scalable software, leading engineering teams, and solving complex technical challenges.',
     creator: '@jurgenkarir',
