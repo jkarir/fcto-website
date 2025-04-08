@@ -5,11 +5,11 @@ import { SectionIntro } from '@/components/SectionIntro'
 import { BulletedList, BulletedListItem } from '@/components/BulletedList'
 
 export const metadata: Metadata = {
-  title: 'About Jürgen Karir | Software Engineering & Fractional CTO',
+  title: 'About Jürgen Karir | Engineering Leader',
   description:
     'With 20+ years of experience in building scalable software, leading engineering teams, and solving complex technical challenges across industries from startups to enterprises.',
   keywords: [
-    'Fractional CTO',
+    'Engineering Manager',
     'Software Engineering',
     'Technical Leadership',
     'Full Stack Development',
@@ -18,13 +18,14 @@ export const metadata: Metadata = {
     'Next.js',
     'Engineering Team Leadership',
     'Technology Strategy',
-    'Startup Technology',
+    'Engineering Leadership',
   ],
   alternates: {
     canonical: 'https://jurgenkarir.com/about-me',
   },
   openGraph: {
-    title: 'About Jürgen Karir | Software Engineering & Fractional CTO',
+    title:
+      'About Jürgen Karir | Engineering Manager & Software Engineering Leader',
     description:
       'With 20+ years of experience in building scalable software, leading engineering teams, and solving complex technical challenges.',
     url: 'https://jurgenkarir.com/about-me',
@@ -36,13 +37,14 @@ export const metadata: Metadata = {
         url: 'https://jurgenkarir.com/images/about-me-og.png',
         width: 1200,
         height: 630,
-        alt: 'Jürgen Karir - Fractional CTO & Software Engineering Consultant',
+        alt: 'Jürgen Karir - Engineering Manager & Software Engineering Leader',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Jürgen Karir | Software Engineering & Fractional CTO',
+    title:
+      'About Jürgen Karir | Engineering Manager & Software Engineering Leader',
     description:
       'With 20+ years of experience in building scalable software, leading engineering teams, and solving complex technical challenges.',
     creator: '@jurgenkarir',
@@ -95,53 +97,50 @@ export default function Page() {
 
       <PageIntro
         eyebrow="About Me"
-        title="Building Scalable, High-Performing Tech for Startups & Scale-Ups"
+        title="Engineering Leadership That Scales Teams, Systems, and Outcomes"
       >
         <p>
-          I&apos;ve spent the past 20 years building software, leading teams,
-          and solving tough technical challenges across industries. I&apos;ve
-          worked with startups and scale-ups to define technical strategy, build
-          scalable systems, and grow strong engineering teams. At my core, I
-          love solving complex problems and helping companies build software
-          that actually delivers value—not just ticking boxes or chasing trends.
-          I take a pragmatic, business-first approach, making sure technology
-          enables growth rather than becoming a bottleneck.
+          With over 20 years of experience building software and leading
+          high-performing engineering teams, I&apos;ve helped companies—from
+          startups to scale-ups—deliver scalable products and build the
+          technical foundations needed for long-term success. My work spans
+          mobile and full-stack development, architecture, DevOps, and developer
+          experience. I&apos;ve led teams through complex system design, product
+          delivery, and rapid growth—always with a pragmatic, business-first
+          mindset. I focus on outcomes, not overengineering. Technology should
+          enable growth—not become a bottleneck.
         </p>
       </PageIntro>
       <br />
-      <SectionIntro title="My Approach" smaller fullWidth>
+      <SectionIntro title="How I Lead" smaller fullWidth>
         <div className="space-y-6">
           <p>
-            As a <strong>Fractional CTO</strong> or{' '}
-            <strong>Fractional Engineering Manager</strong>, I help early-stage
-            startups:
+            My leadership approach blends <strong>strategic thinking</strong>{' '}
+            with <strong>hands-on execution</strong>. I focus on:
           </p>
 
           <BulletedList>
             <BulletedListItem>
-              <strong>Define a clear technical roadmap</strong> that aligns with
-              business goals.
+              Defining clear technical direction aligned with business goals
             </BulletedListItem>
             <BulletedListItem>
-              <strong>Build a strong engineering foundation</strong> for
-              scalability and growth
+              Scaling teams and systems thoughtfully
             </BulletedListItem>
             <BulletedListItem>
-              <strong>Hire and scale the right engineering team</strong> at the
-              right time
+              Coaching engineers and improving delivery performance
             </BulletedListItem>
             <BulletedListItem>
-              <strong>Improve execution and development speed</strong> to ship
-              faster
+              Building systems that are maintainable and resilient
             </BulletedListItem>
             <BulletedListItem>
-              <strong>Avoid costly technical mistakes</strong> through better
-              decisions and due diligence
+              Applying AI where it strengthens product value and developer
+              experience
             </BulletedListItem>
           </BulletedList>
           <p>
-            I focus on practical, high-impact solutions that help startups move
-            fast and scale smart.
+            Great engineering leadership means creating the right environment
+            for teams to thrive—where autonomy, clarity, and technical
+            excellence go hand-in-hand.
           </p>
         </div>
       </SectionIntro>
@@ -149,26 +148,24 @@ export default function Page() {
       <SectionIntro title="My Background" smaller fullWidth>
         <div className="space-y-6">
           <p>
-            As the founder of Blue Pixel Software, I&apos;ve taken on tech lead
-            and staff engineering roles, helping companies scale their
-            engineering efforts. I&apos;ve worked across full-stack and mobile
-            development, ensuring teams build robust, high-performing software
-            that lasts.
+            Through my work at Blue Pixel Software, I&apos;ve taken on
+            Engineering Lead roles across a wide range of industries—including
+            e-commerce, streaming, fintech, gaming, healthcare, and edtech.
           </p>
 
           <p>
-            I approach technology like a founder—balancing innovation with
-            real-world constraints. Over the years, I&apos;ve helped companies
-            in industries like gaming, media, streaming, e-commerce, healthcare,
-            fintech, and edtech.
+            I approach technology like a founder: balancing innovation with
+            real-world constraints, and always focusing on value delivery.
+            Whether designing architecture, improving team performance, or
+            mentoring engineers, my goal is to help teams build software that
+            lasts—and love the process of building it.
           </p>
 
           <p>
-            Beyond writing code, I focus on building great teams and creating
-            environments where engineers can do their best work. Whether
-            it&apos;s defining architecture, optimizing workflows, or mentoring
-            teams, my goal is to help companies build software that lasts and
-            teams that thrive.
+            While I&apos;ve supported organizations through fractional
+            leadership roles in the past, I&apos;m currently focused on
+            full-time engineering leadership opportunities where I can drive
+            long-term impact.
           </p>
         </div>
       </SectionIntro>

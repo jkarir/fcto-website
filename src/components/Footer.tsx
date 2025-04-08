@@ -12,13 +12,14 @@ import {
 } from '@/lib/types/blog-subscribe-form-schema'
 import { zodResolver } from '@hookform/resolvers/zod'
 
+// NOTE: Commenting out the navigation items for now as I'm not sure if I want to keep them
 const navigation = [
   {
     title: 'Jürgen Karir',
     links: [
       { title: 'About Me', href: '/about-me' },
-      { title: 'Services', href: '/services' },
-      { title: 'Ways To Work Together', href: '/ways-to-work-together' },
+      // { title: 'Services', href: '/services' },
+      // { title: 'Ways To Work Together', href: '/ways-to-work-together' },
       { title: 'Blog', href: '/blog' },
       { title: 'Contact Me', href: '/contact' },
     ],

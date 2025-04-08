@@ -10,16 +10,20 @@ export function ContactSection() {
         <div className="mx-auto max-w-5xl">
           <div>
             <h2 className="font-display text-3xl font-medium text-white [text-wrap:balance] sm:text-4xl">
-              Let&apos;s build smarter, faster, better.
+              Let&apos;s build scalable systems and strong teams.
             </h2>
 
             <p className="mt-6 text-lg text-neutral-400">
-              Launching an MVP, scaling fast, or optimizing your tech?
-              Let&apos;s make it work.
+              Whether you&apos;re solving technical challenges or scaling
+              delivery, I bring hands-on engineering leadership that drives real
+              impact.
+            </p>
+            <p className="mt-6 text-lg text-neutral-400">
+              Open to full-time opportunities and meaningful collaborations.
             </p>
             <div className="mt-8 flex">
               <Button href="/contact" invert>
-                Let&apos;s Talk
+                Let&apos;s Connect
               </Button>
             </div>
             <div className="mt-10 border-t border-white/10 pt-10">

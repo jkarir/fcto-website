@@ -7,16 +7,15 @@ import { SectionIntro } from '@/components/SectionIntro'
 import { Offices } from '@/components/Offices'
 
 export const metadata: Metadata = {
-  title:
-    'Contact Jürgen Karir | Fractional CTO & Software Engineering Consultant',
+  title: 'Contact Jürgen Karir | Engineering Leader',
   description:
-    "Get in touch to discuss your startup's technical challenges. As a Fractional CTO, I offer strategic guidance, technical leadership, and hands-on expertise to help your business grow.",
+    "Get in touch to discuss your engineering team's challenges. As an Engineering Leader, I offer strategic guidance, technical leadership, and hands-on expertise to help your team grow.",
   keywords: [
-    'Fractional CTO Contact',
+    'Engineering Manager Contact',
     'Technical Consultation',
     'Software Engineering Services',
-    'Startup Technical Help',
-    'CTO Services',
+    'Engineering Team Leadership',
+    'Engineering Leadership',
     'Technology Consulting',
     'Technical Leadership',
   ],
@@ -25,9 +24,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      'Contact Jürgen Karir | Fractional CTO & Software Engineering Consultant',
+      'Contact Jürgen Karir | Engineering Manager & Software Engineering Leader',
     description:
-      "Get in touch to discuss your startup's technical challenges and how we can work together.",
+      "Get in touch to discuss your engineering team's challenges and how we can work together.",
     url: 'https://jurgenkarir.com/contact',
     siteName: 'Jürgen Karir',
     locale: 'en_US',
@@ -37,14 +36,14 @@ export const metadata: Metadata = {
         url: 'https://jurgenkarir.com/images/contact-og.png',
         width: 1200,
         height: 630,
-        alt: 'Contact Jürgen Karir - Fractional CTO',
+        alt: 'Contact Jürgen Karir - Engineering Leader',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact Jürgen Karir | Fractional CTO',
-    description: "Get in touch to discuss your startup's technical challenges.",
+    title: 'Contact Jürgen Karir | Engineering Leader',
+    description: "Get in touch to discuss your engineering team's challenges.",
     creator: '@jurgenkarir',
     images: ['https://jurgenkarir.com/images/contact-og.png'],
   },
@@ -80,17 +79,21 @@ export default function Contact() {
       <PageIntro eyebrow="Contact Me" title="Let's Connect">
         <div className="space-y-6">
           <p>
-            Building something new? Scaling up? Stuck on a technical decision?
-            Let’s talk.
+            I&apos;m always open to conversations about engineering leadership,
+            product development, and scalable system design.
           </p>
           <p>
-            Whether you need a Fractional CTO, hands-on leadership, or clarity
-            on your architecture, I bring experience, focus, and a no-fluff
-            approach to solving tough challenges.
+            If you&apos;re interested in working together—or just want to
+            connect—feel free to reach out using the form below. I&apos;m
+            currently open to{' '}
+            <strong>full-time engineering leadership roles</strong>, as well as
+            select strategic collaborations.
           </p>
         </div>
       </PageIntro>
-      <div className="mt-10 space-y-16">
+
+      {/* NOTE: Commenting out the section intro for now as I'm not sure if I want to keep it */}
+      {/* <div className="mt-10 space-y-16">
         <SectionIntro title="What To Expect" smaller>
           <BulletedList>
             <BulletedListItem>A reply within 24 hours</BulletedListItem>
@@ -103,7 +106,7 @@ export default function Contact() {
             </BulletedListItem>
           </BulletedList>
         </SectionIntro>
-      </div>
+      </div> */}
 
       <Container className="mt-16 sm:mt-32 lg:mt-16">
         <div className="flex justify-center">

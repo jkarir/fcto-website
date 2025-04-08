@@ -73,7 +73,7 @@ function Header({
         </Link>
         <div className="flex items-center gap-x-8">
           <Button href="/contact" invert={invert}>
-            Let&apos;s Talk
+            Let&apos;s Connect
           </Button>
           <button
             ref={toggleRef}
@@ -129,18 +129,18 @@ function NavigationItem({
     </Link>
   )
 }
-
+// NOTE: Commenting out the navigation items for now as I'm not sure if I want to keep them
 function Navigation() {
   return (
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
-        <NavigationItem href="/ways-to-work-together">
+        {/* <NavigationItem href="/ways-to-work-together">
           Ways To Work Together
-        </NavigationItem>
+        </NavigationItem> */}
         <NavigationItem href="/about-me">About Me</NavigationItem>
       </NavigationRow>
       <NavigationRow>
-        <NavigationItem href="/services">Services</NavigationItem>
+        {/* <NavigationItem href="/services">Services</NavigationItem> */}
         <NavigationItem href="/blog">Blog</NavigationItem>
       </NavigationRow>
     </nav>

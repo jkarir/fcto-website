@@ -69,7 +69,7 @@ export function ContactForm({}: ContactFormProps) {
           />
         </div>
         <Button type="submit" className="mt-10">
-          Let&apos;s work together
+          Let&apos;s Connect
         </Button>
       </form>
     </FadeIn>

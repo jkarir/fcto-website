@@ -12,26 +12,26 @@ import { formatDate } from '@/lib/formatDate'
 import { loadArticles } from '#src/lib/mdx'
 
 export const metadata: Metadata = {
-  title: 'Software Engineering Blog | Technical Insights | Jürgen Karir',
+  title: 'Software Engineering Blog | Engineering Leadership | Jürgen Karir',
   description:
-    'Practical insights on software architecture, product development, and technical leadership for startups and engineering teams building scalable solutions.',
+    'Practical insights on software architecture, product development, and engineering leadership for teams building scalable solutions.',
   keywords: [
     'Software Engineering Blog',
-    'Technical Leadership',
+    'Engineering Leadership',
     'Software Architecture',
     'Product Development',
-    'Startup Technology',
+    'Team Management',
     'Engineering Best Practices',
-    'Fractional CTO Insights',
+    'Engineering Manager Insights',
     'Development Strategy',
   ],
   alternates: {
     canonical: 'https://jurgenkarir.com/blog',
   },
   openGraph: {
-    title: 'Software Engineering Blog | Technical Insights | Jürgen Karir',
+    title: 'Software Engineering Blog | Engineering Leadership | Jürgen Karir',
     description:
-      'Practical insights on software architecture, product development, and technical leadership for startups.',
+      'Practical insights on software architecture, product development, and engineering leadership for teams.',
     url: 'https://jurgenkarir.com/blog',
     siteName: 'Jürgen Karir',
     locale: 'en_US',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Software Engineering Blog | Jürgen Karir',
     description:
-      'Practical insights on software architecture and technical leadership for startups.',
+      'Practical insights on software architecture and engineering leadership for teams.',
     creator: '@jurgenkarir',
     images: ['https://jurgenkarir.com/images/blog-og.png'],
   },

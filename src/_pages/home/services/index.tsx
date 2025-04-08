@@ -1,36 +1,36 @@
 import { GridList, GridListItem } from '@/components/GridList'
-import { MarginButton } from '@/components/MarginButton'
+// import { MarginButton } from '@/components/MarginButton'
 import { SectionTitle } from '@/components/SectionTitle'
 
 interface ServicesProps {}
 
+// NOTE: Commenting out the margin button for now as I'm not sure if I want to keep it
 export function Services({}: React.PropsWithChildren<ServicesProps>) {
   return (
     <div className="space-y-10">
-      <SectionTitle>How I Help</SectionTitle>
+      <SectionTitle>Where I Create Impact</SectionTitle>
       <GridList className="lg:grid-cols-4">
-        <GridListItem title="Fractional CTO for Early-Stage Startups">
-          I help founders make smart technical decisions early—building only
-          what’s needed, avoiding tech debt, and staying focused on product and
+        <GridListItem title="Early-Stage Technical Leadership">
+          Helping teams make smart architectural decisions early—avoiding
+          unnecessary complexity and staying focused on product delivery and
           growth.
         </GridListItem>
         <GridListItem title="MVP Strategy & Product Acceleration">
-          From idea to launch, I guide you through building a lean, scalable MVP
-          that gets to market fast and lays the groundwork for future growth.
+          Leading teams from concept to launch with lean, scalable MVPs that go
+          to market quickly and lay the foundation for long-term success.
         </GridListItem>
-        <GridListItem title="Engineering Team Setup & Execution">
-          I help you hire right, set up lightweight processes, and coach your
-          team to ship faster, stay aligned, and work like a high-performing
-          unit.
+        <GridListItem title="Team Growth & Execution">
+          Supporting hiring, process design, and team coaching to improve
+          delivery speed, alignment, and engineering culture.
         </GridListItem>
         <GridListItem title="Mobile & Web App Development Leadership">
-          Hands-on technical guidance to build fast, reliable, AI-enabled
-          apps—so you can move quickly without cutting corners.
+          Deep experience leading the delivery of fast, reliable, AI-enhanced
+          applications across iOS, React Native, and full-stack platforms.
         </GridListItem>
       </GridList>
-      <MarginButton href="/services" aria-label="Explore my services">
+      {/* <MarginButton href="/services" aria-label="Explore my services">
         Explore My Services
-      </MarginButton>
+      </MarginButton> */}
     </div>
   )
 }
