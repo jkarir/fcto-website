@@ -20,7 +20,7 @@ export function CallToAction({ className }: CtaProps) {
 
         <div className="mt-10">
           <Button href="/contact" aria-label="Contact Me">
-            Let&apos;s Talk
+            Let&apos;s Connect
           </Button>
         </div>
       </SectionIntro>

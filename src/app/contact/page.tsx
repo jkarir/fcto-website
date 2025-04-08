@@ -80,17 +80,20 @@ export default function Contact() {
       <PageIntro eyebrow="Contact Me" title="Let's Connect">
         <div className="space-y-6">
           <p>
-            Building something new? Scaling up? Stuck on a technical decision?
-            Let’s talk.
+            I’m always open to conversations about engineering leadership,
+            product development, and scalable system design.
           </p>
           <p>
-            Whether you need a Fractional CTO, hands-on leadership, or clarity
-            on your architecture, I bring experience, focus, and a no-fluff
-            approach to solving tough challenges.
+            If you're interested in working together—or just want to
+            connect—feel free to reach out using the form below. I’m currently
+            open to <strong>full-time engineering leadership roles</strong>, as
+            well as select strategic collaborations.
           </p>
         </div>
       </PageIntro>
-      <div className="mt-10 space-y-16">
+
+      {/* NOTE: Commenting out the section intro for now as I'm not sure if I want to keep it */}
+      {/* <div className="mt-10 space-y-16">
         <SectionIntro title="What To Expect" smaller>
           <BulletedList>
             <BulletedListItem>A reply within 24 hours</BulletedListItem>
@@ -103,7 +106,7 @@ export default function Contact() {
             </BulletedListItem>
           </BulletedList>
         </SectionIntro>
-      </div>
+      </div> */}
 
       <Container className="mt-16 sm:mt-32 lg:mt-16">
         <div className="flex justify-center">
