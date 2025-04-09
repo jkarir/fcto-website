@@ -28,7 +28,7 @@ export function Hero() {
         <div className="group relative max-h-[418px] w-full max-w-[300px] overflow-hidden rounded-3xl bg-neutral-100 md:max-w-[360px]">
           <Image
             src={jurgen_karir}
-            alt="Jürgen Karir - Fractional CTO"
+            alt="Jürgen Karir - Engineering Leader"
             priority
             className="h-[418px] w-full object-cover transition duration-500 motion-safe:group-hover:scale-105"
           />
