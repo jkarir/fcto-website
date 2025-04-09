@@ -56,7 +56,7 @@ const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Jürgen Karir',
-  jobTitle: 'Fractional CTO & Software Engineering Consultant',
+  jobTitle: 'Engineering Manager & Software Engineering Leader',
   description:
     'With 20+ years of experience in building scalable software, leading engineering teams, and solving complex technical challenges across industries.',
   image: 'https://jurgenkarir.com/images/jurgen-karir.jpg',

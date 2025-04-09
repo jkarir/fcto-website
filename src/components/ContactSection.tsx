@@ -15,8 +15,8 @@ export function ContactSection() {
 
             <p className="mt-6 text-lg text-neutral-400">
               Whether you&apos;re solving technical challenges or scaling
-              delivery, I bring hands-on engineering leadership that drives real
-              impact.
+              delivery, I bring hands-on engineering leadership that drives
+              results.
             </p>
             <p className="mt-6 text-lg text-neutral-400">
               Open to full-time opportunities and meaningful collaborations.

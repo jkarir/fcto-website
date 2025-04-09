@@ -89,7 +89,9 @@ export function NewArticleNotification({
             <p className="font-display text-base font-semibold text-neutral-950">
               {authorName}
             </p>
-            <p className="mt-1 text-sm text-neutral-600">Fractional CTO</p>
+            <p className="mt-1 text-sm text-neutral-600">
+              Engineering Manager & Software Engineering Leader
+            </p>
             <p className="mt-2 text-sm text-neutral-600">
               <a
                 href="https://jurgenkarir.com"
